@@ -1,5 +1,4 @@
 //Program to count the number of digits in a number.
-#include<conio.h>
 #include<stdio.h>
 void main()
 {
