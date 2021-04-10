@@ -1,4 +1,4 @@
-/*Program to print the result of the series -
+/*Program to print the result of the series-
 1/1! + 2/2! + 3/3! + ... +n/n!.*/
 #include<stdio.h>
 void main()
