@@ -5,7 +5,7 @@
 ****
 ***** */
 #include<stdio.h>
-int main()
+void main()
 {
     int i,j;
     for(i=1;i<=5;i++)
@@ -14,5 +14,4 @@ int main()
         printf("*");
         printf("\n");
     }
-    return 0;
 }
