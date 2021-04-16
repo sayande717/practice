@@ -1,5 +1,4 @@
 //Program to print a number in reverse.
-#include<conio.h>
 #include<stdio.h>
 void main()
 {
