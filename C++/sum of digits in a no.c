@@ -1,6 +1,6 @@
 //Program to print the sum of digits in a number.
 #include<stdio.h>
-void main()
+int main()
 {
 long n,r,s=0;
 printf("Enter a number:");
@@ -12,4 +12,5 @@ s+=r;
 n=n/10;
 }
 printf("Sum of digits:%ld",s);
+return 0;
 }
