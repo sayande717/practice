@@ -7,5 +7,6 @@ int main()
     scanf("%d%d",&a,&b);
     div=a/b;
     printf("Answer=%f",div);
+    printf("\n");
     return 0;
 }
