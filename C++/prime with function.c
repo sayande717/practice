@@ -1,19 +1,12 @@
 #include<stdio.h>
-boolean prime(int);
-int main()
+void main()
 {
-    int n,c;
-    printf("Enter a number");
+    int n,i,f=0;
+    printf("Enter a positive number:");
     scanf("%d",&n);
-    printf("Press 1 to use function.");
-    scanf("%d",&c);
-    if(c==1)
-    printf("");
-}
-boolean prime(int n)
-{
-    int a;
-    if(a==2)
-    return true;
-    else return false;
+    for(i=1;i<=n;i++)
+    if(n%i==0)
+    f++;
+    if(f==2)
+    printf("%d is a prime number",n);
 }
