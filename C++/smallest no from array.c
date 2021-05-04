@@ -1,7 +1,9 @@
+//Program to print the position of the smallest number from an array of n numbers.
 #include<stdio.h>
+#include<limits.h>
 void main()
 {
-    int n,min=n,i;
+    int n,min=INT_MAX,i,pos;
     printf("Enter number of array elements.");
     scanf("%d",&n);
     int a[n];
@@ -10,10 +12,7 @@ void main()
     {
         scanf("%d",&a[i]);
         if(a[i]<min)
-        min=a[i];
+        pos=(i+1);
     }
-    printf("Smallest number:%d",min);
-    printf("\nArray elements:");
-    for(i=0;i<n;i++)
-    printf("%d\t",a[i]);
+    printf("Position of smallest number:%d",pos);
 }
