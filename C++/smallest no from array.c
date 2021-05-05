@@ -3,6 +3,11 @@
 #include<limits.h>
 void main()
 {
+    /*Variables used - 
+    a = The array,n = number of elements of array.
+    i = Counter variable used used in the for loop.
+    pos = Stores the position of the smallest number.
+    */
     int n,min=INT_MAX,i,pos;
     printf("Enter number of array elements.");
     scanf("%d",&n);

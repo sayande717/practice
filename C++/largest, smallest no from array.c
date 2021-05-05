@@ -3,6 +3,12 @@
 #include<limits.h>
 void main()
 {
+    /*Variables used - 
+    a = The array,n = number of elements of array.
+    i = Counter variable used used in the for loop.
+    min,max = Stores the largest & smallest numbers in the array.
+    s = Store a temporary value, needed to swap the values of min & max.
+    */
     int n,min=INT_MAX,max=INT_MIN,i,s;
     printf("Enter number of array elements.");
     scanf("%d",&n);
