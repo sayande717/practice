@@ -13,4 +13,4 @@ void main()
     scanf("%s",&string1);
     printf("Enter 2nd string.");
     scanf("%s",&string2);
-    //not complete
+    //not complete.
