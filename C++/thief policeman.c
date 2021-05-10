@@ -21,7 +21,6 @@ void main()
             if(a[i]==1)
             c++;
         }
-        printf("%d",c);
     }
     else printf("Constraints not met.");
 }
