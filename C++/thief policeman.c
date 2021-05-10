@@ -14,13 +14,14 @@ void main()
     if(n<1000&&k<100)
     {
         int a[n],c=0,i;
-        for(i=0;i<n;i++)
+        for(i=0;i<(n-1);i++)
         {
             //Enter the array elements.
             scanf("%d ",&a[i]);
             if(a[i]==1)
             c++;
         }
+        printf("%d",c);
     }
     else printf("Constraints not met.");
 }
