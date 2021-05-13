@@ -1,7 +1,8 @@
+//Code to sort a set of numbers in ascending order.
 #include<stdio.h>
 void main()
 {
-    /*Variable descriptions - 
+    /*Variable description - 
     n = Stores number of elements in the number array.
     a[n] = the number array.
     n1 = stores a temporary variable to be used for sorting.
@@ -13,8 +14,8 @@ void main()
     int a[n];
     printf("Enter elements:");
     for(i=0;i<n;i++)
-    scanf("%d",&a[i]);
-    for(i=0;i<n;i++)
+    scanf("%d",&a[i]); //Take the numbers as input.
+    for(i=0;i<n;i++) //perform the sorting.
     for(j=i+1;j<n;j++)
     if(a[i]>a[j])
     {
@@ -24,5 +25,5 @@ void main()
     }
     printf("Numbers in ascending order:\n");
     for(i=0;i<n;i++)
-    printf("%d\t",a[i]);
+    printf("%d\t",a[i]); //print the resulting array.
 }
