@@ -1,17 +1,30 @@
-//Program to remove duplicate elements from an array.
-//Not complete.
+//Program to remove duplicates from array.
+//Problem - Output wrong.
 #include<stdio.h>
 void main()
 {
-    /*Variable description - 
-    a[n] = Array, n = number of elements in array.
-    i = Counter variable used in for loop.
-    */
-   int n,i;
-   printf("Enter the number of elements:");
-   scanf("%d",&n);
-   int a[n];
-   printf("Enter elements of the array:");
-   for(i=0;i<n;i++)
-   scanf("%d",&a[i]);
+    int n,i,j,c=0;
+    printf("Enter the number of elements:");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter the elements:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        for(j=0;j<i;j++)
+        {
+            if(a[j]==a[i])
+            c++;
+        }
+        if(c<2)
+        {
+            a[i]=' ';
+        }
+        c=0;
+    }
+    printf("Array without the duplicates:");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t",a[i]);
+    }
 }
