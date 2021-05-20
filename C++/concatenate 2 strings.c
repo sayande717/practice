@@ -3,9 +3,9 @@
 void main()
 {
    char string1[50], string2[50], i, j;
-   printf("\nEnter the first string: ");
+   printf("Enter the first string: ");
    scanf("%s",string1);
-   printf("\nEnter the second string: ");
+   printf("Enter the second string: ");
    scanf("%s",string2);
    for(i=0;string1[i]!='\0';i++);
    {
@@ -15,5 +15,5 @@ void main()
        }
        string1[i]='\0';
    }
-   printf("\nConcatenated string: %s",string1);
+   printf("Concatenated string: %s\n",string1);
 }
