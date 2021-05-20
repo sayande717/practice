@@ -1,4 +1,5 @@
 //Program to merge 2 array into a 3rd array.
+//Not complete.
 #include<stdio.h>
 void main()
 {

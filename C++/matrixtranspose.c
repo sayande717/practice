@@ -15,7 +15,7 @@ void main()
         {
             printf("Column %d:",j+1);
             scanf("%d",&a[i][j]);
-            a[i][j]=b[j][i];
+            b[j][i]=a[i][j];
         }
     }
     printf("Transposed Matrix:\n");
