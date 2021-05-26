@@ -17,3 +17,4 @@ void main()
    }
    printf("Concatenated string: %s\n",string1);
 }
+;
