@@ -1,48 +1,30 @@
+/*This program works like a simple calculator. It supports the following functions - 
+1. +   > Addition
+2. -   > Subtraction
+3. *   > Multiplication
+4. /   > Division
+5. x^y > Finding x to the power of y.*/
 #include<stdio.h>
-int add(int,int);
-int sub(int,int);
-int mul(int,int);
-int div(int,int);
-int rem(int,int);
 void main()
 {
-    int a,b;
-    char op;
-    printf("Only +,-,*,/ supported\n");
-    printf("Provide your input in this syntax - <number 1><operation><number 2>. Eg-2+3\n");
-    scanf("%d%c%d",&a,&op,&b);
-    printf("Answer - ");
-    if(op=='+')
-    printf("%d",add(a,b));
-    if(op=='-')
-    printf("%d",sub(a,b));
-    if(op=='*'||op=='x')
-    printf("%d",mul(a,b));
-    if(op=='/')
+    float operand1, operand2;
+    char operator;
+    int WantToContinue=1;
+    do
     {
-        printf("%d",div(a,b));
-        printf("\nRemainder - %d",rem(a,b));
-    }
-    printf("\n");
-}
-int add(int n,int m)
-{
-    return n+m;
-}
-int sub(int n,int m)
-{
-    return n-m;
-}
-int mul(int n,int m)
-{
-    return n*m;
-}
-int div(int n,int m)
-{
-    return n/m;
-}
-int rem(int n,int m)
-{
-    if(n%m!=0)return n%m;
-    else return 0;
+        printf("Provide the input in this syntax = <number 1><operation><number 2>. Eg - 2+3\n");
+        scanf("%f%c%f", &operand1, &operator, & operand2);
+        if (operator== '+')
+            printf("Answer - %f", operand1 + operand2);
+        else if (operator== '-')
+            printf("Answer - %f", operand1 - operand2);
+        else if (operator== '*' || operator== 'x' || operator== 'X')
+            printf("Answer - %f", operand1 * operand2);
+        else if (operator== '/')
+        {
+            printf("Answer - %f", operand1 / operand2);
+        }
+        printf("\nPress 1 to continue or any other key to exit.\n");
+        scanf("%d",&WantToContinue);
+    }while(WantToContinue==1);
 }
