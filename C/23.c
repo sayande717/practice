@@ -9,5 +9,5 @@ void main()
     max=n2;
     if(n3>max)
     max=n3;
-    printf("The largest number:%d",max);
+    printf("The largest number:%d\n",max);
 }
