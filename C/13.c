@@ -7,7 +7,7 @@ void main()
     scanf("%c",&alphabet);
     printf("\nReverse case of %c is : ", alphabet);
     if (islower(alphabet))
-        printf("%c",tolower(alphabet));
+    printf("%c",tolower(alphabet));
     else printf("%c",tolower(alphabet));
     printf("\n");
 }
