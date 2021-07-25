@@ -12,7 +12,7 @@ void main()
     printf("Enter a number:");
     scanf("%d",&n); //Take number as input.
     ncopy=n; //Store the number in another place.
-    while(n!=0) //reverse the number, store in revn.
+    while(n!=0) //reverse the number, store in rev n.
     {
         rem=n%10;
         revn=(revn*10)+rem;

@@ -1,16 +1,16 @@
 /*Program to print the result of the series-
 1/1! + 2/2! + 3/3! + ... +n/n!.*/
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-int n,f=1,i,ans=0;
-printf("Enter the value of n:");
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-{
-f=f*i;
-ans+=i/f;
-}
-printf("Answer:%d",ans);
-return 0;
+    int n, f = 1, i, ans = 0;
+    printf("Enter the value of n:");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        f = f * i;
+        ans += i / f;
+    }
+    printf("Answer:%d", ans);
+    return 0;
 }
