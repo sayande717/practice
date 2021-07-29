@@ -35,6 +35,7 @@ Note - If a number is the same as it's reverse, it's called a palindrome number.
 Note - The trace of a square matrix is defined as the sum of the principle diagonal elements of a matrix.
 22.c - Checks whether the character entered is a vowel.
 23.c - Takes 3 numbers as input, returns the largest number.
+24.c - Find the number of (-)ve numbers, (+)ve numbers & 0 in a matrix.
 
 [HTML]
 
