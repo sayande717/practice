@@ -16,7 +16,7 @@ void main()
     {
         scanf("%s %d %d", stud[i].name, &stud[i].roll_no, &stud[i].marks);
     }
-    for (i = 0; i < n; i++) //Sorting in descending order, stud[0].marks=highest marks.
+    for (i = 0; i < n; i++) //Sorting in descending order, stud[0].marks = highest marks.
     {
         for (j = 0; j < n - 1; j++)
         {
