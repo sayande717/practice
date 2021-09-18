@@ -38,6 +38,8 @@ Note - The trace of a square matrix is defined as the sum of the principle diago
 24.c - Find the number of (-)ve numbers, (+)ve numbers & 0 in a matrix.
 
 [HTML]
+Test URL - http://10.0.17.6:84/index.html
+Directory - /var/www/testHTML
 
 [Python]
 1.c - Prints 'hello world!'.
