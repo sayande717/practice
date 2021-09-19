@@ -36,6 +36,7 @@ Note - The trace of a square matrix is defined as the sum of the principle diago
 22.c - Checks whether the character entered is a vowel.
 23.c - Takes 3 numbers as input, returns the largest number.
 24.c - Find the number of (-)ve numbers, (+)ve numbers & 0 in a matrix.
+25.c - Finds whether a number is a prime number or not.
 
 [HTML]
 Test URL - http://10.0.17.6:84/index.html
