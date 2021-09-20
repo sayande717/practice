@@ -1,5 +1,5 @@
-Program description - 
-[C] - 
+Program description -
+[C] -
 1.c - Sorts the numbers in ascending order.
 2.c - Performs basic calculator operations - +,-,*,/,%.
 3.c - Concatenates 2 strings.
@@ -17,7 +17,7 @@ Note - If a number is the same as it's reverse, it's called a palindrome number.
 ***
 ****
 *****
-12.c - Prints the pattern - 
+12.c - Prints the pattern -
 *****
 ****
 ***
@@ -37,9 +37,17 @@ Note - The trace of a square matrix is defined as the sum of the principle diago
 23.c - Takes 3 numbers as input, returns the largest number.
 24.c - Find the number of (-)ve numbers, (+)ve numbers & 0 in a matrix.
 25.c - Finds whether a number is a prime number or not.
+26.c - A menu driven program to perform various kinds of operation on an integer array of size 'n'. Functions -
+Display(int A[], int n) - Displays 'n' elements of the array 'A'.
+CountOdd(int A[], int n) - Returns the no. of odd numbers in the array 'A' of size 'n'.
+FindSmallest(int A[], int n) - Returns the smallest number in the array A of size 'n'.
+Reverse(int A[], int n) - Print the array 'A' of size 'n' in reverse.
+PrintFrequency(int A[], int n) - Print the frequency of each element of the array 'A' of size 'n'.
+Replace(int A[], int n, int x, int y) - Replaces all the 'x' elements in the array 'A' of size 'n' with 'y'.
+SearchPrime(int A[], int n) - Returns the position of the first occurence of a prime number in the array 'A' of size 'n'.
 
 [HTML]
-Test URL - http://10.0.17.6:84/index.html
+Test URL - <http://10.0.17.6:84/index.html>
 Directory - /var/www/testHTML
 
 [Python]
