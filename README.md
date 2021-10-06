@@ -46,6 +46,9 @@ PrintFrequency(int A[], int n) - Print the frequency of each element of the arra
 Replace(int A[], int n, int x, int y) - Replaces all the 'x' elements in the array 'A' of size 'n' with 'y'.
 SearchPrime(int A[], int n) - Returns the position of the first occurence of a prime number in the array 'A' of size 'n'.
 
+[Java]
+1.java - A program to demonstrate single inheritance.
+
 [HTML]
 Test URL - <http://10.0.17.6:84/index.html>
 Directory - /var/www/testHTML
