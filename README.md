@@ -45,6 +45,7 @@ Reverse(int A[], int n) - Print the array 'A' of size 'n' in reverse.
 PrintFrequency(int A[], int n) - Print the frequency of each element of the array 'A' of size 'n'.
 Replace(int A[], int n, int x, int y) - Replaces all the 'x' elements in the array 'A' of size 'n' with 'y'.
 SearchPrime(int A[], int n) - Returns the position of the first occurence of a prime number in the array 'A' of size 'n'.
+27.c - Write a program that sorts an integer array in ascending or descending order, depending on user input.
 
 [Java]
 1.java - A program to demonstrate single inheritance.
