@@ -48,7 +48,8 @@ SearchPrime(int A[], int n) - Returns the position of the first occurence of a p
 27.c - Write a program that sorts an integer array in ascending or descending order, depending on user input.
 
 [Java]
-1.java - A program to demonstrate single inheritance.
+1.java - A program to print 'Hello World!'.
+2.java - A program to demonstrate single inheritance.
 
 [HTML]
 Test URL - <http://10.0.17.6:84/index.html>
