@@ -46,7 +46,7 @@ PrintFrequency(int A[], int n) - Print the frequency of each element of the arra
 Replace(int A[], int n, int x, int y) - Replaces all the 'x' elements in the array 'A' of size 'n' with 'y'.
 SearchPrime(int A[], int n) - Returns the position of the first occurence of a prime number in the array 'A' of size 'n'.
 27.c - Write a program that sorts an integer array in ascending or descending order, depending on user input.
-
+(in 3 separate lines).
 [Java]
 1.java - A program to print 'Hello World!'.
 2.java - A program to demonstrate single inheritance.
@@ -56,4 +56,14 @@ Test URL - <http://10.0.17.6:84/index.html>
 Directory - /var/www/testHTML
 
 [Python]
-1.c - Prints 'hello world!'.
+1.py - Prints 'hello world!'.
+2.py - Given - i = 4, d = 4.0, s = 'HackerRank '.
+[Input]
+Integer variable 'j'
+Double variable 'e'
+String variable 't'
+(in 3 separate lines).
+[Output]
+i+j
+d+e
+s+t
