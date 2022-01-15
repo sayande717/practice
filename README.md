@@ -4,6 +4,11 @@ Directory - ~/hdd/coding/test/HTML
 Local site - http://10.0.17.6:86/
 
 Program description -
+
+[Python]
+production.py - Local production bot.
+testbot0.py - Test bot
+
 [C] -
 1.c - Sorts the numbers in ascending order.
 2.c - Performs basic calculator operations - +,-,*,/,%.
