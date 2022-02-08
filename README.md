@@ -1,13 +1,17 @@
-Test directories - 
-HTML (SSH)
-Directory - ~/hd/coding/test/HTML
+[External] -
+[HTML]
 Local site - http://10.0.17.6:86/
-
-Program description -
+[bot] -> [/Discord Bot (line: 7)]
 
 [Python]
-production.py - Local production bot.
-testbot0.py - Test bot
+[/Discord Bot]
+local.py: Local bot.
+remote.py: Remote bot.
+run_remote.py: Keeps the remote bot online.
+test.py: Test bot.
+
+1.py: Prints 'Hello world!'.
+2.py: HackerRank program.
 
 [C] -
 1.c - Sorts the numbers in ascending order.
