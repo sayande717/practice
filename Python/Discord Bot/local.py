@@ -9,7 +9,7 @@ async def live_uptime():
     while True:
         uptime = os.popen('up').read()
         await client.change_presence(activity=discord.Game(name=uptime))
-        await asyncio.sleep(60)
+        await asyncio.sleep(600)
 
 @client.event
 async def on_ready():
