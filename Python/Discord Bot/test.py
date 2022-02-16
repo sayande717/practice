@@ -14,10 +14,10 @@ async def on_ready():
     print('Test bot logged in.')
 '''
 ##Idle
-
+'''
 @client.event
 async def on_ready():
     await client.change_presence(status='idle')
     print('Test bot logged in.')
-    
+'''
 client.run(TOKEN) 
