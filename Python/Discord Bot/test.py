@@ -19,5 +19,5 @@ async def on_ready():
 async def on_ready():
     await client.change_presence(status='idle')
     print('Test bot logged in.')
-    
+
 client.run(TOKEN) 
