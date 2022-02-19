@@ -9,6 +9,31 @@ local.py: Local bot.
 remote.py: Remote bot.
 run_remote.py: Keeps the remote bot online.
 test.py: Test bot.
+example.py: Help.
+
+Line #: Functionality
+> functions needed
+(Universal > Discord)
+#13: Defines a client event.
+#18: Runs once the bot is ready.
+#19: Change bot status (online, idle, dnd)
+#33: Welcome a new user.
+#45: Create a function that keeps running after specific intervals of time
+> asyncio
+#56: Reply to a specific message.
+#60-#70: Reply with another string - 
+#60: If a message matches a string.
+#64: If a message starts with a string.
+#68: If a message contains a string.
+
+#75: Send messages to a specific channel.
+#80: Run a command on the system & return the output.
+> os
+#81: Reply to the sender.
+#83: Reply to the sender but don't mention.
+
+#Last line: Specify the bot token.
+> os
 
 1.py: Prints 'Hello world!'.
 2.py: HackerRank program.

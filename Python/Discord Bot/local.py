@@ -1,27 +1,19 @@
 import discord,os
-import asyncio
 from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('Production_token')
 client = discord.Client()
 
-async def live_uptime():
-    while True:
-        uptime = os.popen('up').read()
-        await client.change_presence(activity=discord.Game(name=uptime))
-        await asyncio.sleep(600)
-
 @client.event
 async def on_ready():
     await client.change_presence(status='online')
     print('Local bot logged in.')
-    client.loop.create_task(live_uptime())
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content.startswith('Hi!'):
-        await message.channel.send('Hi there!')
+    if message.content.find('Hi') != -1 or message.content.find('hi') != -1:
+        await message.reply('Hello there!')
+    if message.content.find('Ping') != -1 or message.content.find('ping') != -1:
+        await message.reply('Pong!')
 
 client.run(TOKEN)

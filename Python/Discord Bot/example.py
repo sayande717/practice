@@ -1,5 +1,5 @@
 #Import the discord.py package. 'os' package is needed for importing the 'env' file.
-import discord,os,time
+import discord,os
 import asyncio
 #Import 'load_dotenv' function from package 'dotenv'
 from dotenv import load_dotenv
@@ -56,11 +56,31 @@ async def uptimefunction():
 #If a message starts with a string, it replies to that message with another pre-defined string.
 @client.event
 async def on_message(message):
+    
+    #If message matches the string 'ABC', send the message 'DEF'
+    if message.content == "ABC":
+        await message.channel.send('DEF')
+    
     #if message starts with 'abc', send the message 'def'.
-    if message.author == client.user:
-        return
     if message.content.startswith('abc'):
         await message.channel.send('def')
+        
+    #if message contains 'ABC', send the message 'def'
+    if message.content.find('ABC') != -1:
+        await message.channel.send('def')
 
+#If message starts with . & contains .abc, run a command in the system & return the output.
+@client.event
+async def on_message(message):
+    #Send messages to a specific channel.
+    if (message.channel.id == 123456781234567812345678):
+        if message.content.startswith('.'):
+            if message.content == ".abc":
+                #os.popen() = Run a command in the system & return the output.
+                await message.channel.send(os.popen('abc').read())
+                #Reply to the sender.
+                await message.reply('msg')
+                #Reply to the sender but don't mention.
+                await message.reply('msg',mention_author=False)
 #Run the client using the token defined above.
 client.run(TOKEN)
