@@ -9,14 +9,16 @@ local.py: Local bot.
 remote.py: Remote bot.
 run_remote.py: Keeps the remote bot online.
 test.py: Test bot.
-example.py: Help.
 
+example.py: Help.
 Line #: Functionality
 > functions needed
 (Universal > Discord)
 #13: Defines a client event.
 #18: Runs once the bot is ready.
+#32: Send a message to a specific text channel as soon as the bot is ready.
 #19: Change bot status (online, idle, dnd)
+#72: Make the bot reply only to the users, not to other bots or itself.
 #33: Welcome a new user.
 #45: Create a function that keeps running after specific intervals of time
 > asyncio

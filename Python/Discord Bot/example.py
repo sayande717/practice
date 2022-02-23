@@ -29,6 +29,10 @@ async def on_ready():
     print('Test bot logged in.')
     #(1.2) From line 45 > Create a task to run the 'uptimefunction()' function.
     client.loop.create_task(uptimefunction())
+    #Send a message to a specific text channel as soon as the bot is ready.
+    channel = client.get_channel()
+    #Send the message.
+    await channel.send('')
 
 #Welcomes a new user.
 @client.event
@@ -68,12 +72,16 @@ async def on_message(message):
     #if message contains 'ABC', send the message 'def'
     if message.content.find('ABC') != -1:
         await message.channel.send('def')
+    
+    #Make the bot reply only to the users, not to other bots or itself
+    if message.author.bot:
+        return
 
 #If message starts with . & contains .abc, run a command in the system & return the output.
 @client.event
 async def on_message(message):
     #Send messages to a specific channel.
-    if (message.channel.id == 123456781234567812345678):
+    if (message.channel.id == 0):
         if message.content.startswith('.'):
             if message.content == ".abc":
                 #os.popen() = Run a command in the system & return the output.
