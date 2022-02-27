@@ -22,9 +22,10 @@ async def on_ready():
     print('Test bot logged in.')
     
     #Send the bot update message(s).
-    #channel = client.get_channel(944658998550999060)
-    #await channel.send('[22.02.22 16:24]')
+    channel = client.get_channel(944658998550999060)
+    await channel.send('[26.02.22 20:30]:')
 '''
+
 #Test code
 @client.event
 async def on_message(message):
