@@ -9,7 +9,7 @@ async def on_ready():
     await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.listening, name='%help'))
     print('Local bot logged in.')
         
-     
+
 #Reply to messages
 @client.event
 async def on_message(message):
