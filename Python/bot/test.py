@@ -10,7 +10,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.listening, name='Admin'))
-    print('1')
+    print('Test bot running.')
     #Send the bot update message(s).
     #channel = client.get_channel(944658998550999060)
     #await channel.send('[02.03.22 11:48]:')
