@@ -18,7 +18,7 @@ async def on_message(message):
         return
     elif message.channel.id == 940487185973530655 and message.content.find(',') != -1:
         if message.content.find('help') != -1:
-            await message.channel.send('1. Ping: **pwan**,**plan**\n2. up: **uptime**\n3. **log2ram**\n4. **ram**\n5. **pihole**')
+            await message.channel.send('1. Ping: **pwan**,**plan**\n2. **up**: uptime\n3. **log2ram**\n4. **ram**\n5. **pihole**')
         if message.content.find('pwan') != -1:
             await message.channel.send(os.popen('ping 1.1.1.1 -c 1').read())
         elif message.content.find('plan') != -1:

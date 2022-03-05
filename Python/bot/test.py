@@ -13,7 +13,7 @@ async def on_ready():
     print('Test bot running.')
     #Send the bot update message(s).
     #channel = client.get_channel(944658998550999060)
-    #await channel.send('[02.03.22 11:48]:')
+    #await channel.send('[05.03.22 19:01]:')
 
 
 #Test code
@@ -23,5 +23,4 @@ async def on_message(message):
         return
     elif message.channel.id == 940487185973530655:
         return
-        
 client.run(TOKEN)
