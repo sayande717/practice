@@ -20,8 +20,8 @@ Line #: Functionality
 #19: Change bot status (online, idle, dnd)
 #72: Make the bot reply only to the users, not to other bots or itself.
 #33: Welcome a new user.
-#45: Create a function that keeps running after specific intervals of time
-> asyncio
+#45: Create a function that keeps running after specific intervals of time.
+> time
 #56: Reply to a specific message.
 #60-#70: Reply with another string - 
 #60: If a message matches a string.
@@ -34,11 +34,20 @@ Line #: Functionality
 #81: Reply to the sender.
 #83: Reply to the sender but don't mention.
 
+#94: Delete the last x messages with a specific bot command.
+
 #Last line: Specify the bot token.
 > os
 
 1.py: Prints 'Hello world!'.
 2.py: HackerRank program.
+3.py: Functions for:
+a. Convert a string to lowercase, uppercase & titlecase.
+b. Variations of the print() function.
+c. Variations of the for loop.
+4.py: Basic operation on 1-D & 2-D lists.
+a. Finding list length.
+b. Sort the list in ascending & descending (reverse) order.
 
 [C] -
 1.c - Sorts the numbers in ascending order.

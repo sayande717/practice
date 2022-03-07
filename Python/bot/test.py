@@ -12,9 +12,8 @@ async def on_ready():
     await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.listening, name='Admin'))
     print('Test bot running.')
     #Send the bot update message(s).
-    #channel = client.get_channel(944658998550999060)
-    #await channel.send('[05.03.22 19:01]:')
-
+    channel = client.get_channel(944658998550999060)
+    await channel.send("[07.03.22 17:10]:\n")
 
 #Test code
 @client.event
@@ -23,4 +22,5 @@ async def on_message(message):
         return
     elif message.channel.id == 940487185973530655:
         return
+
 client.run(TOKEN)

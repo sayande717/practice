@@ -1,6 +1,6 @@
 #Import the discord.py package. 'os' package is needed for importing the 'env' file.
 import discord,os
-import asyncio
+import time
 #Import 'load_dotenv' function from package 'dotenv'
 from dotenv import load_dotenv
 #load a .env file
@@ -9,10 +9,10 @@ load_dotenv()
 TOKEN = os.getenv('token')
 #Specify the client to be used by the bot.
 client = discord.Client()
-"""
+'''
 @client.event = Creates an event.
 Execute these lines once the bot is ready.
-"""
+'''
 @client.event
 #Executes on_ready() when the bot is ready.
 async def on_ready():
@@ -55,7 +55,7 @@ async def uptimefunction():
         #Change activity status accordingly.
         await client.change_presence(activity=discord.Game(name=up))
         #Sleep for '30' seconds.
-        await asyncio.sleep(30)
+        time.sleep(30)
 
 #If a message starts with a string, it replies to that message with another pre-defined string.
 @client.event
@@ -90,5 +90,11 @@ async def on_message(message):
                 await message.reply('msg')
                 #Reply to the sender but don't mention.
                 await message.reply('msg',mention_author=False)
+
+#Delete last 100 messages with the command .del
+@client.command(name='del')
+async def clear(ctx):
+        await ctx.channel.purge(limit=100)
+
 #Run the client using the token defined above.
 client.run(TOKEN)
