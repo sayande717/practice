@@ -60,11 +60,11 @@ async def on_message(message):
         if msg == '%help':
             #For chat channels
             if message.channel.id == 944823325450977332 or message.channel.id == 940604423330222140:
-                botmsg = await message.reply("---Help---\nChannel: **#chat**\n1. Hi/hello/hey: Say hi to the bot!\n2. Good morning/afternoon/evening/night: Greet the bot!\n\n**This message will disappear after 10 seconds.**")
+                botmsg = await message.channel.send("---Help---\nChannel: **#chat**\n1. Hi/hello/hey: Say hi to the bot!\n2. Good morning/afternoon/evening/night: Greet the bot!\n\n**This message will disappear after 10 seconds.**")
             #For music channels
             elif message.channel.id == 944823432971968523 or message.channel.id == 944825825243574292:
 
-                botmsg = await message.reply("---Help Commands---\nChannel: **#music-requests**\n1. Hydra = **.help** \n2. FredBoat = **;;help** \n3. Lofi Radio: = **lofi.help** & **/help**\n\n**This message will disappear after 10 seconds.**")
+                botmsg = await message.channel.send("---Help Commands---\nChannel: **#music-requests**\n1. Hydra = **.help** \n2. FredBoat = **;;help** \n3. Lofi Radio: = **lofi.help** & **/help**\n\n**This message will disappear after 10 seconds.**")
             await message.delete()
             time.sleep(10)
             await botmsg.delete()
