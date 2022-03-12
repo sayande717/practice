@@ -1,5 +1,4 @@
-import discord
-import os
+import discord,os,time
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,8 +17,8 @@ async def on_ready():
     await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.listening, name='Admin'))
     print('Test bot running.')
     #Send the bot update message(s).
-    #channel = client.get_channel(944658998550999060)
-    #await channel.send("[07/03/2022 | 22:38]:\n")
+    #channel = client.get_channel(940487185973530655)
+    #await channel.send("[12/03/2022 | 19:15]:\n")
 '''
 #Test code
 @client.event
@@ -28,5 +27,5 @@ async def on_message(message):
         return
     elif message.channel.id == 940487185973530655:
         return
-
+        
 client.run(TOKEN)

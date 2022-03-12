@@ -1,16 +1,28 @@
 '''
 Function to demonstrate:
-1. String conversion to:
+1. strprint() - String conversion to:
 a. Lowercase
 b. Uppercase
 c. Title case
 
-2. Variations of the print() function.
+2. strprint() - Variations of the print() function.
 By default, print('str') function adds '\n' after 'str' ie the cursor moves to a new line after printing 'str'.
 To avoid this, we can use the 'end' parameter.
 Ex. print('str',end='\t')
 This replaces the end character from the default '\n' to '\t'.
+
+3. strfunc() - Splitting a string into n parts, using a separator.
+Default separator is whitespace.
+
+4. forloop() - Variations of the 'for' loop: 
+1. for i in range (a,b,c)
+a = The initial value (included). Default = 0
+b = The final value (excluded, ex. if b is 10 then loop will run till 10-1 = 9)
+c = i will be incremented by this value. Default = 1
+Ex. If c = 4 & b = 12 then i = (1,4,10)
+Note: a,c may not be present in the definition.
 '''
+
 def strprint():
     str=['abcd','efgh','ijkl']
     #Lowercase
@@ -24,15 +36,12 @@ def strprint():
         print(str[i],end=' ')
     print()
 
-'''
-3. Variations of the 'for' loop: 
-1. for i in range (a,b,c)
-a = The initial value (included). Default = 0
-b = The final value (excluded, ex. if b is 10 then loop will run till 10-1 = 9)
-c = i will be incremented by this value. Default = 1
-Ex. If c = 4 & b = 12 then i = (1,4,10)
-Note: a,c may not be present in the definition.
-'''
+def strfunc():
+    str1 = 'ab,bc,cd,ef gh'
+    str2 = str1.split() #Using default separator, ' ' ie whitespace.
+    str3 = str1.split(',') #Specifying the separator ',' ie comma.
+    print(str2)
+    print(str3)
 
 def forloop():
     #Only b provided.
@@ -49,5 +58,4 @@ def forloop():
     print()
 
 #Run the functions
-strprint()
-forloop()
+strfunc()

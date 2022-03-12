@@ -1,4 +1,8 @@
-#Import the discord.py package. 'os' package is needed for importing the 'env' file.
+'''
+Import the discord.py package.
+'os' package is needed for importing the 'env' file.
+'time' package is needed for the time related functions, ex. time.sleep(n)
+'''
 import discord,os
 import time
 #Import 'load_dotenv' function from package 'dotenv'
@@ -62,7 +66,7 @@ async def uptimefunction():
 async def on_message(message):
     
     #If message matches the string 'ABC', send the message 'DEF'
-    if message.content == "ABC":
+    if message.content == 'ABC':
         await message.channel.send('DEF')
     
     #if message starts with 'abc', send the message 'def'.

@@ -42,12 +42,13 @@ Line #: Functionality
 1.py: Prints 'Hello world!'.
 2.py: HackerRank program.
 3.py: Functions for:
-a. Convert a string to lowercase, uppercase & titlecase.
+a. Convert a string to lowercase, uppercase & titlecase. Split a string into n parts using a separator.
 b. Variations of the print() function.
 c. Variations of the for loop.
 4.py: Basic operation on 1-D & 2-D lists.
 a. Finding list length.
 b. Sort the list in ascending & descending (reverse) order.
+5.py: Error detection using try-except.
 
 [C] -
 1.c - Sorts the numbers in ascending order.
@@ -100,16 +101,3 @@ SearchPrime(int A[], int n) - Returns the position of the first occurence of a p
 [Java]
 1.java - A program to print 'Hello World!'.
 2.java - A program to demonstrate single inheritance.
-
-[Python]
-1.py - Prints 'hello world!'.
-2.py - Given - i = 4, d = 4.0, s = 'HackerRank '.
-[Input]
-Integer variable 'j'
-Double variable 'e'
-String variable 't'
-(in 3 separate lines).
-[Output]
-i+j
-d+e
-s+t

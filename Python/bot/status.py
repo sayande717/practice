@@ -28,9 +28,9 @@ async def on_message(message):
         if message.channel.id == 940487185973530655:
             if msg == commandlist[0][0]:
                     await message.channel.send(commandlist[0][1])
-        else:
-            for i in range (1,len(commandlist)):
-                if msg == commandlist[i][0]:
-                    await message.channel.send(os.popen(commandlist[i][1]).read())
+            else:
+                for i in range (1,len(commandlist)):
+                    if msg == commandlist[i][0]:
+                        await message.channel.send(os.popen(commandlist[i][1]).read())
 
 client.run(TOKEN)
