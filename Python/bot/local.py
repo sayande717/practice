@@ -24,6 +24,7 @@ Calculations:
 3. Multiplication: *,x,X
 4. Division: /
 5. Modulus: %
+6. x to the power y: ^
 
 
 Messages that'll be deleted:
@@ -56,10 +57,10 @@ async def on_message(message):
               'x', #Index 3
               'X', #Index 4
               '/', #Index 5
-              '%'] #Index 6
-
+              '%', #Index 6
+              '^'] #Index 7
     #msgtodel = Stores the banned words to be deleted.
-    msgtodel = ['abcd','def','fuck']
+    msgtodel = ['fuck']
 
     if message.author.bot:
         return
@@ -74,8 +75,8 @@ async def on_message(message):
         '''
         msg = message.content
         msglow = msg.lower()
-        msgdel3 = '\n\n**This message will be auto-deleted in 3 seconds.**'
-        msgdel10 = '\n\n**This message will be auto-deleted in 10 seconds.**'
+        msgdel3 = '\n\nThis message will be auto-deleted in 3 seconds.'
+        msgdel10 = '\n\nThis message will be auto-deleted in 10 seconds.'
 
         if msg == '%help':    
             #For channel #chat
@@ -87,7 +88,7 @@ async def on_message(message):
                 botmsg = await message.reply(helpstart+"Channel: **#music-requests**\n1. Hydra = **.help** \n2. FredBoat = **;;help** \n3. Lofi Radio: = **lofi.help** & **/help**\nAll your messages will be **auto-deleted** in order to keep the channel clutter-free."+msgdel10)
             #For #calculations channel
             elif message.channel.id == 952095676106412042:
-                botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel10)
+                botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n6. X to the power Y: [**^**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel10)
             time.sleep(10)
             await botmsg.delete()
             await message.delete()

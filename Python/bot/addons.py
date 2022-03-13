@@ -24,3 +24,5 @@ def calc(exp0,op,exp1):
             return 'Error 404: Remainder not found! :face_with_monocle:'
         else:
             return calcansvar[1] + str(rem)
+    elif op == '^':
+        return str(pow(exp0,exp1))

@@ -1,4 +1,4 @@
-import discord,os,time
+import discord,os
 from dotenv import load_dotenv
 
 load_dotenv()
