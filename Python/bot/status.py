@@ -13,19 +13,19 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    msg = message.content
-    commandlist = [['help','1. Ping: **pwan**,**plan**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
-                   ['pwan','ping 1.1.1.1 -c 1'],
-                   ['plan','ping 192.168.1.1 -c 1'],
-                   ['up','uptime'],
-                   ['ram','free -h'],
-                   ['log2ram','df -h | grep log2ram'],
-                   ['cputemp','vcgencmd measure_temp']]
-    if message.author.bot:
-        return
-    else:
-        #Works in admin-chat channel only.
-        if message.channel.id == 940487185973530655:
+    if message.channel.id == 940487185973530655:
+        msg = message.content
+        if message.author.bot:
+            return
+        else:
+            #Works in admin-chat channel only.
+            commandlist = [['help','1. Ping: **pwan**,**plan**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
+                            ['pwan','ping 1.1.1.1 -c 1'],
+                            ['plan','ping 192.168.1.1 -c 1'],
+                            ['up','uptime'],
+                            ['ram','free -h'],
+                            ['log2ram','df -h | grep log2ram'],
+                            ['cputemp','vcgencmd measure_temp']]
             if msg == commandlist[0][0]:
                     await message.channel.send(commandlist[0][1])
             else:

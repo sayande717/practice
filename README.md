@@ -11,8 +11,9 @@ run_remote.py: Keeps the remote bot online.
 test.py: Test bot.
 
 example.py: Help.
-Line #: Functionality
 > functions needed
+Line #: Functionality
+
 (Universal > Discord)
 #13: Defines a client event.
 #18: Runs once the bot is ready.
@@ -20,24 +21,23 @@ Line #: Functionality
 #19: Change bot status (online, idle, dnd)
 #72: Make the bot reply only to the users, not to other bots or itself.
 #33: Welcome a new user.
-#45: Create a function that keeps running after specific intervals of time.
 > time
+#45: Create a function that keeps running after specific intervals of time.
+
 #56: Reply to a specific message.
 #60-#70: Reply with another string - 
 #60: If a message matches a string.
 #64: If a message starts with a string.
 #68: If a message contains a string.
-
-#75: Send messages to a specific channel.
-#80: Run a command on the system & return the output.
 > os
+#80: Run a command on the system & return the output.
+
 #81: Reply to the sender.
 #83: Reply to the sender but don't mention.
-
+#88: Send messages to a specific channel.
 #94: Delete the last x messages with a specific bot command.
-
-#Last line: Specify the bot token.
 > os
+#Last line: Specify the bot token.
 
 1.py: Prints 'Hello world!'.
 2.py: HackerRank program.

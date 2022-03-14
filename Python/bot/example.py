@@ -84,6 +84,7 @@ async def on_message(message):
 #If message starts with . & contains .abc, run a command in the system & return the output.
 @client.event
 async def on_message(message):
+    
     #Send messages to a specific channel.
     if (message.channel.id == 0):
         if message.content.startswith('.'):

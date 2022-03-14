@@ -18,7 +18,7 @@ async def on_ready():
     print('Test bot running.')
     #Send the bot update message(s).
     #channel = client.get_channel(940487185973530655)
-    #await channel.send("[12/03/2022 | 19:15]:\n")
+    #await channel.send("test\n")
 '''
 #Test code
 @client.event
