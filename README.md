@@ -7,6 +7,7 @@ Local site - http://192.168.1.5:86/
 [/Discord Bot]
 local.py: Local bot.
 remote.py: Remote bot.
+announcement.py: Broadcasts announcements & system status.
 run_remote.py: Keeps the remote bot online.
 test.py: Test bot.
 

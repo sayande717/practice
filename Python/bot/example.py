@@ -86,7 +86,7 @@ async def on_message(message):
 async def on_message(message):
     
     #Send messages to a specific channel.
-    if (message.channel.id == 0):
+    if message.channel.id == 0:
         if message.content.startswith('.'):
             if message.content == ".abc":
                 #os.popen() = Run a command in the system & return the output.
