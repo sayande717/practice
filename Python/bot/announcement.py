@@ -27,7 +27,7 @@ async def on_message(message):
     #Announcements
     elif message.channel.id == 955875394119172176:
         if msg == '%help':
-            await message.channel.send("Syntax: \n<**Message 1**>\n<**Message 2**>\n%%<**Channel ID**>")
+            await message.channel.send("Syntax: \n<**Message start...**\n**...message end**>\n%%<**Channel ID**>")
         else:
             msg = msg.split('%%')
             msgch = client.get_channel(int(msg[1]))
