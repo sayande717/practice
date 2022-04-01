@@ -16,7 +16,7 @@ Message syntax: <Message>%%<channel ID>
 #Status: Active
 @client.event
 async def on_ready():
-    await client.change_presence(status='dnd',activity=discord.Activity(type=discord.ActivityType.watching, name='Announcements'))
+    await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.watching, name='Announcements'))
     print('Announcement bot running.')
 
 @client.event
