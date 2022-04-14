@@ -1,6 +1,6 @@
 [External] -
 [HTML]
-Local site - http://192.168.1.5:86/
+Local site - http://10.1.41.5:86/
 [bot] -> [/Discord Bot (line: 7)]
 
 [Python]
