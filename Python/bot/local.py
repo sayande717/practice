@@ -110,7 +110,7 @@ async def on_message(message):
                 6. x to the power y: ^
                 
                 calcop = List of operators for calculations.
-                '''    
+                '''
                 calcop = ['+', #Index 0
                         '-', #Index 1
                         '*', #Index 2
