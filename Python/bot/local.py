@@ -81,7 +81,7 @@ async def on_message(message):
                 General replies:
                 1. hi,hello,hola,hey
                 2. good morning,afternoon,evening,night
-                
+
                 ---Greetings for #chat channels---
                 greetings_welcome = List of hi,hello related terms.
                 greetings_daywish = List of good morning, good night related terms.

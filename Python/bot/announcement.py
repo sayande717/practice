@@ -36,7 +36,7 @@ async def on_message(message):
     elif message.channel.id == 940487185973530655:
         commandlist = [['%help','1. Ping: **pwan**,**plan**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
                         ['pwan','ping 1.1.1.1 -c 1'],
-                        ['plan','ping 192.168.1.1 -c 1'],
+                        ['plan','ping 10.1.41.19 -c 1'],
                         ['up','uptime'],
                         ['ram','free -h'],
                         ['log2ram','df -h | grep log2ram'],

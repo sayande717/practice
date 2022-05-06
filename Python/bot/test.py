@@ -8,7 +8,8 @@ client = discord.Client()
 #Status: Active
 @client.event
 async def on_ready():
-    await client.change_presence(status='offline',activity=discord.Activity(type=discord.ActivityType.listening, name='Sayan'))
+    #await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.listening, name='Sayan'))
+    await client.change_presence(status='idle')
     print('Test bot running.')
 
 #Test code
