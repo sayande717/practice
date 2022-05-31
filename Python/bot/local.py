@@ -56,7 +56,7 @@ async def on_message(message):
             
             msgtodel = Stores the banned words to be deleted.
             '''
-            msgtodel = ['fuck','whore']
+            msgtodel = ['fuck','whore','cunt']
             for i in range (len(msgtodel)):
                 if msglow.find(msgtodel[i]) != -1:
                     await message.delete()
@@ -64,15 +64,7 @@ async def on_message(message):
                     time.sleep(3)
                     await botmsg.delete()
 
-            if message.channel.id == 944823432971968523 or message.channel.id == 944825825243574292:
-                '''
-                Delete all messages sent by the user after 2 seconds. Currently works on:
-                1. #music-requests
-                '''
-                time.sleep(1)
-                await message.delete()
-
-            elif message.channel.id == 940604423330222140 or message.channel.id == 944823325450977332:
+            if message.channel.id == 940604423330222140 or message.channel.id == 944823325450977332:
                 '''
                 General replies:
                 1. hi,hello,hola,hey

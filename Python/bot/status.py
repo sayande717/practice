@@ -2,36 +2,23 @@ import discord,os
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('Announcement')
+TOKEN = os.getenv('Server_Status')
 client = discord.Client()
 
 '''
-Tasks:
-1. Announcements
-Message syntax: <Message>%%<channel ID>
-
-2. System status
+Task: System status
 '''
 
 #Status: Active
 @client.event
 async def on_ready():
-    await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.watching, name='Announcements'))
-    print('Announcement bot running.')
+    print('Status bot running.')
 
 @client.event
 async def on_message(message):
     msg = message.content
     if message.author.bot:
         return
-    #Announcements
-    elif message.channel.id == 955875394119172176:
-        if msg == '%help':
-            await message.channel.send("Syntax: \n<**Message start...**\n**...message end**>\n%%<**Channel ID**>")
-        else:
-            msg = msg.split('%%')
-            msgch = client.get_channel(int(msg[1]))
-            await msgch.send(msg[0])
     #System status. Works in admin-chat channel only.
     elif message.channel.id == 940487185973530655:
         commandlist = [['%help','1. Ping: **pwan**,**plan1,2**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
