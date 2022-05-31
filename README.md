@@ -1,9 +1,14 @@
 [External] -
 [HTML]
-Local site - http://10.1.41.5:86/
+Local site - http://10.0.17.5:86/
 [bot] -> [/Discord Bot (line: 7)]
 
 [Python]
+notes.txt - 
+1. Print output of division as integer (A//B).
+
+
+
 [/Discord Bot]
 local.py: Local bot.
 remote.py: Remote bot.
@@ -50,13 +55,18 @@ c. Variations of the for loop.
 a. Finding list length.
 b. Sort the list in ascending & descending (reverse) order.
 5.py: Error detection using try-except.
+6.py: Create a dictionary, print values,
 
 [C] -
+notes.txt - 
+1. Format Specifiers (for use in scanf and printf)
+2. How to scale float/double to n decimel spaces
+
 1.c - Sorts the numbers in ascending order.
 2.c - Performs basic calculator operations - +,-,*,/,%.
 3.c - Concatenates 2 strings.
 4.c - Checks whether a character is a consonant.
-5.c - Takes a,b as input and prints a/b.
+5.c - null
 6.c - Prints "Hello world".
 7.c - Interchange the position of largest & smallest number in an integer array.
 8.c - Print the transpose of a 3x3 matrix.

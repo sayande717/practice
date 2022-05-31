@@ -2,7 +2,7 @@ import discord,os
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('Announcement_token')
+TOKEN = os.getenv('Announcement')
 client = discord.Client()
 
 '''
@@ -16,7 +16,7 @@ Message syntax: <Message>%%<channel ID>
 #Status: Active
 @client.event
 async def on_ready():
-    await client.change_presence(status='dnd',activity=discord.Activity(type=discord.ActivityType.watching, name='Announcements'))
+    await client.change_presence(status='online',activity=discord.Activity(type=discord.ActivityType.watching, name='Announcements'))
     print('Announcement bot running.')
 
 @client.event
@@ -34,9 +34,10 @@ async def on_message(message):
             await msgch.send(msg[0])
     #System status. Works in admin-chat channel only.
     elif message.channel.id == 940487185973530655:
-        commandlist = [['%help','1. Ping: **pwan**,**plan**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
+        commandlist = [['%help','1. Ping: **pwan**,**plan1,2**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
                         ['pwan','ping 1.1.1.1 -c 1'],
-                        ['plan','ping 10.1.41.19 -c 1'],
+                        ['plan1','ping 10.0.17.23 -c 1'],
+                        ['plan2','ping 192.168.29.1 -c 1'],
                         ['up','uptime'],
                         ['ram','free -h'],
                         ['log2ram','df -h | grep log2ram'],

@@ -1,0 +1,25 @@
+Format Specifiers (for use in scanf and printf) - 
+int - %d
+short int - %hd
+unsigned int - %u
+long int - %li
+long long int - %lli
+float - %f
+double (long float) - %lf
+char - %c
+memory address - %p
+String - 
+First word only - %s
+Entire line - %[^\n]
+Syntax - 
+1. scanf("%[^\n]",str);
+*%[..] - Edit set conversion mode.
+Here, [^\n] specifies that scanf will take input till \n ie newline is encountered.
+2. Using gets() - gets(str)
+
+Multiple lines - [^\r]
+Syntax - 
+scanf("%[^\r]",s);
+
+How to scale float/double to n decimel spaces - %.nf
+Syntax - printf("%.2f",fl);

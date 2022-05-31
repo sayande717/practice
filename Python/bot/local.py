@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from addons import calc
 
 load_dotenv()
-TOKEN = os.getenv('Local_token')
+TOKEN = os.getenv('Local')
 
 client = discord.Client()
 
@@ -35,23 +35,19 @@ async def on_message(message):
             '''
             Help index:
             1. #chat
-            2. #music-requests
             3. #calculations
             '''
             #For #chat
             helpstart = '-----Help-----\n'
             if message.channel.id == 944823325450977332 or message.channel.id == 940604423330222140:
-                botmsg = await message.reply(helpstart+"Channel: **#chat**\nMake sure the word '**bot**' is present in your message.\n1. Hi/hello/hey bot: Say hi to the bot!\n2. Good morning/afternoon/evening/night bot: Greet the bot!"+msgdel10)
-            #For #music-requests
-            elif message.channel.id == 944823432971968523 or message.channel.id == 944825825243574292:
-                botmsg = await message.reply(helpstart+"Channel: **#music-requests**\n1. Hydra = **.help** \n2. FredBoat = **;;help** \n3. Lofi Radio: = **lofi.help** & **/help**\nAll your messages will be **auto-deleted** in order to keep the channel clutter-free."+msgdel10)
+                botmsg = await message.reply(helpstart+"Channel: **#chat**\nMake sure the word '**bot**' is present in your message.\n1. Hi/hello/hey bot: Say hi to the bot!\n2. Good morning/afternoon/evening/night bot: Greet the bot!"+msgdel10)            
             #For #calculations channel
             elif message.channel.id == 952095676106412042:
                 botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n6. X to the power Y: [**^**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel10)
             time.sleep(10)
             await botmsg.delete()
             await message.delete()
-                
+
         else:
             '''
             ---Delete messages containing certain keywords---
@@ -60,7 +56,7 @@ async def on_message(message):
             
             msgtodel = Stores the banned words to be deleted.
             '''
-            msgtodel = ['fuck']
+            msgtodel = ['fuck','whore']
             for i in range (len(msgtodel)):
                 if msglow.find(msgtodel[i]) != -1:
                     await message.delete()
