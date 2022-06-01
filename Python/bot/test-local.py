@@ -2,7 +2,7 @@ import discord,os
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('Test_token')
+TOKEN = os.getenv('Test_local')
 client = discord.Client()
 
 #Status: Active
@@ -13,5 +13,9 @@ async def on_ready():
     print('Local test bot running.')
 
 #Test code
+@client.event
+async def on_message(message):
+    if message.author.bot:
+        return
 
 client.run(TOKEN)

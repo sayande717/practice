@@ -32,6 +32,7 @@ Line #: Functionality
 
 #56: Reply to a specific message.
 #60-#70: Reply with another string - 
+#67: Ignore messages sent by bots.
 #60: If a message matches a string.
 #64: If a message starts with a string.
 #68: If a message contains a string.

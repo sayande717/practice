@@ -64,7 +64,9 @@ async def uptimefunction():
 #If a message starts with a string, it replies to that message with another pre-defined string.
 @client.event
 async def on_message(message):
-    
+    #Ignore messages sent by bots.
+    if message.author.bot:
+        return
     #If message matches the string 'ABC', send the message 'DEF'
     if message.content == 'ABC':
         await message.channel.send('DEF')
