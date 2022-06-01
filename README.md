@@ -48,7 +48,7 @@ Line #: Functionality
 1.py: Prints 'Hello world!'.
 2.py: HackerRank program.
 3.py: Functions for:
-a. Convert a string to lowercase, uppercase & titlecase. Split a string into n parts using a separator.
+a. Convert a string to lowercase, uppercase & title case. Split a string into n parts using a separator.
 b. Variations of the print() function.
 c. Variations of the for loop.
 4.py: Basic operation on 1-D & 2-D lists.
