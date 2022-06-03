@@ -42,7 +42,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     #Paste channel ID here
-    channel = client.get_channel('channel ID')
+    channel = client.get_channel('Channel ID') #Without single quotes
     #Provide a title & description.
     embed=discord.Embed(title=f"Welcome {member.name}!", description=f"Thanks for joining my server!")
     #Set thumbnail to user's image.
