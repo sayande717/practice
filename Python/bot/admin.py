@@ -6,27 +6,42 @@ TOKEN = os.getenv('Admin')
 client = discord.Client()
 
 '''
-Task: System status
+Tasks:
+1. System status
+2. Pinning message(s) on any channel.
 '''
 
-#Status: Active
 @client.event
 async def on_ready():
     await client.change_presence(status='dnd', activity=discord.Activity(type=discord.ActivityType.watching, name='Server Status'))
     print('Admin bot running.')
+
+    #Type in a new channel ID here. Format: '<channel-name>',<Channel ID>
+    '''
+    ch = client.get_channel(982255693748908062)
+    sendmsg = await ch.send("5. channel-name -> 00000000")
+    await sendmsg.pin()
+    '''
 
 @client.event
 async def on_message(message):
     msg = message.content
     if message.author.bot:
         return
-    #Send a message on the #bot-updates channel and pin it. Channel ID=944658998550999060
-    elif message.channel.id == 944658998550999060:
-        if msg == '%get':
-            sendmsg = await message.channel.send('[01/06/2022 | 08:32]:\nThe Admin Bot will now send the update message(s) & pin them here, all by itself! :grin:')
-            await message.delete()
-            await sendmsg.pin()
-    #System status. Works in admin-chat channel only.
+    elif message.channel.id == 982255693748908062:
+        '''
+        Pin a message in any channel.
+        Syntax: 
+        <Channel ID>%%
+        line 1
+        line 2
+        '''
+        msg = msg.split("%%")
+        ch = client.get_channel(int(msg[0]))
+        sendmsg = await ch.send(msg[1])
+        await message.delete()
+        await sendmsg.pin()
+    #System status. Works in admin-general channel only.
     elif message.channel.id == 940487185973530655:
         commandlist = [['%help','1. Ping: **pwan**,**plan1,2**\n2. uptime: **up**\n3. **log2ram**\n4. **ram**\n5. **cputemp**'],
                         ['pwan','ping 1.1.1.1 -c 1'],
