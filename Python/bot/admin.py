@@ -50,7 +50,7 @@ async def on_message(message):
                         ['up','uptime'],
                         ['ram','free -h'],
                         ['log2ram','df -h | grep log2ram'],
-                        ['cputemp','vcgencmd measure_temp']]
+                        ['temp','vcgencmd measure_temp']]
         if msg == commandlist[0][0]:
                 await message.channel.send(commandlist[0][1])
         else:

@@ -1,3 +1,0 @@
-Let A=4,B=5
-A//B=0 (Integer output)
-A/B=0.8 (Float output)
