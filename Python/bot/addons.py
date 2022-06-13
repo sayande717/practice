@@ -1,4 +1,6 @@
 #For calculation related functions
+#Return True if n is a float/integer.
+
 def calc(exp0,op,exp1):
     calcansvar = ['Answer = ',
                   'Remainder = ']

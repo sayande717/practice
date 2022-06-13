@@ -1,7 +1,5 @@
-import discord,os,time
+import discord,os,time,math
 from dotenv import load_dotenv
-#For calculations
-from addons import calc
 
 load_dotenv()
 TOKEN = os.getenv('Local')
@@ -25,13 +23,15 @@ async def on_message(message):
         -----Notification at the end of messages that will be deleted-----
         msgdel3 = 3 seconds timeout.
         msgdel10 = 10 seconds timeout.
+        run_help = Run %help for help.
         '''
         msg = message.content
         msglow = msg.lower()
         msgdel3 = '\n\nThis message will be auto-deleted in 3 seconds.'
         msgdel10 = '\n\nThis message will be auto-deleted in 10 seconds.'
+        run_help = ' Run **%help** for help.'
 
-        if msglow == '%help':    
+        if msglow == '%help':
             '''
             Help index:
             1. #chat
@@ -40,13 +40,16 @@ async def on_message(message):
             #For #chat
             helpstart = '-----Help-----\n'
             if message.channel.id == 944823325450977332 or message.channel.id == 940604423330222140:
-                botmsg = await message.reply(helpstart+"Channel: **#chat**\nMake sure the word '**bot**' is present in your message.\n1. Hi/hello/hey bot: Say hi to the bot!\n2. Good morning/afternoon/evening/night bot: Greet the bot!"+msgdel10)            
+                botmsg = await message.reply(helpstart+"Channel: **#chat**\nMake sure the word '**bot**' is present in your message.\n1. Hi/hello/hey bot: Say hi to the bot!\n2. Good morning/afternoon/evening/night bot: Greet the bot!"+msgdel10)
             #For #calculations channel
             elif message.channel.id == 952095676106412042:
                 botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n6. X to the power Y: [**^**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel10)
+            elif message.channel.id == 985990030570975262:
+                botmsg = await message.reply(helpstart+"Channel: **#unit-conversion**\nAvailable units:-\n**1**. Temperature :thermometer:\n\t**a**. Celcius > Fahrenheit, **b**. Fahrenheit > Celcius\n\t**c**. Kelvin > Celcius, **d**. Celcius > Kelvin\n\t**e**. Fahrenheit > Kelvin, **f**. Kelvin > Fahrenheit\n\n**2**. Number Systems :1234:\n\t**a**. Binary > Decimal, **b**. Decimal > Binary\n\nSyntax: <main parameter>.<sub parameter> <value>.\nUsage: **1.a 100** converts the value '**100**' from **Celcius** to **Fahrenheit**."+msgdel10)
             time.sleep(10)
             await botmsg.delete()
             await message.delete()
+
 
         else:
             '''
@@ -100,30 +103,159 @@ async def on_message(message):
                 calcop = List of operators for calculations.
                 '''
                 calcop = ['+', #Index 0
-                        '-', #Index 1
-                        '*', #Index 2
-                        'x', #Index 3
-                        'X', #Index 4
-                        '/', #Index 5
-                        '%', #Index 6
-                        '^'] #Index 7
-                flag = -1
+                '-', #Index 1
+                '*', #Index 2
+                'x', #Index 3
+                'X', #Index 4
+                '/', #Index 5
+                '%', #Index 6
+                '^'] #Index 7
                 for i in range (len(calcop)):
                     if msg.find(calcop[i]) != -1:
-                        #flag = Flag variable, used to check if a condition was true atleast once.
-                        flag = 0
-                        msg = msg.split(calcop[i])
                         try:
+                            ans=''
+                            flag = 0
+                            msg = msg.split(calcop[i])
                             exp1 = float(msg[0].strip())
                             exp2 = float(msg[1].strip())
-                            await message.reply(str(calc(exp1,calcop[i],exp2)))
+                            op = calcop[i]
+                            if op == '+':
+                                ans = exp1 + exp2
+                            elif op == '-':
+                                ans =  exp1 - exp2
+                            elif op == '*' or op == 'x' or op == 'X':
+                                ans = exp1 * exp2
+                            elif op == '/':
+                                if exp2 == 0:
+                                    flag = 1
+                                    ans = 'Cannot divide a number by zero.'
+                                else:
+                                    div = int(exp1//exp2)
+                                    rem = int(exp1%exp2)
+                                    if rem == 0:
+                                        ans = div
+                                    else:
+                                        ans = str(div) + '\nRemainder = ' + str(rem)
+                            elif op == '%':
+                                ans = int(exp1 % exp2)
                         except ValueError:
-                            msgout = await message.reply('Invalid expression. Run **%help** for help.'+msgdel3)
+                            msgout = await message.reply('Invalid Syntax.'+run_help+msgdel3)
                             time.sleep(3)
                             await msgout.delete()
                             await message.delete()
-                if flag == -1:
-                    msgout = await message.reply('Invalid Syntax. Run **%help** for help.'+msgdel3)
+                        if flag == 0:
+                            msgout = 'Answer = '+str(ans)
+                            await message.reply(msgout)
+
+            elif message.channel.id == 985990030570975262:
+                '''
+                Unit Conversion:
+                1. Temperature:
+                    1.a - Celcius > Fahrenheit
+                    1.b - Fahrenheit > Celcius
+
+                    1.c - Kelvin > Calcius
+                    1.d - Celcius > Kelvin
+
+                    1.e - Fahrenheit > Kelvin
+                    1.f - Kelvin > Fahrenheit
+                2. Number Systems:
+                    2.a - Binary > Decimal
+                    2.b - Decimal > Binary
+                '''
+                try:
+                    '''
+                    split_1 = Splits the original message into 2 parts:
+                    0. <main parameter>.<sub parameter>
+                    1. value
+                    split_2 = Splits the parameters into 2 parts:
+                    0. main parameter
+                    1. sub parameter
+                    '''
+                    split_1 = msg.split(' ')
+                    split_2 = split_1[0].split('.')
+                    parameter1 = int(split_2[0])
+                    parameter2 = split_2[1]
+                    value = float(split_1[1])
+                    flag=0
+                    convert_from = ''
+                    convert_to = ''
+                    unit = ''
+                    ans = ''
+                    #Temperature
+                    if parameter1 == 1:
+                        #Celcius > Fahrenheit
+                        if parameter2 == 'a':
+                            convert_from = 'Celcius'
+                            convert_to = 'Fahrenheit'
+                            unit = 'F'
+                            ans = (value*1.8)+32.0
+                        #Fahrenheit > Celcius
+                        elif parameter2 == 'b':
+                            convert_from = 'Fahrenheit'
+                            convert_to = 'Celcius'
+                            unit = "'C"
+                            ans = (value-32)/1.8
+                        #Kelvin > Celcius
+                        elif parameter2 == 'c':
+                            convert_from = 'Kelvin'
+                            convert_to = 'Celcius'
+                            unit = "'C"
+                            ans = value - 273.15
+                        #Celcius > Kelvin
+                        elif parameter2 == 'd':
+                            convert_from = 'Celcius'
+                            convert_to = 'Kelvin'
+                            unit = 'K'
+                            ans = value + 273.15
+                        #Fahrenheit > Kelvin
+                        elif parameter2 == 'e':
+                            convert_from = 'Fahrenheit'
+                            convert_to = 'Kelvin'
+                            ans = (value-32)/1.8 + 273.15
+                        #Kelvin > Fahrenheit
+                        elif parameter2 == 'f':
+                            convert_from = 'Kelvin'
+                            convert_to = 'Fahrenheit'
+                            ans = (value-273.15) * 1.8 + 32
+                        else:
+                            flag=1
+                    #Number Systems
+                    elif parameter1 == 2:
+                        #Binary > Decimal
+                        if parameter2 == 'a':
+                            convert_from = 'Binary'
+                            convert_to = 'Decimal'
+                            sum = 0
+                            exponent_2 = 0
+                            while value != 0:
+                                mod = value % 10
+                                sum = sum+(mod*math.pow(2, exponent_2))
+                                exponent_2 = exponent_2+1
+                                value = value//10
+                                ans = int(sum)
+                        #Decimal > Binary
+                        elif parameter2 == 'b':
+                            convert_from = 'Decimal'
+                            convert_to = 'Binary'
+                            while value != 0:
+                                rem = int(value % 2)
+                                ans=str(rem)+ans
+                                value=value//2
+                        else:
+                            flag=1
+                    else:
+                        flag=1
+                except ValueError:
+                    msgout = await message.reply('Invalid Syntax.'+run_help)
+                    time.sleep(3)
+                    await msgout.delete()
+                    await message.delete()
+                if flag == 0:
+                        msgout = 'Converting from '+'**{}**'.format(convert_from)+' to '+'**{}**'.format(convert_to)+' :arrows_clockwise:\nAnswer -> ' + str(ans) + unit
+                        await message.reply(msgout)
+                elif flag == 1:
+                    msgout = await message.reply('Invalid Expression.'+run_help)
                     time.sleep(3)
                     await msgout.delete()
                     await message.delete()
