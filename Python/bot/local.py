@@ -45,7 +45,7 @@ async def on_message(message):
             elif message.channel.id == 952095676106412042:
                 botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n6. X to the power Y: [**^**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel10)
             elif message.channel.id == 985990030570975262:
-                botmsg = await message.reply(helpstart+"Channel: **#unit-conversion**\nAvailable units:-\n**1**. Temperature :thermometer:\n\t**a**. Celcius > Fahrenheit, **b**. Fahrenheit > Celcius\n\t**c**. Kelvin > Celcius, **d**. Celcius > Kelvin\n\t**e**. Fahrenheit > Kelvin, **f**. Kelvin > Fahrenheit\n\n**2**. Number Systems :1234:\n\t**a**. Binary > Decimal, **b**. Decimal > Binary\n\nSyntax: <main parameter>.<sub parameter> <value>.\nUsage: **1.a 100** converts the value '**100**' from **Celcius** to **Fahrenheit**."+msgdel10)
+                botmsg = await message.reply(helpstart+"Channel: **#unit-conversion**\nAvailable units:-\n**1**. Temperature :thermometer:\n\t**a**. Celcius > Fahrenheit, **b**. Fahrenheit > Celcius\n\t**c**. Kelvin > Celcius, **d**. Celcius > Kelvin\n\t**e**. Fahrenheit > Kelvin, **f**. Kelvin > Fahrenheit\n\n**2**. Number Systems :1234:\n\t**a**. Binary > Decimal, **b**. Decimal > Binary\n\n**3**. Weights :scales:\n\t**a**. Kilogram > Gram, **b**. Gram > Kilogram\n\t**c**. Kilogram > Ton (Metric), **d**. Ton (Metric) > Kilogram\n\t**e**. Kilogram > Pound, **f**. Pound > Kilogram\n\t**g**. Kilogram > Ounce (oz), **h**. Ounce (oz) > Kilogram\n\nSyntax: <main parameter>.<sub parameter> <value>.\nUsage: **1.a 100** converts the value '**100**' from **Celcius** to **Fahrenheit**."+msgdel10)
             time.sleep(10)
             await botmsg.delete()
             await message.delete()
@@ -162,6 +162,16 @@ async def on_message(message):
                 2. Number Systems:
                     2.a - Binary > Decimal
                     2.b - Decimal > Binary
+                
+                3. Weight:
+                    3.a - Kilogram > Gram
+                    3.b - Gram > Kilogram
+                    3.c - Kilogram > Ton (Metric)
+                    3.d - Ton (Metric) > Kilogram
+                    3.e - Kilogram > Pound
+                    3.f - Pound > Kilogram
+                    3.g - Kilogram > Ounce (oz)
+                    3.h - Ounce (oz) > Kilogram
                 '''
                 try:
                     '''
@@ -242,6 +252,57 @@ async def on_message(message):
                                 rem = int(value % 2)
                                 ans=str(rem)+ans
                                 value=value//2
+                        else:
+                            flag=1
+                    elif parameter1 == 3:
+                        #Kilogram to Gram
+                        if parameter2 == 'a':
+                            convert_from = 'Kilogram'
+                            convert_to = 'Gram'
+                            unit = 'g'
+                            ans = value * 1000
+                        #Gram to Kilogram
+                        elif parameter2 == 'b':
+                            convert_from = 'Gram'
+                            convert_to = 'Kilogram'
+                            unit = 'kg'
+                            ans = value / 1000
+                        #Kilogram > Ton (Metric)
+                        elif parameter2 == 'c':
+                            convert_from = 'Kilogram'
+                            convert_to = 'Ton (Metric)'
+                            unit = 't'
+                            ans = value * 0.001
+                        #Ton (Metric) > Kilogram
+                        elif parameter2 == 'd':
+                            convert_from = 'Ton (Metric)'
+                            convert_to = 'Kilogram'
+                            unit = 'kg'
+                            ans = value * 1000
+                        #Kilogram > Pound
+                        elif parameter2 == 'e':
+                            convert_from = 'Kilogram'
+                            convert_to = 'Pound'
+                            unit = 'lb'
+                            ans = value * 2.2046226218
+                        #Pound > Kilogram
+                        elif parameter2 == 'f':
+                            convert_from = 'Pound'
+                            convert_to = 'Kilogram'
+                            unit = 'kg'
+                            ans = value * 0.45359237
+                        #Kilogram > Ounce (oz)
+                        elif parameter2 == 'g':
+                            convert_from='Kilogram'
+                            convert_to='Ounce (oz)'
+                            unit = 'oz'
+                            ans = value * 35.2739619496
+                        #Kilogram > Ounce (oz)
+                        elif parameter2 == 'h':
+                            convert_from = 'Ounce (oz)'
+                            convert_to = 'Kilogram'
+                            unit = 'kg'
+                            ans = value * 0.0283495231
                         else:
                             flag=1
                     else:
