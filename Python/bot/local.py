@@ -22,13 +22,13 @@ async def on_message(message):
         msglow = Client message converted to lowercase.
         -----Notification at the end of messages that will be deleted-----
         msgdel3 = 3 seconds timeout.
-        msgdel15 = 10 seconds timeout.
+        msgdel10 = 10 seconds timeout.
         run_help = Run %help for help.
         '''
         msg = message.content
         msglow = msg.lower()
         msgdel3 = '\n\nThis message will be auto-deleted in 3 seconds.'
-        msgdel15 = '\n\nThis message will be auto-deleted in 15 seconds.'
+        msgdel10 = '\n\nThis message will be auto-deleted in 15 seconds.'
         run_help = ' Run **%help** for help.'
 
         if msglow == '%help':
@@ -40,13 +40,13 @@ async def on_message(message):
             #For #chat
             helpstart = '-----Help-----\n'
             if message.channel.id == 944823325450977332 or message.channel.id == 940604423330222140:
-                botmsg = await message.reply(helpstart+"Channel: **#chat**\nMake sure the word '**bot**' is present in your message.\n1. Hi/hello/hey bot: Say hi to the bot!\n2. Good morning/afternoon/evening/night bot: Greet the bot!"+msgdel15)
+                botmsg = await message.reply(helpstart+"Channel: **#chat**\nMake sure the word '**bot**' is present in your message.\n1. Hi/hello/hey bot: Say hi to the bot!\n2. Good morning/afternoon/evening/night bot: Greet the bot!"+msgdel10)
             #For #calculations channel
             elif message.channel.id == 952095676106412042:
-                botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n6. X to the power Y: [**^**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel15)
+                botmsg = await message.reply(helpstart+"Channel: **#calculations**\nSupported operations:\n1. Addition: [**+**]\n2. Subtraction: [**-**]\n3. Multiplication: [***** or **x** or **X**]\n4. Division: [**/**]\n5. Modulus/Remainder: [**%**]\n6. X to the power Y: [**^**]\n\nSyntax: **2+3**, where **2** & **3** are the numbers you want to evaluate and **+** is the operator."+msgdel10)
             elif message.channel.id == 985990030570975262:
-                botmsg = await message.reply(helpstart+"Channel: **#unit-conversion**\nAvailable units:-\n**1**. Temperature :thermometer:\n\t**a**. Celcius > Fahrenheit, **b**. Fahrenheit > Celcius\n\t**c**. Kelvin > Celcius, **d**. Celcius > Kelvin\n\t**e**. Fahrenheit > Kelvin, **f**. Kelvin > Fahrenheit\n\n**2**. Number Systems :1234:\n\t**a**. Binary > Decimal, **b**. Decimal > Binary\n\n**3**. Weights :scales:\n\t**a**. Kilogram > Gram, **b**. Gram > Kilogram\n\t**c**. Kilogram > Ton (Metric), **d**. Ton (Metric) > Kilogram\n\t**e**. Kilogram > Pound, **f**. Pound > Kilogram\n\t**g**. Kilogram > Ounce (oz), **h**. Ounce (oz) > Kilogram\n\nSyntax: <main parameter>.<sub parameter> <value>.\nUsage: **1.a 100** converts the value '**100**' from **Celcius** to **Fahrenheit**."+msgdel15)
-            time.sleep(15)
+                botmsg = await message.reply(helpstart+"Channel: **#unit-conversion**\nAvailable units:-\n**1**. Temperature :thermometer:\n\t**a**. Celcius > Fahrenheit, **b**. Fahrenheit > Celcius\n\t**c**. Kelvin > Celcius, **d**. Celcius > Kelvin\n\t**e**. Fahrenheit > Kelvin, **f**. Kelvin > Fahrenheit\n\n**2**. Number Systems :1234:\n\t**a**. Binary > Decimal, **b**. Decimal > Binary\n\n**3**. Weights :scales:\n\t**a**. Kilogram > Gram, **b**. Gram > Kilogram\n\t**c**. Kilogram > Ton (Metric), **d**. Ton (Metric) > Kilogram\n\t**e**. Kilogram > Pound, **f**. Pound > Kilogram\n\t**g**. Kilogram > Ounce (oz), **h**. Ounce (oz) > Kilogram\n\nSyntax: <main parameter>.<sub parameter> <value>.\nUsage: **1.a 100** converts the value '**100**' from **Celcius** to **Fahrenheit**."+msgdel10)
+            time.sleep(10)
             await botmsg.delete()
             await message.delete()
 
