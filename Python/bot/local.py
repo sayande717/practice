@@ -28,7 +28,7 @@ async def on_message(message):
         msg = message.content
         msglow = msg.lower()
         msgdel3 = '\n\nThis message will be auto-deleted in 3 seconds.'
-        msgdel10 = '\n\nThis message will be auto-deleted in 15 seconds.'
+        msgdel10 = '\n\nThis message will be auto-deleted in 10 seconds.'
         run_help = ' Run **%help** for help.'
 
         if msglow == '%help':
