@@ -109,6 +109,7 @@ PrintFrequency(int A[], int n) - Print the frequency of each element of the arra
 Replace(int A[], int n, int x, int y) - Replaces all the 'x' elements in the array 'A' of size 'n' with 'y'.
 SearchPrime(int A[], int n) - Returns the position of the first occurence of a prime number in the array 'A' of size 'n'.
 27.c - Write a program that sorts an integer array in ascending or descending order, depending on user input.
+28.cpp - Program on Inheritance.
 (in 3 separate lines).
 [Java]
 1.java - A program to print 'Hello World!'.

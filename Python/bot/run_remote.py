@@ -1,16 +1,15 @@
 from flask import Flask
 from threading import Thread
 
-app = Flask('')
+web = Flask('')
 
-@app.route('/')
-
+@web.route('/')
 def home():
-  return "Running"
+   return 'Running'
 
 def run():
-  app.run(host='0.0.0.0',port=8080)
+  web.run(host='0.0.0.0',port=8080)
 
-def run_remote():
-  t = Thread(target=run)
-  t.start()
+def keep_alive():
+   run_thread = Thread(target=run)
+   run_thread.start()

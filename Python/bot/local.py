@@ -1,5 +1,7 @@
 import discord,os,time,math
 from dotenv import load_dotenv
+#For Remote bot
+#import run_remote
 
 load_dotenv()
 TOKEN = os.getenv('Local')
@@ -49,7 +51,6 @@ async def on_message(message):
             time.sleep(10)
             await botmsg.delete()
             await message.delete()
-
 
         else:
             '''
@@ -321,4 +322,6 @@ async def on_message(message):
                     await msgout.delete()
                     await message.delete()
 
+#for Remote bot
+#run_remote.keep_alive()
 client.run(TOKEN)
