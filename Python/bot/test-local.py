@@ -8,8 +8,8 @@ client = discord.Client()
 #Status
 @client.event
 async def on_ready():
-    await client.change_presence(status='online', activity=discord.Activity(type=discord.ActivityType.listening, name='Sayan'))
-    #await client.change_presence(status='idle', activity=discord.Activity(type=discord.ActivityType.listening, name='Sayan'))
+    #await client.change_presence(status='online', activity=discord.Activity(type=discord.ActivityType.listening, name='Sayan'))
+    await client.change_presence(status='idle', activity=discord.Activity(type=discord.ActivityType.listening, name='Sayan'))
     print('Local test bot running.')
 
 
