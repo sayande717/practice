@@ -2,7 +2,7 @@ import discord,os
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('Test_local')
+TOKEN = os.getenv('Test')
 client = discord.Client()
 
 #Status

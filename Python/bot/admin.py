@@ -13,7 +13,7 @@ Tasks:
 
 @client.event
 async def on_ready():
-    await client.change_presence(status='dnd', activity=discord.Activity(type=discord.ActivityType.watching, name='Server Status'))
+    await client.change_presence(status='dnd', activity=discord.Activity(type=discord.ActivityType.watching, name='Raspberry Pi'))
     print('Admin bot running.')
     #Type in a new channel ID here. Format: '<channel-name>',<Channel ID>
     '''
