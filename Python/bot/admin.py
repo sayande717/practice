@@ -13,14 +13,8 @@ Tasks:
 
 @client.event
 async def on_ready():
-    await client.change_presence(status='dnd', activity=discord.Activity(type=discord.ActivityType.watching, name='Raspberry Pi'))
+    await client.change_presence(status='dnd')
     print('Admin bot running.')
-    #Type in a new channel ID here. Format: '<channel-name>',<Channel ID>
-    '''
-    ch = client.get_channel(982255693748908062)
-    sendmsg = await ch.send("5. channel-name -> 00000000")
-    await sendmsg.pin()
-    '''
 
 @client.event
 async def on_message(message):
