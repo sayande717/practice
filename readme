@@ -117,3 +117,8 @@ SearchPrime(int A[], int n) - Returns the position of the first occurence of a p
 
 [HTML] - 
 info.html
+1.html - Basic HTML page structure, headings & paragraphs.
+
+[JavaScript] - 
+1.js - In-line & Multi-line comments.
+2.js - Data types, assigning & declaring variables, console.log().
