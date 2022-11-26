@@ -1,6 +1,5 @@
 [External] -
 [HTML]
-Local site - http://10.0.17.5:86/
 [bot] -> [/Discord Bot (line: 7)]
 
 [Python]
@@ -111,14 +110,77 @@ SearchPrime(int A[], int n) - Returns the position of the first occurence of a p
 29.c - Program to demonstrate pointers.
 30.c - Program to increase the value of a variable by 20, using pointers.
 (in 3 separate lines).
+
 [Java]
 1.java - A program to print 'Hello World!'.
 2.java - A program to demonstrate single inheritance.
+3.java - Take variables as input using Scanner class.
+4.java - Data types.
+5.java - Type Casting
+6.java - Calculate the number of occurences of a digit in a number.
+7.java - Reverse a number.
+8.java - Calculator program, takes user input till user enters 'x' or 'X'.
+9.java - String functions - 
+equals(),equalsIgnoreCase()
+10.java - Switch statement (old).
+11.java - Switch statement (new).
+12.java - Nested Switch case.
+13.java - Functions in java.
+
 
 [HTML] - 
 info.html
-1.html - Basic HTML page structure, headings & paragraphs.
+1.html - Basic HTML page structure, headings, paragraphs and line breaks.
+2.html - White space Collapsing.
+3.html - Working with images.
+4.html - IDs, external, internal, empty links.
+5.html - Superscript, subscript, strong (bold), emphasis (italics) elements, special characters.
+6.html - Unordered & ordered list.
+7.html - Table.
+8.html - Forms & select box
+9.html - Using CSS Scripts in HTML
+10.html - Using an external CSS file (1.css). Defining classes for use in CSS.
+
+[./Coffee\ Junkie] - Company webpage
+index.html - Main page
+numbers.html - Stats
+contact.html - Contact form
+about.html - About page
+
+[CSS] - 
+1.css -> 10.html - Basic CSS Syntax.
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.
 2.js - Data types, assigning & declaring variables, console.log().
+3.js - Camel case.
+4.js - Working with numbers.
+5.js - Compound assignment & augmented addition.
+6.js - Using escape character in a string.
+7.js - Escape sequences.
+8.js - Appending variables to string & finding it's length.
+9.js - String immutability (individual characters cannot be changed).
+10.js - Arrays
+11.js - Array functions: push(),pop(),shift(),unshift().
+12.js - Example of a nested array: Shopping List.
+13.js - Functions, local and global variables.
+14.js - Simulating a queue & JSON Stringify (a way to convert arrays to strings).
+15.js - If condition.
+16.js - Strict equality & strict inequality operator. (===)
+17.js - Switch case
+18.js - Returning boolean values from functions i.e. using return instead of if else.
+19.js - Returning undefined for invalid inputs.
+20.js - Counting cards.
+21.js - Objects in JavaScript.
+
+[./bot]
+> Discord
+./src/test-bot.js - Test bot
+readme.js - Tells you what all that jargon means.
+
+[Shell] - 
+1.sh - $var vs var, where to use which.
+
+[Android] - 
+> ./testapp - First app.
+./MainActivity.kt - Contains all basic code information.

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+    <!--action = What to do, method = How to submit-->
+        <label for="def2">Name</label>
+        <input type="text" name="Something" placeholder="Name" id="def2">
+        <!--
+        type=What type of input? button, submit, text, etc.
+        name = Name of the input, used for collecting the data
+        placeholder = Tells the user what the input is for (displayed inside the text box), disappears when the user starts inputting text.
+
+        Types of values:
+        value = The value is submitted to the backend.
+        1. Used for labelling buttons (including submit button)
+        2. Used in text boxes (incl. mail) when we want to predefine some text in the input text box.
+        <label>Label</label> = Used for general labelling for ex. text boxes, bullets, etc. It can be used without or without an ID.
+
+        For checkbox & radio = Use the 'checked' tag to select/tick it by default.
+        -->
+        <br>
+        <label for="def">First Name</label>
+        <input type="text" name="Thing 2" placeholder="Name 2" id="def">
+        <!--Here, we created a label 'First Name' for the ID 'def'.-->
+        <br>
+        <label for='mail'>E-mail ID</label>
+        <input type="email" placeholder="Enter your Email ID" value="Mail"><br>
+        <label for='mail'>E-mail ID 2</label>
+        <input type="email" placeholder="Enter your Email ID" value="email@email.com" id="mail">
+        <br>
+        <input type="submit" value="Submit here">
+    </form>
+    <br><br>
+    <form>
+        <!--Here, the name="" should match so that it only allows the user to select one of the available options.-->
+        <input type="radio" name="r1">Radio 1<br>
+        <!--Using the 'checked' tag-->
+        <input type="radio" name="r1" checked>
+        <label>Radio 2</label><br>
+    </form>
+    <br>
+    <form>
+        <input type="checkbox">Java<br>
+        <!--Using the 'checked' tag-->
+        <input type="checkbox" checked>Python<br>
+        <input type="checkbox">JavaScript
+    </form>
+    <!--Using the select box, where multiple options are provided to the user for selection-->
+    <select>
+        <option value="javascript">JavaScript</option>
+        <option>Python</option>
+        <option>Java</option>
+    </select>
+</body>
+</html>

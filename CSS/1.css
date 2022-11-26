@@ -1,0 +1,35 @@
+/*
+h2 //Selector
+{
+    Property: value;
+    color: blue;
+} 
+*/
+h2
+{
+    background: yellow;
+    color:blue;
+    width: 200px;
+    height: 150px;
+}
+/*Defining properties of classes (.class) */
+.clr
+{
+    background: orchid;
+}
+/*
+Define properties for a particular tag within a class.
+.class tag { }
+*/
+.newlayout div
+{
+    background-color: aqua;
+    border: 2px dotted black;
+    height: 20px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/*
+Define ID's using (#id)
+*/
