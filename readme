@@ -112,6 +112,10 @@ SearchPrime(int A[], int n) - Returns the position of the first occurence of a p
 (in 3 separate lines).
 
 [Java]
+[Run the code]:
+$ javac file.java
+$ java file //file.class
+
 1.java - A program to print 'Hello World!'.
 2.java - A program to demonstrate single inheritance.
 3.java - Take variables as input using Scanner class.
@@ -126,7 +130,20 @@ equals(),equalsIgnoreCase()
 11.java - Switch statement (new).
 12.java - Nested Switch case.
 13.java - Functions in java.
+14.java - Enhanced for loop, printing array without for loop.
+15.java - Take 2D array as input, print it using enhanced for loop.
+16.java - 1D & 2D ArrayLists in Java (when number of array elements isn't known).
+17.java - Reverse the array.
 
+[Kotlin]
+[Run the code]:
+$ kotlinc file.java
+$ kotlin file.class //file.class
+OR
+$ kotlin file //file.class
+
+1.kt - Hello, World!
+2.kt - Types of variables, printing variables, function declaration.
 
 [HTML] - 
 info.html
