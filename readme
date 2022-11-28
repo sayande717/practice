@@ -134,6 +134,8 @@ equals(),equalsIgnoreCase()
 15.java - Take 2D array as input, print it using enhanced for loop.
 16.java - 1D & 2D ArrayLists in Java (when number of array elements isn't known).
 17.java - Reverse the array.
+18.java - Input elements to an ArrayList.
+19.java - Linear Search.
 
 [Kotlin]
 [Run the code]:
@@ -143,7 +145,18 @@ OR
 $ kotlin file //file.class
 
 1.kt - Hello, World!
-2.kt - Types of variables, printing variables, function declaration.
+2.kt - 
+> Types of variables
+> Printing variables 
+> Function declaration
+> Shorthand functions
+3.kt -
+> Overloaded functions
+> Functions with parameters with default value
+4.kt -
+> Initialising variables for use later (kinda like int a; ... a = 12; in Java)
+> Creating mutable & non-mutable lists.
+> Working on lists - finding length, printing each element.
 
 [HTML] - 
 info.html
@@ -165,7 +178,10 @@ contact.html - Contact form
 about.html - About page
 
 [CSS] - 
-1.css -> 10.html - Basic CSS Syntax.
+1.css -> 10.html - 
+> Basic CSS Syntax.
+> Defining properties for tags and classes.
+> Using FlexBox.
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.

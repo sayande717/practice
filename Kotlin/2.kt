@@ -1,29 +1,23 @@
-/*
- * var = Variables ie value can be changed.
- * val = Constants ie value cannot be changed.
- * Function syntax:
- * fun <function-name> (<var-1>:<DataType>,<var-2>:<DataType>):<Function-Return-Type> { <Body> }
- * For functions with no return type, the default type is 'Unit'.
- * It's set to 'Unit' for such functions by default.
- */
-fun calc(n1: Int, n2: Int): Int {
-    return n1 + n2
+/* Function declaration:
+ * fun sum(var1:DataType1,var2:DataType2):DataType3
+ * DataType1,DataType2 = Data types of the variables var1 & var2.
+ * DataType3 = Return type / Data type of the function.
+ * */
+fun sum(a:Int,b:Int):Int
+{
+    return (a+b);
 }
-
+//Shorthand method, when there is only 1 line in the function.
+fun sum2(a:Int,b:Int) = (a+b);
 fun main()
 {
-    var num1 = 12
-    var num2 = 8
-    //Print numbers using $var
-    println("1st number: $num1")
-    println("2nd number: $num2")
-    /* 
-     * Any operations within println is to be placed within ${}
-     * Syntax 1: ${num1 <oper> num2}
-     * Syntax 2: ${function(num1,num2)}
+    /*
+     * var = Value can be changed.
+     * val = Constant, value cannot be changed. 
      * 
-     */
-    println("Addition 1: ${num1+num2}")
-    //Syntax: ${function(num1,num2)}
-    println("Addition 2: ${calc(num1,num2)}")
+     * */
+    var a = 20;
+    val b = 30;
+    //Precede variables/constants with $.
+    println("Sum: ${sum(a,b)}")
 }

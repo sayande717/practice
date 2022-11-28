@@ -21,15 +21,60 @@ h2
 Define properties for a particular tag within a class.
 .class tag { }
 */
-.newlayout div
+.flexlayout {
+    display: flex;
+    /* FlexBox
+     * Main access: Row
+     * flex-basis will work in this direction.
+     */
+    flex-direction: row;
+}
+
+.flexlayout div
 {
     background-color: aqua;
     border: 2px dotted black;
+    /* Here, width is ignored. */
+    flex-basis: 150px;
+
+    /* By default, flexbox will try to adjust the size of every single item according to the size of the container. But we can change this using 'flex-shrink' 
+    Values:
+    .first //The first div / box.
+    {
+        flex-shrink: 0; - Don't shrink at all.
+        flex-shrink: 0.5; - Shrink only half as much.
+        flex-shrink: 2; - Shrink twice as fast.
+    }
+    flex-wrap: wrap; Wrap the div.
+    */
+    width: 40px;
     height: 20px;
     margin: 10px;
+    
     font-size: 16px;
 }
 
 /*
 Define ID's using (#id)
 */
+#parent
+{
+    display: flex;
+    background: red;
+    width: 500px;
+    height: 250px;
+    /* align-items: Just aligns the items
+     * justify-content: Works in the main access direction.
+     */
+    align-items: center;
+    justify-content: center;
+}
+
+#child
+{
+    background: rgb(255, 255, 0);
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
