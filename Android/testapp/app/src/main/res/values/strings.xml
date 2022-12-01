@@ -2,4 +2,9 @@
     <string name="app_name">Test App</string>
     <string name="welcome">hey, enter name wen</string>
     <string name="next">Next!</string>
+    <string name="offer_page_text">
+        Wonderful offers for you!
+        \n1. Something
+        \n2. Something else
+    </string>
 </resources>

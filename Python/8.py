@@ -1,0 +1,10 @@
+name = input('Enter name: ')
+age = int(input('Enter age: '))
+print()
+print('Name: ',name)
+print('Age: ',age)
+#Print the data types of the variables.
+print()
+print('Data Types: ')
+print(type(name))
+print(type(age))

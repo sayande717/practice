@@ -3,24 +3,32 @@ package com.sayan.testapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.util.logging.Level.INFO
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        /* Log a message
+         * Use Log.i("Tag","Message") to log the message.
+         * Use logcat to see the logs.
+         */
+        Log.i("TAG","MainActivity : OnCreate")
         /*
          * val = read-only value
          * findViewById = Find the UI element by ID
          * TextView, EditText, Button, etc. = Element Type
          * R.id.<id> = This is how you link the element with the static variable.
          */
+
         val greetingTextView = findViewById<TextView>(R.id.textView)
         val inputfield = findViewById<EditText>(R.id.username)
         val submitbutton = findViewById<Button>(R.id.btnsubmit)
@@ -34,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         submitbutton.setOnClickListener()
         {
             enteredName = inputfield.text.toString()
-            if (enteredName == "")
+            if (enteredName.isEmpty())
             {
                 //Make the offers button invisible.
                 offersbutton.visibility = INVISIBLE
@@ -68,11 +76,36 @@ class MainActivity : AppCompatActivity() {
             /*
              * intent = the object of class Intent.
              * this = The package context.
-             * second_activity::class.java - the 2nd file ie screen
+             * Activity2::class.java - the 2nd file ie screen
+             * startActivity: Start this activity.
              */
-            val intent = Intent(this,SecondActivity::class.java)
+            val intent = Intent(this,Activity2::class.java)
+            //Send something to some other kotlin file, like the 2nd activity here.
             intent.putExtra("USER",enteredName)
             startActivity(intent)
         }
+    }
+
+    override fun onStart()
+    {
+        super.onStart()
+        Log.i("MYTAG","Activity started")
+    }
+
+    override fun onPause()
+    {
+        super.onPause()
+        Log.i("MYTAG","Activity paused")
+    }
+    override fun onStop()
+    {
+        super.onStop()
+        Log.i("MYTAG","Activity stopped")
+    }
+
+    override fun onDestroy()
+    {
+        super.onDestroy()
+        Log.i("MYTAG","Activity destroyed")
     }
 }

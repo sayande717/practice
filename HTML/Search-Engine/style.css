@@ -1,0 +1,35 @@
+#topnavbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+#midsection
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Needed for flex-grow to work */
+    height: 80vh;
+}
+
+
+#bottomnavbar
+{
+    display: flex;
+    flex-shrink: 0;
+}
+
+#midsection ul li,
+#bottomnavbar ul li,
+#topnavbar ul li 
+{
+    list-style: none;
+    display: inline-block;
+    font-weight: bold;
+    color: blue;
+}

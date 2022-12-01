@@ -53,7 +53,10 @@ c. Variations of the for loop.
 a. Finding list length.
 b. Sort the list in ascending & descending (reverse) order.
 5.py: Error detection using try-except.
-6.py: Create a dictionary, print values,
+6.py: Create a dictionary, print values.
+7.py: Print a single element multiple times.
+8.py: Taking variables as input.
+9.py: Print the data types of the variables.
 
 [C] -
 notes.txt - 
@@ -136,6 +139,12 @@ equals(),equalsIgnoreCase()
 17.java - Reverse the array.
 18.java - Input elements to an ArrayList.
 19.java - Linear Search.
+20.java - Search for a character in a String.
+21.java - Find the maximum and minimum number.
+22.java - Find the minimum and maximum number of each array in a 2D array.
+23.java - LeetCode [1295. Find Numbers with Even Number of Digits] [https://leetcode.com/problems/find-numbers-with-even-number-of-digits/submissions/]
+24.java - Calculating number of digits using Math.log().
+25.java - Binary Search.
 
 [Kotlin]
 [Run the code]:
@@ -171,11 +180,15 @@ info.html
 9.html - Using CSS Scripts in HTML
 10.html - Using an external CSS file (1.css). Defining classes for use in CSS.
 
-[./Coffee\ Junkie] - Company webpage
+[./Coffee-Junkie]- Company webpage
 index.html - Main page
 numbers.html - Stats
 contact.html - Contact form
 about.html - About page
+
+[./Search-Engine] - Search Engine
+index.html - Main page
+style.css - CSS StyleSheet
 
 [CSS] - 
 1.css -> 10.html - 
