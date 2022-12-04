@@ -146,6 +146,167 @@ equals(),equalsIgnoreCase()
 24.java - Calculating number of digits using Math.log().
 25.java - Binary Search.
 
+[DSA BootCamp: Assignment-02]
+26.java - Write a program to print whether a number is even or odd, also take input from the user.
+27.java - Take name as input and print a greeting message for that particular name.
+28.java - Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+29.java - Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
+30.java - Take 2 numbers as input and print the largest number.
+31.java - Input currency in rupees and output in USD.
+[Not Done]
+32.java - To calculate Fibonacci Series up to n numbers.
+33.java - To find out whether the given String is Palindrome or not.
+34.java - To find Armstrong Number between two given number.
+
+[DSA BootCamp: Assignment-03]
+[Easy]
+35.java - Area Of Circle Java Program
+36.java - Area Of Triangle
+37.java - Area Of Rectangle Program
+38.java - Area Of Isosceles Triangle
+39.java - Area Of Parallelogram
+40.java - Area Of Rhombus
+31.java - Area Of Equilateral Triangle
+42.java - Perimeter Of Circle
+43.java - Perimeter Of Equilateral Triangle
+44.java - Perimeter Of Parallelogram
+45.java - Perimeter Of Rectangle
+46.java - Perimeter Of Square
+47.java - Perimeter Of Rhombus
+48.java - Volume Of Cone Java Program
+49.java - Volume Of Prism
+50.java - Volume Of Cylinder
+51.java - Volume Of Sphere
+52.java - Volume Of Pyramid
+53.java - Curved Surface Area Of Cylinder
+54.java - Total Surface Area Of Cube
+55.java - Fibonacci Series In Java Programs
+56.java - Subtract the Product and Sum of Digits of an Integer
+57.java - Input a number and print all the factors of that number (use loops).
+58.java - Take integer inputs till the user enters 0 and print the sum of all numbers (HINT: while loop)
+59.java - Take integer inputs till the user enters 0 and print the largest number from all.
+60.java - Addition Of Two Numbers 
+[Intermediate]
+61.java - Factorial Program In Java
+62.java - Calculate Electricity Bill
+63.java - Calculate Average Of N Numbers
+64.java - Calculate Discount Of Product
+65.java - Calculate Distance Between Two Points
+66.java - Calculate Commission Percentage
+67.java - Power In Java
+68.java - Calculate Depreciation of Value
+69.java - Calculate Batting Average
+70.java - 61.java - Calculate CGPA Java Program
+71.java - Compound Interest Java Program
+72.java - Calculate Average Marks
+73.java - Sum Of N Numbers
+74.java - Armstrong Number In Java
+75.java - Find Ncr & Npr
+76.java - Reverse A String In Java
+77.java - Find if a number is palindrome or not
+78.java - Future Investment Value
+79.java - HCF Of Two Numbers Program
+80.java - LCM Of Two Numbers
+81.java - Java Program Vowel Or Consonant
+82.java - Perfect Number In Java
+83.java - Check Leap Year Or Not
+84.java - Sum Of A Digits Of Number
+85.java - Kunal is allowed to go out with his friends only on the even days of a given month. Write a program to count the number of days he can go out in the month of August.
+86.java - Write a program to print the sum of negative numbers, sum of positive even numbers and the sum of positive odd numbers from a list of numbers (N) entered by the user. The list terminates when the user enters a zero.
+
+[DSA BootCamp: Assignment-03]
+87.java - Define two methods to print the maximum and the minimum number respectively among three numbers entered by the user.
+88.java - Define a program to find out whether a given number is even or odd.
+89.java - A person is eligible to vote if his/her age is greater than or equal to 18. Define a method to find out if he/she is eligible to vote.
+90.java - Write a program to print the sum of two numbers entered by user by defining your own method.
+91.java - Define a method that returns the product of two numbers entered by user.
+92.java - Write a program to print the circumference and area of a circle of radius entered by user by defining your own method.
+93.java - Define a method to find out if a number is prime or not.
+94.java - Write a program that will ask the user to enter his/her marks (out of 100). Define a method that will display grades according to the marks entered as below: 
+Marks  Grade
+91-100  AA 
+81-90   AB 
+71-80   BB 
+61-70   BC 
+51-60   CD 
+41-50   DD
+
+[DSA BootCamp: Assignment-04]
+95.java - Write a program to print the factorial of a number by defining a method named ‘Factorial’.
+96.java - Write a function to find if a number is a palindrome or not. Take number as parameter.
+97.java - Convert the programs in flow of program, first java, conditionals & loops assignments into functions.
+98.java - Write a function to check if a given triplet is a Pythagorean triplet or not. (A Pythagorean triplet is when the sum of the square of two numbers is equal to the square of the third number).
+99.java - Write a function that returns all prime numbers between two given numbers.
+100.java - Write a function that returns the sum of first n natural numbers.
+
+[DSA BootCamp: Assignment-05]
+101.java - Build Array from Permutation
+102.java - Concatenation of Array
+103.java - Running Sum of 1d Array
+104.java - Richest Customer Wealth
+105.java - Shuffle the Array
+106.java - Kids With the Greatest Number of Candies
+107.java - Number of Good Pairs
+108.java - How Many Numbers Are Smaller Than the Current Number
+109.java - Create Target Array in the Given Order
+110.java - Check if the Sentence Is Pangram
+111.java - Count Items Matching a Rule
+112.java - Find the Highest Altitude
+113.java - Flipping an Image
+114.java - Cells with Odd Values in a Matrix
+115.java - Matrix Diagonal Sum
+116.java - Find Numbers with Even Number of Digits
+117.java - Transpose Matrix
+118.java - Add to Array-Form of Integer
+119.java - Maximum Population Year
+120.java - Determine Whether Matrix Can Be Obtained By Rotation
+121.java - Two Sum
+122.java - Find N Unique Integers Sum up to Zero
+123.java - Lucky Number In a Matrix
+124.java - Maximum Subarray
+125.java - Reshape the Matrix
+126.java - Plus One
+127.java - Remove Duplicates from Sorted Array
+128.java - Minimum Cost to Move Chips to The Same Position 
+
+[DSA BootCamp: Assignment-06]
+[Easy]
+129.java - Square Root
+130.java - Guess Number Higher or Lower
+131.java - First Bad Version
+132.java - Two Sum II - Input array is sorted
+133.java - Valid Perfect Square
+134.java - Arranging Coins(Easy)
+135.java - Find Smallest Letter Greater Than Target
+136.java - Kth Missing Positive Number
+137.java - Search Insert Position
+138.java - Peak Index in a Mountain Array
+139.java - Count Negative Numbers in a Sorted Matrix
+140.java - Intersection of Two Arrays
+141.java - Intersection of Two Arrays II
+142.java - Fair Candy Swap
+143.java - Check If N and Its Double Exist
+144.java - Special Array With X Elements Greater Than or Equal X
+145.java - Binary Search
+[Medium]
+146.java - Find First and Last Position of Element in Sorted Array
+147.java - Single Element in a Sorted Array
+148.java - Search in Rotated Sorted Array
+149.java - Search in Rotated Sorted Array II
+150.java - Find Minimum in Rotated Sorted Array
+151.java - Find Peak Element
+152.java - Find Right Interval
+153.java - Reach a Number
+154.java - Maximum Value at a Given Index in a Bounded Array
+155.java - Koko Eating Bananas
+156.java - Minimum Absolute Sum Difference
+157.java - Search a 2D Matrix
+158.java - Find a Peak Element II
+159.java - Frequency of the Most Frequent Element
+160.java - Find the Duplicate Number
+161.java - Capacity To Ship Packages Within D Days
+162.java - 4 Sum 
+
 [Kotlin]
 [Run the code]:
 $ kotlinc file.java
@@ -166,6 +327,11 @@ $ kotlin file //file.class
 > Initialising variables for use later (kinda like int a; ... a = 12; in Java)
 > Creating mutable & non-mutable lists.
 > Working on lists - finding length, printing each element.
+5.kt - Implementing OOP Concepts in Kotlin.
+> Creating a class
+> Creating an object of a class
+6.kt - Extending classes
+7.kt - Implementing interfaces in classes.
 
 [HTML] - 
 info.html
@@ -178,7 +344,11 @@ info.html
 7.html - Table.
 8.html - Forms & select box
 9.html - Using CSS Scripts in HTML
-10.html - Using an external CSS file (1.css). Defining classes for use in CSS.
+10.html <-> 1.css - Defining classes for use in CSS.
+11.html <-> 2.css (Absolute & Relative) Positioning in CSS:
+> Absolute & Relative
+> Fixed
+> Sticky
 
 [./Coffee-Junkie]- Company webpage
 index.html - Main page
@@ -188,6 +358,7 @@ about.html - About page
 
 [./Search-Engine] - Search Engine
 index.html - Main page
+about.html - About page
 style.css - CSS StyleSheet
 
 [CSS] - 
@@ -195,6 +366,7 @@ style.css - CSS StyleSheet
 > Basic CSS Syntax.
 > Defining properties for tags and classes.
 > Using FlexBox.
+2.css -> 11.html
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.
@@ -218,6 +390,8 @@ style.css - CSS StyleSheet
 19.js - Returning undefined for invalid inputs.
 20.js - Counting cards.
 21.js - Objects in JavaScript.
+22.js - Variables in JavaScript, typeof
+23.js - a to the power of b (a^b)
 
 [./bot]
 > Discord

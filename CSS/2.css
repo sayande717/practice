@@ -1,0 +1,62 @@
+#pos1 #pos2
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#pos1
+{
+    /* Position: relative.
+     * Positions 'pos2' in a relative position wrt the block 'pos1'.
+     */
+    position: relative;
+    background-color: blue;
+    width: 100px;
+    height: 200px;
+
+}
+
+#pos2
+{
+    /* Absolute position wrt the container.
+     * Also check #pos1 for relative positioning.
+     */
+    position: absolute;
+    background-color: beige;
+    width: 100px;
+    height: 50px;
+    /* Left & right offsets of this block. */
+    top: 20px;
+    left: 20px;
+}
+
+/* Fixed position
+ * The section does not move from it's position even we scroll the page.
+ */
+#pos3
+{
+    position: fixed;
+    background-color: teal;
+    height: 20vw;
+    width: 30vw;
+    top: 10px;
+}
+/* Position: Sticky
+ * The element 'sticks' to the website once we start scrolling the page.
+ * top: 0 - This tells the browser where the section should stick when the page is scrolled.
+ */
+#pos4
+{
+    position: sticky;
+    top: 0px;
+    background-color: rgb(202, 202, 12);
+    width: 100%;
+    font-weight: bold;
+}
+
+#pos5
+{
+    background-color: blue;
+    height: 200vh;
+    width: 400vh;
+}

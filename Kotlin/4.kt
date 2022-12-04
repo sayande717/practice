@@ -1,7 +1,9 @@
 fun main()
 {
-    //Initialising the variable
+    //Initialising the variable.
     var age:Int
+    //Initialising a private variable.
+    private var variable = 24
     //Assigning a value to it.
     age = 12;
     println("Age: $age")
