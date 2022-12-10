@@ -1,6 +1,7 @@
 package com.sayan.testapp
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +11,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import java.util.logging.Level.INFO
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?)
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
          */
 
         val greetingTextView = findViewById<TextView>(R.id.textView)
-        val inputfield = findViewById<EditText>(R.id.username)
+        val inputField = findViewById<EditText>(R.id.username)
         val submitbutton = findViewById<Button>(R.id.btnsubmit)
         val offersbutton = findViewById<Button>(R.id.btnoffers)
         var enteredName = ""
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
          */
         submitbutton.setOnClickListener()
         {
-            enteredName = inputfield.text.toString()
+            enteredName = inputField.text.toString()
             if (enteredName.isEmpty())
             {
                 //Make the offers button invisible.
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                 // $enteredName = In Kotlin, all variables are referred to by $ sign, ex. $var
                 val msg = "Welcome, $enteredName!"
                 greetingTextView.text = msg
-                inputfield.text.clear()
+                inputField.text.clear()
                 //Make the offers button visible.
                 offersbutton.visibility = VISIBLE
             }
@@ -84,23 +84,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("USER",enteredName)
             startActivity(intent)
         }
-    }
-
-    override fun onStart()
-    {
-        super.onStart()
-        Log.i("MYTAG","Activity started")
-    }
-
-    override fun onPause()
-    {
-        super.onPause()
-        Log.i("MYTAG","Activity paused")
-    }
-    override fun onStop()
-    {
-        super.onStop()
-        Log.i("MYTAG","Activity stopped")
     }
 
     override fun onDestroy()
