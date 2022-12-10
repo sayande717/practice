@@ -65,3 +65,26 @@
     font-size: 21px;
     text-align: justify;
 }
+
+/* For search-page.html */
+
+#srchpg
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(163, 157, 157);
+    flex-grow: 1;
+}
+
+
+#srchpg .topicon
+{
+    height: 40px;
+}
+
+#srchpg .toplist
+{
+    list-style-type: none;
+    float: right;
+    
+}

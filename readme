@@ -57,6 +57,19 @@ b. Sort the list in ascending & descending (reverse) order.
 7.py: Print a single element multiple times.
 8.py: Taking variables as input.
 9.py: Print the data types of the variables.
+10.py: Multi-line strings.
+11.py: Printing characters at a specific index in a string.
+12.py: Formatting Strings
+13.py: String methods.
+14.py: Print 'Eligible for Loan' if the applicant has high income and cood credit.
+15.py: Weight Convertor.
+16.py: While loop
+17.py: Guessing game, if the user guesses the correct number, he wins.
+18.py: Car Game!
+19.py: For loops
+20.py: Printing the alphabet 'F' & 'L' using for loop.
+21.py: Find the largest element in a list
+22.py: Linear Search
 
 [C] -
 notes.txt - 
@@ -153,10 +166,9 @@ equals(),equalsIgnoreCase()
 29.java - Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
 30.java - Take 2 numbers as input and print the largest number.
 31.java - Input currency in rupees and output in USD.
-[Not Done]
 32.java - To calculate Fibonacci Series up to n numbers.
 33.java - To find out whether the given String is Palindrome or not.
-34.java - To find Armstrong Number between two given number.
+34.java - To find Armstrong Number between two given numbers.
 
 [DSA BootCamp: Assignment-03]
 [Easy]
@@ -164,9 +176,10 @@ equals(),equalsIgnoreCase()
 36.java - Area Of Triangle
 37.java - Area Of Rectangle Program
 38.java - Area Of Isosceles Triangle
+[Not Done]
 39.java - Area Of Parallelogram
 40.java - Area Of Rhombus
-31.java - Area Of Equilateral Triangle
+41.java - Area Of Equilateral Triangle
 42.java - Perimeter Of Circle
 43.java - Perimeter Of Equilateral Triangle
 44.java - Perimeter Of Parallelogram
@@ -306,6 +319,8 @@ Marks  Grade
 160.java - Find the Duplicate Number
 161.java - Capacity To Ship Packages Within D Days
 162.java - 4 Sum 
+163.java - Binary Search in 2D Arrays
+164.java - Binary Search in 2D array, where both the rows & columns are sorted.
 
 [Kotlin]
 [Run the code]:
@@ -349,6 +364,8 @@ info.html
 > Absolute & Relative
 > Fixed
 > Sticky
+12.html <-> 3.css, 29.js - Basic JavaScript funcitonality demonstration.
+13.html <-> 4.css, 30.js - Counter page.
 
 [./Coffee-Junkie]- Company webpage
 index.html - Main page
@@ -367,6 +384,7 @@ style.css - CSS StyleSheet
 > Defining properties for tags and classes.
 > Using FlexBox.
 2.css -> 11.html
+3.css -> 12.html
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.
@@ -390,8 +408,21 @@ style.css - CSS StyleSheet
 19.js - Returning undefined for invalid inputs.
 20.js - Counting cards.
 21.js - Objects in JavaScript.
+27.js - Objects are called by reference, primitive values are called by value.
 22.js - Variables in JavaScript, typeof
 23.js - a to the power of b (a^b)
+24.js - Working with boolean values.
+25.js - Binary Search
+26.js - Linear Search
+28.js - Local variable is prioritised over global variable, if both have the same variable name.
+29.js - [HTML] Information about how JavaScript works with HTML.
+> Iterating a single item
+> Iterating a list of items
+> using for loop to change values of elements.
+> querySelector(), querySelectorAll()
+> getElementById()
+> var.innerText
+> addEventListener()
 
 [./bot]
 > Discord
@@ -400,6 +431,7 @@ readme.js - Tells you what all that jargon means.
 
 [Shell] - 
 1.sh - $var vs var, where to use which.
+2.sh - Switch Case in Shell.
 
 [Android] - 
 > ./testapp - First app.

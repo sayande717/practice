@@ -1,0 +1,16 @@
+#titleTop
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(87, 18, 121);
+}
+
+#valueRow
+{
+    font-size: 24px;
+    color: rgb(87, 18, 121);
+    padding-bottom: 10px;
+}
