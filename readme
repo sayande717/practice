@@ -70,6 +70,14 @@ b. Sort the list in ascending & descending (reverse) order.
 20.py: Printing the alphabet 'F' & 'L' using for loop.
 21.py: Find the largest element in a list
 22.py: Linear Search
+23.py: Binary Search
+24.py: 2D lists
+25.py: Operations on lists
+26.py: Insert only those numbers in the 2nd list, which are not present in the 1st list.
+27.py: Tuples in Python
+28.py: Dictionary
+29.py: Input a number, return the numbers in words.
+30.py: Keyword parameters in functions.
 
 [C] -
 notes.txt - 
@@ -321,6 +329,11 @@ Marks  Grade
 162.java - 4 Sum 
 163.java - Binary Search in 2D Arrays
 164.java - Binary Search in 2D array, where both the rows & columns are sorted.
+[[10,20,30,40],
+ [15,25,35,45],
+ [28,29,37,49],
+ [33,34,38,50]]
+ 165.java - Binary Search in a strictly sorted 2D Array.
 
 [Kotlin]
 [Run the code]:
@@ -366,6 +379,11 @@ info.html
 > Sticky
 12.html <-> 3.css, 29.js - Basic JavaScript funcitonality demonstration.
 13.html <-> 4.css, 30.js - Counter page.
+14.html <-> 5.css, 31.js - Removing elements from the counter page.
+[./Unit-Convertor]
+index.html - Main page
+style.css
+script.js
 
 [./Coffee-Junkie]- Company webpage
 index.html - Main page

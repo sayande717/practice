@@ -4,3 +4,4 @@ Multi-line comment
 console.log('Hello world!')
 console.log('Hello!')
 */
+var number2 = 20;

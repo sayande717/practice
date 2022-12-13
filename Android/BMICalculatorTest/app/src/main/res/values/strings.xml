@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BMI Calculator Test</string>
+    <string name="appTitle">BMI Calculator!</string>
+    <string name="heightTitle">Enter height: </string>
+    <string name="heightUnit">cm</string>
+    <string name="weightTitle">Enter weight: </string>
+    <string name="weightUnit">kg</string>
+    <string name="buttonSubmit">Calculate</string>
+</resources>

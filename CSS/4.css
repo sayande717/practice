@@ -8,9 +8,22 @@
     color: rgb(87, 18, 121);
 }
 
-#valueRow
+#mainBody {
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mainBody #valueRow
 {
     font-size: 24px;
-    color: rgb(87, 18, 121);
-    padding-bottom: 10px;
+    color: rgb(4, 7, 179);
+}
+
+#mainBody #buttonRow {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
 }
