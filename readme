@@ -78,6 +78,8 @@ b. Sort the list in ascending & descending (reverse) order.
 28.py: Dictionary
 29.py: Input a number, return the numbers in words.
 30.py: Keyword parameters in functions.
+31.py: Unit Convertor. Functions:
+Temperature
 
 [C] -
 notes.txt - 
@@ -184,7 +186,6 @@ equals(),equalsIgnoreCase()
 36.java - Area Of Triangle
 37.java - Area Of Rectangle Program
 38.java - Area Of Isosceles Triangle
-[Not Done]
 39.java - Area Of Parallelogram
 40.java - Area Of Rhombus
 41.java - Area Of Equilateral Triangle
@@ -199,6 +200,7 @@ equals(),equalsIgnoreCase()
 50.java - Volume Of Cylinder
 51.java - Volume Of Sphere
 52.java - Volume Of Pyramid
+[Not Done]
 53.java - Curved Surface Area Of Cylinder
 54.java - Total Surface Area Of Cube
 55.java - Fibonacci Series In Java Programs
@@ -333,7 +335,12 @@ Marks  Grade
  [15,25,35,45],
  [28,29,37,49],
  [33,34,38,50]]
- 165.java - Binary Search in a strictly sorted 2D Array.
+ 165.java - Binary Search in a strictly sorted 2D Array. //Check once.
+ Ex.
+ [[1,2,3,4],
+  [7,8,9,10],
+  [21,22,23,24],
+  [54,55,56,57]]
 
 [Kotlin]
 [Run the code]:
@@ -380,6 +387,7 @@ info.html
 12.html <-> 3.css, 29.js - Basic JavaScript funcitonality demonstration.
 13.html <-> 4.css, 30.js - Counter page.
 14.html <-> 5.css, 31.js - Removing elements from the counter page.
+15.html <-> 6.css, 32.js - Counter page, setting CSS styles from within JavaScript.
 [./Unit-Convertor]
 index.html - Main page
 style.css
@@ -397,12 +405,10 @@ about.html - About page
 style.css - CSS StyleSheet
 
 [CSS] - 
-1.css -> 10.html - 
+1.css -> 10.html
 > Basic CSS Syntax.
 > Defining properties for tags and classes.
 > Using FlexBox.
-2.css -> 11.html
-3.css -> 12.html
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.
@@ -441,6 +447,12 @@ style.css - CSS StyleSheet
 > getElementById()
 > var.innerText
 > addEventListener()
+33.js - ES6 (ECMA Script v6), array destructuring
+34.js - Arrow Functions in ES6
+35.js - Using arrow function to return if a number is even or odd.
+36.js - Array functions
+37.js - Multi-line strings in ES6.
+38.js - Using Array functions & Arrow functions to filter out the even and odd numbers in an array.
 
 [./bot]
 > Discord

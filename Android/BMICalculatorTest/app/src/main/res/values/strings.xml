@@ -6,4 +6,5 @@
     <string name="weightTitle">Enter weight: </string>
     <string name="weightUnit">kg</string>
     <string name="buttonSubmit">Calculate</string>
+    <string name="resultTitle">BMI</string>
 </resources>

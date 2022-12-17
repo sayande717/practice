@@ -44,6 +44,7 @@ async def on_message(message):
                         ['ram','free -h'],
                         ['log2ram','df -h | grep log2ram'],
                         ['temp','vcgencmd measure_temp']]
+
         if msg == commandlist[0][0]:
                 await message.channel.send(commandlist[0][1])
         else:

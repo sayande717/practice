@@ -7,6 +7,21 @@
     android:background="@color/appBackground"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:textColor="@color/appText"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.459" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardWeight"
         android:layout_width="300dp"
@@ -89,7 +104,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/tvHeight"
@@ -139,35 +157,69 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btSubmit"
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/cardBackground"
         android:elevation="100dp"
         android:text="@string/buttonSubmit"
         android:textColor="@color/cardText"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardHeight"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.421" />
 
-    <TextView
-        android:id="@+id/textAppTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/appTitle"
-        android:textColor="@color/appText"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cardWeight"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="52dp"
+        app:cardBackgroundColor="@color/cardBackground"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tvResultTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resultTitle"
+                android:textAlignment="center"
+                android:textColor="@color/cardText"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="-123dp"
+                tools:layout_editor_absoluteY="610dp" />
+
+            <TextView
+                android:id="@+id/tvResultOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/cardText"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvResultDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/cardText" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

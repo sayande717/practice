@@ -1,7 +1,5 @@
 import discord,os,time,math
 from dotenv import load_dotenv
-#For Remote bot
-#import run_remote
 
 load_dotenv()
 TOKEN = os.getenv('Local')
@@ -321,7 +319,8 @@ async def on_message(message):
                     time.sleep(3)
                     await msgout.delete()
                     await message.delete()
+            # Delete all messages on the Lofi -> #bot-command-zone channel.
+            elif message.channel.id == 1052898474254938194:
+                await message.delete()
 
-#for Remote bot
-#run_remote.keep_alive()
 client.run(TOKEN)
