@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -16,33 +18,57 @@ class MainActivity : AppCompatActivity() {
         val submitButton = findViewById<Button>(R.id.btnSubmit)
 
         submitButton.setOnClickListener {
-            val weight = weightValue.text.toString().toFloat()
-            val height = heightValue.text.toString().toFloat() / 100
-            val bmi = String.format("%.2f",weight / (height * height)).toFloat()
-            displayResult(bmi)
+            var weight = weightValue.text.toString()
+            var height = heightValue.text.toString()
+            if(weight.isNullOrEmpty()) {
+                Toast.makeText(this,"Please input weight",Toast.LENGTH_LONG).show()
+            }
+            else if (height.isNullOrEmpty()) {
+                Toast.makeText(this,"Please input height",Toast.LENGTH_LONG).show()
+            }
+            else {
+                val valueHeight = height.toFloat() / 100
+                val valueWeight = weight.toFloat()
+                val bmi = String.format("%.2f",valueWeight / (valueHeight/100 * valueHeight)).toFloat()
+                displayResult(bmi)
+            }
+
         }
     }
+
     private fun displayResult(bmi: Float) {
         val resultOutput = findViewById<TextView>(R.id.tvResultOutput)
         val resultDescription = findViewById<TextView>(R.id.tvResultDesc)
         resultOutput.text = bmi.toString()
+
+        var resultText = ""
+        var color = 0
         if (bmi <= 18.5) {
-            resultDescription.text = "Underweight"
+            resultText = "Underweight"
+            color = R.color.resultUnderweight
         }
         else if (bmi <= 24.9) {
-            resultDescription.text = "Healthy Weight"
+            resultText = "Healthy Weight"
+            color = R.color.resultHealthy
         }
         else if (bmi <= 29.9) {
-            resultDescription.text = "Overweight"
+            resultText = "Overweight"
+            color = R.color.resultOverweight
         }
         else if (bmi <= 34.9) {
-            resultDescription.text = "Obese-Class 1"
+            resultText = "Obese-Class 1"
+            color = R.color.resultObese1
         }
         else if(bmi <= 39.9) {
-            resultDescription.text = "Obese-Class 2"
+            resultText = "Obese-Class 2"
+            color = R.color.resultObese2
         }
         else {
-            resultDescription.text = "Obese-Class 3"
+            resultText = "Obese-Class 3"
+            color = R.color.resultObese3
         }
+        // Set the colour of the textView.
+        resultDescription.setTextColor(ContextCompat.getColor(this,color))
+        resultDescription.text = resultText
     }
 }

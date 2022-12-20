@@ -204,6 +204,14 @@
                 tools:layout_editor_absoluteY="610dp" />
 
             <TextView
+                android:id="@+id/tvResultInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resultInfo"
+                android:textAlignment="center"
+                android:textColor="@color/cardText" />
+
+            <TextView
                 android:id="@+id/tvResultOutput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

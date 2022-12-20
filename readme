@@ -453,6 +453,7 @@ style.css - CSS StyleSheet
 36.js - Array functions
 37.js - Multi-line strings in ES6.
 38.js - Using Array functions & Arrow functions to filter out the even and odd numbers in an array.
+39.js <-> data.json - Fetch API and Promise object
 
 [./bot]
 > Discord
@@ -464,5 +465,8 @@ readme.js - Tells you what all that jargon means.
 2.sh - Switch Case in Shell.
 
 [Android] - 
-> ./testapp - First app.
-./MainActivity.kt - Contains all basic code information.
+> ./testapp - First app - Greet the user.
+> ./BMICalculatorTest - BMI Calculator
+> ./checkNumber - Check if the entered number is:
+a. Odd / Even
+b. Prime

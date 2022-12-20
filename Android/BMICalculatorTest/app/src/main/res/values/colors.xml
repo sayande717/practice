@@ -13,7 +13,8 @@
     <color name="cardText">#D7354334</color>
 <!--For Result-->
     <color name="resultUnderweight">#D7FF0000</color>
-    <color name="resultOverweight">#F6EA00</color>
+    <color name="resultHealthy">#5FFF3B</color>
+    <color name="resultOverweight">#F60031</color>
     <color name="resultObese1">#F49609</color>
     <color name="resultObese2">#F1760A</color>
     <color name="resultObese3">#F40909</color>

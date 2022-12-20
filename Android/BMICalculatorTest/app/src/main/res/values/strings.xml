@@ -7,4 +7,5 @@
     <string name="weightUnit">kg</string>
     <string name="buttonSubmit">Calculate</string>
     <string name="resultTitle">BMI</string>
+    <string name="resultInfo">Normal range: 18.5 - 24.9</string>
 </resources>
