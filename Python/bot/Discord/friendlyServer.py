@@ -1,14 +1,22 @@
-from common import getChannelID, getStrMistake
+# Import from common.py
+from common import getStrMistake, getChannelID, getMathResult
+
 from discord.ext import commands
 import discord
 import os
+
+# Import Bot Token
 from dotenv import load_dotenv
 load_dotenv()
-
 TOKEN = os.getenv('Friendly')
+
+# Import from common.py
+
+# Bot Intents
 intent = discord.Intents.default()
 intent.message_content = True
 
+# Bot Command prefix
 bot = commands.Bot(intents=intent, command_prefix='$')
 
 
@@ -31,17 +39,16 @@ async def info(ctx):
             'RHS': {
                 # Category: Ask The Bot!
                 getChannelID('Ask The Bot!', 'calculations'): 'Perform calculations here!\
-                    \nCurrently supported operations: [+,-,*,/,%,^]',
+                    \n Types of operations supported: \
+                    \n I. Basic Calculations: \
+                    \n> [+,-,*,/,%] \
+                    \n> Example: 2+4 , 4*7 , 5x2\
+                    \n II. Advanced Calculations: \
+                    \n> [log,sin,cos,tan] \
+                    \n> Example: log 2 , pow 2,4 \
+                    ',
                 getChannelID('Ask The Bot!', 'unit-conversion'): 'Perform unit conversion here!\
-                    \nCurrently, these units are supported: [temperature]',
-
-                # Category: LoFi Zone! 🎶
-                getChannelID('LoFi Zone! 🎶', 'lofi-bot-command-zone'): 'Ask the Lofi Bot to play music!\
-                    \nEnter **/play** after joining the voice channel & enjoy the tunes!',
-
-                # Category: Bot Code Testing
-                getChannelID('Bot Code Testing', 'test-zone'): 'New / modified code, running on the Test Bot, will be tested here.',
-                getChannelID('Bot Code Testing', 'code-suggestions'): 'Any bot-related feature requests / suggestions for improvement are welcome!'
+                    \nCurrently, these units are supported: [temperature]'
             }
         },
         'footer': 'Enjoy! :innocent:'
@@ -55,6 +62,18 @@ async def info(ctx):
         await ctx.channel.send(infoMessage)
     except KeyError:
         return
+
+
+@bot.command()
+async def calc(ctx, expression1='', expression2=''):
+    if ctx.channel.id == getChannelID('Ask The Bot!', 'calculations'):
+        result = getMathResult(expression1, expression2)
+        resultPrefix = f'Answer ='
+        if result == False:
+            await ctx.channel.send(getStrMistake())
+        else:
+            await ctx.channel.send(f'{resultPrefix} **{result}**')
+
 
 bot.run(TOKEN)
 

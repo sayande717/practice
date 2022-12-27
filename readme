@@ -341,6 +341,7 @@ Marks  Grade
   [7,8,9,10],
   [21,22,23,24],
   [54,55,56,57]]
+166.java - Bubble Sort
 
 [Kotlin]
 [Run the code]:
@@ -470,3 +471,8 @@ readme.js - Tells you what all that jargon means.
 > ./checkNumber - Check if the entered number is:
 a. Odd / Even
 b. Prime
+New things learnt:
+I. For loop:
+1..5 means 1 to 5
+1 until 5 means 1 to 4 
+II. Hiding the keyboard after pressing a button: check function -> hideSoftKeyboard()

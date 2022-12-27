@@ -1,10 +1,9 @@
 # Import from common.py
-from common import getMathResult,getStrMistake,getChannelID
+# from common import getChannelID
 
 from discord.ext import commands
 import discord
 import os
-import math
 
 # Import Bot Token
 from dotenv import load_dotenv
