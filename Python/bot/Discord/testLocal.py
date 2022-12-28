@@ -9,7 +9,7 @@ import math
 # Import Bot Token
 from dotenv import load_dotenv
 load_dotenv()
-TOKEN = os.getenv('Test')
+TOKEN = os.getenv('TestLocal')
 
 # Bot Intents
 intent = discord.Intents.default()
