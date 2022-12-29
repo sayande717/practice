@@ -18,4 +18,4 @@ import math
 # exp1 = exp.split(',')
 # print(math.pow(float(exp1[0]),float(exp1[1]))) # IndexError
 
-print (eval('2x4'))
+print(eval('2*6'))
