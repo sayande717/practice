@@ -1,5 +1,5 @@
 # Import from common.py
-from common import getChannelID, getStrMistake
+from common import *
 
 from discord.ext import commands
 import discord
@@ -23,13 +23,11 @@ bot = commands.Bot(intents=intent, command_prefix='.')
 async def on_ready():
     await bot.change_presence(status=discord.Status.dnd)
 
-# Channel ID to listen to, for commands
-commandChannelID = getChannelID('Self', 'commands')
-
-
+# Scope: Server command Information / Help
 @bot.command()
 async def info(ctx):
-    if ctx.channel.id == commandChannelID:
+    # Channel = Self > #commands
+    if ctx.channel.id == 940487185973530655:
         await ctx.channel.send('\
             \n---Command info---\
             \n \
@@ -38,39 +36,35 @@ async def info(ctx):
             \n> **up**: Display system uptime.\
             \n> **ram**: Check the amount of free RAM.\
             \n> **vol <0-100>**: Increase/Decrease the volume.\
-            \n> **log2ram**: Check Log2RAM status.\
             \n> **temp**: Check current CPU Temperature.\
             \n> **load**: Check current CPU Load.\
             \n> **ifconfig <interface_name>**: Check network interface status.\
             \n \
             \n2. Commands invoked independently: \
             \na. **ping**:\
-            \nSyntax: .ping <argument0> <argument1>\
-            \n> **argument0**: IPv4 Address to ping.\
+            \nSyntax: .ping <argument> \
+            \n> **argument**: IPv4 Address to ping.\
             \n> Examples: [lan0,lan1,wan] *or* custom IPv4 Address. \
-            \n> **argument1**: Target Network Interface.\
-            \n> Examples: [wan0,wan1] *or* custom Network Interface.\
-            \n \
             \nb. **vol** aka *volume*:\
             \nSyntax: .vol <0-100>\
         ')
 
 
-# Run all commands on the server except:
-# [ping,vol]
+# Scope: All server commands except:
+# [ ping, vol ]
 @bot.command()
 async def run(ctx, arg0, arg1=''):
-    if ctx.channel.id == commandChannelID:
+    # Channel = Self > #commands
+    if ctx.channel.id == 940487185973530655:
         # Command DB for which to return the system output.
         commandDBSystemOutput = {
             # 1 Argument
             # System & CPU
             'up': 'uptime',
-            'temp': 'vcgencmd measure_temp',
+            'temp': 'sensors -A | grep temp',
             'load': 'cat /proc/loadavg',
             # RAM
             'ram': 'free -h',
-            'log2ram': 'df -h | grep log2ram',
             'time': 'date',
 
             # 2 Arguments
@@ -80,12 +74,13 @@ async def run(ctx, arg0, arg1=''):
             # Display the system output.
             await ctx.channel.send(os.popen(commandDBSystemOutput[arg0]).read())
         except KeyError:
-            await ctx.channel.send(getStrMistake())
+            await ctx.channel.send(getString(0,'mistake'))
 
-
+# Scope: Server command: ping
 @bot.command()
-async def ping(ctx, arg0, arg1='wan0'):
-    if ctx.channel.id == commandChannelID:
+async def ping(ctx, arg):
+    # Channel = Self > #commands
+    if ctx.channel.id == 940487185973530655:
         # List of common ping aliases
         pingAlias = {
             # Internet IPv4 Address
@@ -93,26 +88,24 @@ async def ping(ctx, arg0, arg1='wan0'):
 
             # LAN Gateways
             'lan0': '192.168.29.1',  # JioFiber
-            'lan1': '192.168.1.1',  # JioDongle
+            'lan1': '10.10.0.1',  # Internal Server Gateway
 
-            # WAN Interfaces
-            'wan0': 'eth0',  # JioFiber
-            'wan1': 'wlan0'  # JioDongle
         }
         # Run the command and print the system output.
-        await ctx.channel.send(os.popen(f'ping -I {pingAlias.get(arg1,arg1)} {pingAlias.get(arg0,arg0)} -c 3').read())
+        await ctx.channel.send(os.popen(f'ping -I eth0 {pingAlias.get(arg,arg)} -c 3').read())
 
-
+# Scope: Server command: vol
 @bot.command()
 async def vol(ctx, arg):
-    if ctx.channel.id == commandChannelID:
+    # Channel = Self > #commands
+    if ctx.channel.id == 940487185973530655:
         try:
             # Execute the command
             os.popen(f'amixer sset Master {int(arg)}%')
             # Print a custom output
             await ctx.channel.send(f'Volume set to **{arg}%**')
         except ValueError:
-            await ctx.channel.send(getStrMistake())
-
+            await ctx.channel.send(getString(0, 'mistake'))
+            
 
 bot.run(TOKEN)

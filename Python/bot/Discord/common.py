@@ -1,56 +1,82 @@
 import math
 
-
-def getStrMistake():
-    return 'Wrong input! Please try again.'
-
-
-def getChannelID(category, channel):
-    channelDB = {
-        'Ask The Bot!': {
-            'calculations': 952095676106412042,
-            'unit-conversion': 985990030570975262
+# Master String Database
+def getString(channelID, channelProperty=''):
+    scopeDB = {
+        #Scope: Bot
+        'bot':{
+            'commands':'bot commands',
+            'code':'bot code'
         },
-        'LoFi Zone! 🎶': {
-            'lofi-bot-command-zone': 1052898474254938194
-        },
-        'Friends ✨': {
-            'chat': 944823325450977332
-        },
-        'Bot Code Testing': {
-            'test-zone': 994965043588370525,
-            'code-suggestions': 994965065545547786
-        },
-        'Self': {
-            'commands': 940487185973530655,
-            'announcements': 982255693748908062
+        # Scope: Guild members
+        'human':{
+            'chat': {
+                'general':'general chat',
+                'specific':'related chat'
+            }
         }
     }
-    try:
-        return channelDB[category][channel]
-    except KeyError:
-        return 0
+    stringDB = {
+    # Scope: All channels, Channel ID = 0
+        0: {
+            'mistake': 'Wrong input! Please try again.'
+        },
+    # Scope: Specific channel
+    # Category: Ask the Bot!
+        # channel: #calculations
+        952095676106412042: {
+            'scope': str.title(scopeDB['bot']['commands']),
+            'description': 
+                'Perform calculations here!\
+                \n Types of operations supported: \
+                \n I. Basic Calculations: \
+                \n> [+,-,*,/,%] \
+                \n> Example: 2+4 , 4*7 , 5x2\
+                \n II. Advanced Calculations: \
+                \n> [log,sin,cos,tan] \
+                \n> Example: log 2 , pow 2,4 \
+                '
+        },
+        # channel: #unit-conversion
+        985990030570975262: {
+            'scope': str.title(scopeDB['bot']['commands']),
+            'description':
+                'Perform unit conversion here!\
+                \nCurrently, these units are supported: [temperature]'
+        },
+    # Category: Bot Code Testing
+        # channel: #test-zone
+        994965043588370525: {
+            'scope': f"{str.title(scopeDB['bot']['commands'])} | {str.title(scopeDB['human']['chat']['specific'])}",
+            'description':
+                'This channel is for testing new/modified bot code.'
+        },
+        # channel: #code-suggestions
+        994965065545547786: {
+            'scope': str.title(scopeDB['human']['chat']['specific']),
+            'description': 'Suggestions for improving the bot code are welcome!'
+        }
+    }
+    
+    return stringDB[channelID][channelProperty]
 
+# $calc f
 # For Calculations
-
-
-def getMathResult(arg1, arg2):
+def getCalcResult(arg1, arg2):
     # Input: arg1
     # Scope: number1 + number2 | ... [+,-,*,/,%]
     # Example: 2+4,2%4
     if arg2 == '':
         try:
             return eval(arg1)
-        except SyntaxError:
+        except SyntaxError or NameError:
             # For the multiplication part
             # Scope: number1 x number2 | number1 X number2
             # Example: 2x4 | 2X4
             expression = str.lower(arg1).split('x')
             if len(expression) == 2:
                 return eval(f'{expression[0]}*{expression[1]}')
-            # ERROR: Expression / Argument is invalid.
-            else:
-                return False
+            return False
 
     # Input: arg1,arg2
     else:

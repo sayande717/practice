@@ -1,4 +1,5 @@
-def greetUser(designation, firstName, lastName):
+# lastName="null" = If no value is passed for lastName, the value "null" is used.
+def greetUser(designation, firstName, lastName="null"):
     return f'Hi there, {str.title(designation)}. {str.title(firstName)} {str.title(lastName)}!'
 
 

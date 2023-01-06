@@ -1,5 +1,5 @@
 # Import from common.py
-# from common import getChannelID
+from common import *
 
 from discord.ext import commands
 import discord

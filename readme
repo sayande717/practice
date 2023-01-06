@@ -79,7 +79,10 @@ b. Sort the list in ascending & descending (reverse) order.
 29.py: Input a number, return the numbers in words.
 30.py: Keyword parameters in functions.
 31.py: Unit Convertor. Functions:
-Temperature
+> Temperature
+32.py: Return statement
+33.py: Emoji convertor using function.
+34.py: Exception handling.
 
 [C] -
 notes.txt - 
@@ -136,6 +139,13 @@ SearchPrime(int A[], int n) - Returns the position of the first occurence of a p
 29.c - Program to demonstrate pointers.
 30.c - Program to increase the value of a variable by 20, using pointers.
 (in 3 separate lines).
+
+[C++]:
+1.cpp - Initialising a pointer.
+2.cpp - Pointers and arrays.
+3.cpp - Dereferencing once and twice.
+4.cpp - Swapping 2 numbers using call by reference.
+
 
 [Java]
 [Run the code]:
@@ -342,6 +352,11 @@ Marks  Grade
   [21,22,23,24],
   [54,55,56,57]]
 166.java - Bubble Sort
+167.java - Linked List functions:
+> Adding an element at the beginning.
+> Adding an element in the end.
+> Printing the linked list.
+> Search for an element in the linked list.
 
 [Kotlin]
 [Run the code]:
@@ -460,6 +475,17 @@ style.css - CSS StyleSheet
 > Discord
 ./src/test-bot.js - Test bot
 readme.js - Tells you what all that jargon means.
+
+[React.js]
+Port for Development: 3010
+A complete list of commands is provided in the 'tutorials & fixes' file.
+In short,
+$ cd app_name
+$ npm start
+Go to: http://0.0.0.0:3010
+
+[./hello-world]
+
 
 [Shell] - 
 1.sh - $var vs var, where to use which.

@@ -1,6 +1,4 @@
-# Import from common.py
-from common import getStrMistake, getChannelID, getMathResult
-
+from common import *
 from discord.ext import commands
 import discord
 import os
@@ -9,8 +7,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('Friendly')
-
-# Import from common.py
 
 # Bot Intents
 intent = discord.Intents.default()
@@ -24,53 +20,29 @@ bot = commands.Bot(intents=intent, command_prefix='$')
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name='$info'))
 
-
+# Scope: Information / Help
 @bot.command()
 async def info(ctx):
-    # Database
-    infoDB = {
-        'header': {
-            'LHS': '< **Information/Help** /> \
-                \n> **Channel** ->'
-        },
-
-        'description': {
-            'LHS': '**Description** ->',
-            'RHS': {
-                # Category: Ask The Bot!
-                getChannelID('Ask The Bot!', 'calculations'): 'Perform calculations here!\
-                    \n Types of operations supported: \
-                    \n I. Basic Calculations: \
-                    \n> [+,-,*,/,%] \
-                    \n> Example: 2+4 , 4*7 , 5x2\
-                    \n II. Advanced Calculations: \
-                    \n> [log,sin,cos,tan] \
-                    \n> Example: log 2 , pow 2,4 \
-                    ',
-                getChannelID('Ask The Bot!', 'unit-conversion'): 'Perform unit conversion here!\
-                    \nCurrently, these units are supported: [temperature]'
-            }
-        },
-        'footer': 'Enjoy! :innocent:'
-    }
+    channelID = ctx.channel.id
     try:
-        channelID = ctx.channel.id
-        infoMessage = f'{infoDB["header"]["LHS"]} #{bot.get_channel(channelID)}\
-        \n> {infoDB["description"]["LHS"]} {infoDB["description"]["RHS"][channelID]}\
-        \n \
-        \n{infoDB["footer"]}'
-        await ctx.channel.send(infoMessage)
+        await ctx.channel.send(
+            f"\< **Information/Help** /> \
+            \n> Channel: **#{bot.get_channel(channelID)}** \
+            \n> Scope: {getString(channelID,'scope')} \
+            \n> Description: {getString(channelID,'description')} \
+            \n \
+            \nEnjoy! :innocent:"
+            )
     except KeyError:
-        return
-
+        await ctx.channel.send(getString(0, 'mistake'))
 
 @bot.command()
 async def calc(ctx, expression1='', expression2=''):
-    if ctx.channel.id == getChannelID('Ask The Bot!', 'calculations'):
-        result = getMathResult(expression1, expression2)
+    if ctx.channel.id == 952095676106412042:
+        result = getCalcResult(expression1, expression2)
         resultPrefix = f'Answer ='
         if result == False:
-            await ctx.channel.send(getStrMistake())
+            await ctx.channel.send(getString(0,'mistake'))
         else:
             await ctx.channel.send(f'{resultPrefix} **{result}**')
 
