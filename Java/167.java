@@ -1,4 +1,5 @@
 class LinkedList {
+    private int size = 0;
     Node head;
     // Defining the properties of a node, with the class 'Node'.
     class Node {
@@ -12,6 +13,8 @@ class LinkedList {
             this.data = data;
             // By default, the node points to null.
             this.next = null;
+            // Whenever we create a new node, we increase the size of the linked list, by 1.
+            size++;
         }
     }
     public static void main(String[] args) {
@@ -19,6 +22,9 @@ class LinkedList {
         list.AddAtFirst("abcd");
         list.AddAtFirst("def");
         list.AddAtLast("ghij");
+        list.PrintList();
+        list.deleteFirst();
+        list.deleteLast();
         list.PrintList();
     }
 
@@ -30,13 +36,14 @@ class LinkedList {
         if (head == null) {
             // ...Make the New Node as the head node.
             head = newNode;
+            return;
         }
-        else {
-            // NewNode will point to the head / first node.
-            newNode.next = head;
-            // NewNode will become the new head / first node.
-            head = newNode;
-        }
+        // NewNode will point to the head / first node.
+        newNode.next = head;
+        // NewNode will become the new head / first node.
+        head = newNode;
+        
+        
     }
 
     // Add element at the end of the list.
@@ -48,18 +55,17 @@ class LinkedList {
         if(head == null) {
             head = NewNode;
         }
-        else {
-            // Set the current node as the head / first node.
-            Node currNode = head;
-            // Find the node whose next pointer points to 'null'.
-            while(currNode.next != null) {
-                currNode = currNode.next;
-            }
-            // CurrentNode will point to the new node, instead of null.
-            currNode.next = NewNode;
-            // NewNode already points to null, so we don't need to change anything there.
+        // Set the current node as the head / first node.
+        Node currNode = head;
+        // Find the node whose next pointer points to 'null'.
+        while(currNode.next != null) {
+            currNode = currNode.next;
         }
+        // CurrentNode will point to the new node, instead of null.
+        currNode.next = NewNode;
+        // NewNode already points to null, so we don't need to change anything there.
     }
+
     // Print the linked list.
     public void PrintList() {
         if(head == null) {
@@ -72,6 +78,7 @@ class LinkedList {
             currNode = currNode.next;
         }
         System.out.println("null");
+        System.out.println("Size: "+size);
     }
     // Search for an element in the Linked List.
     public boolean SearchList(String data) {
@@ -83,5 +90,41 @@ class LinkedList {
             currentNode = currentNode.next;
         }
         return false;
+    }
+
+    // Delete first node
+    void deleteFirst() {
+        if(head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        head = head.next;
+        size--;
+    }
+    // Delete last node
+    void deleteLast() {
+        // Edge case 1
+        if(head == null) { 
+            System.out.println("List is empty");
+            return;
+        }
+        size--;
+        //Edge case 2
+        // If the linked list only contains 1 element, delete that element.
+        if(head.next == null) {
+            head = null;
+            return;
+        }
+
+        // Initialise second last and last node.
+        Node secondLastNode = head;
+        Node lastNode = head.next;
+        // When lastNode.next = null, that means it is the last node.
+        // It also means that the secondLastNode is the 2nd last node.
+        while(lastNode.next != null) { 
+            lastNode = lastNode.next;
+            secondLastNode = secondLastNode.next;
+        }
+        secondLastNode.next = null;
     }
 }

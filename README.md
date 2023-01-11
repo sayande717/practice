@@ -210,7 +210,6 @@ equals(),equalsIgnoreCase()
 50.java - Volume Of Cylinder
 51.java - Volume Of Sphere
 52.java - Volume Of Pyramid
-[Not Done]
 53.java - Curved Surface Area Of Cylinder
 54.java - Total Surface Area Of Cube
 55.java - Fibonacci Series In Java Programs
@@ -229,7 +228,7 @@ equals(),equalsIgnoreCase()
 67.java - Power In Java
 68.java - Calculate Depreciation of Value
 69.java - Calculate Batting Average
-70.java - 61.java - Calculate CGPA Java Program
+70.java - Calculate CGPA Java Program
 71.java - Compound Interest Java Program
 72.java - Calculate Average Marks
 73.java - Sum Of N Numbers
@@ -355,8 +354,18 @@ Marks  Grade
 167.java - Linked List functions:
 > Adding an element at the beginning.
 > Adding an element in the end.
-> Printing the linked list.
-> Search for an element in the linked list.
+> Find the size of the linked list.
+> Print the linked list.
+> Search for an element.
+> Delete the first element.
+> Delete the last element.
+
+168.java - Linked List, using Collections Framework (java.util.LinkedList).
+<Not Done>
+169.java - Make a Linked List & add the following elements to it : (1, 5, 7, 3 , 8, 2, 3). Search for the number 7 & display its index.
+170.java - Take elements(numbers in the range of 1-50) of a Linked List as input from the user. Delete all nodes which have values greater than 25. // Optimise
+</Not Done>
+
 
 [Kotlin]
 [Run the code]:
@@ -480,12 +489,32 @@ readme.js - Tells you what all that jargon means.
 Port for Development: 3010
 A complete list of commands is provided in the 'tutorials & fixes' file.
 In short,
-$ cd app_name
-$ npm start
-Go to: http://0.0.0.0:3010
+> $ cd app_name
+> $ npm start
+> Go to: http://0.0.0.0:3010
 
-[./hello-world]
+README.md - 
+> To create a new React.js app
+> Commands for running React.js (npm)
+> Why index.jsx and not index.js?
+> Short-circuiting
+> Passing arguments to a function, for dynamically displaying them on a webpage
+> Event Listeners (click)
+> When should you use functions to update the value in stateful React.js?
 
+[./hello-world] - Won't run, just for reference
+> [./src/index.js] - 
+> Introduction to React.js (check src/index.js)
+> Importing functions (from calc.js)
+
+[./project_1] - Increment / decrement the value of a counter.
+> [./components/header.jsx] - Header
+> [./components/content.jsx] - Content
+> [./components/footer.jsx] - Footer
+> [./components/app.jsx] - Combines the header, content & footer, returns it to index.js
+> [./src/index.js] - Main file
+
+[./project_2] - Input a number, find out if it is even or odd.
 
 [Shell] - 
 1.sh - $var vs var, where to use which.
