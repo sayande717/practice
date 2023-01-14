@@ -1,4 +1,4 @@
 # Files/Directories to ignore
 .env
 node_modules
-coding-arm64
+temp.*
