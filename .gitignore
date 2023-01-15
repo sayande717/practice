@@ -2,3 +2,5 @@
 .env
 node_modules
 temp.*
+package.json
+package-lock.json
