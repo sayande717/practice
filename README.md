@@ -84,6 +84,10 @@ b. Sort the list in ascending & descending (reverse) order.
 33.py: Emoji convertor using function.
 34.py: Exception handling.
 
+[Programming & DSA using Python]:
+1.py: A program to implement Greatest Common Divisor (GCD).
+2.py: Optimising 1.py
+
 [C] -
 notes.txt - 
 1. Format Specifiers (for use in scanf and printf)
@@ -364,7 +368,9 @@ Marks  Grade
 <Not Done>
 169.java - Make a Linked List & add the following elements to it : (1, 5, 7, 3 , 8, 2, 3). Search for the number 7 & display its index.
 170.java - Take elements(numbers in the range of 1-50) of a Linked List as input from the user. Delete all nodes which have values greater than 25. // Optimise
-</Not Done>
+171.java - Arrays.setAll(array,generator): Setting the elements of an array from:
+a. User input
+b. Predefined values, for eg [1-10].
 
 
 [Kotlin]
@@ -514,7 +520,14 @@ README.md -
 > [./components/app.jsx] - Combines the header, content & footer, returns it to index.js
 > [./src/index.js] - Main file
 
-[./project_2] - Input a number, find out if it is even or odd.
+[./project_2]
+> Running a function when a button is clicked [ <button onCLick={}>something</button> ].
+> useState() in React.js
+> useEffect() in React.js
+
+[./project_3] -> A random quote generator
+
+[./project_4] -> ToDo app
 
 [Shell] - 
 1.sh - $var vs var, where to use which.

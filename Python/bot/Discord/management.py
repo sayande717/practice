@@ -61,7 +61,7 @@ async def run(ctx, arg0, arg1=''):
             # 1 Argument
             # System & CPU
             'up': 'uptime',
-            'temp': 'sensors -A | grep temp',
+            'temp': 'vcgencmd measure_temp',
             'load': 'cat /proc/loadavg',
             # RAM
             'ram': 'free -h',
@@ -87,8 +87,8 @@ async def ping(ctx, arg):
             'wan': '1.1.1.1',
 
             # LAN Gateways
-            'lan0': '192.168.29.1',  # JioFiber
-            'lan1': '10.10.0.1',  # Internal Server Gateway
+            'lan0': '10.0.27.1', # Internet Gateway
+            'lan1': '10.10.0.1',  # Internal Gateway
 
         }
         # Run the command and print the system output.
