@@ -398,6 +398,11 @@ $ kotlin file //file.class
 > Creating an object of a class
 6.kt - Extending classes
 7.kt - Implementing interfaces in classes.
+8.kt - Functions 'timesTwo()' and 'timesThree()'.
+9.kt - The multiple ways of inserting an element in an Array/ArrayList/List.
+10.kt - String functions.
+11.kt - Array functions.
+12.kt - List functions.
 
 [HTML] - 
 info.html

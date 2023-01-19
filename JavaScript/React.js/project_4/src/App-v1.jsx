@@ -9,6 +9,7 @@ function App() {
       return [...oldToDo, task]
     })
   }
+  
   return (
     <div>
       <h1>ToDo App</h1>
