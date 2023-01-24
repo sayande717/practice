@@ -5,5 +5,9 @@ fun main() {
     list += 7 // Add element '7' to the end of the list.
     list.add(1, 7) // Add element '7' to index '1' of the list.
     println(list) // The list can directly be printed here.
+    list.remove(2) // Remove the specified element
+    list.removeAt(3) // Remove the element at index 3
+    val arr = arrayOf(10,11,12)
+    list.addAll(arr) // Add an array to the mutable list.
     println(list2)
 }

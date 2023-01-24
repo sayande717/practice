@@ -1,6 +1,7 @@
-[External] -
-[HTML]
-[bot] -> [/Discord Bot (line: 7)]
+Case types:
+camelCase | variables, methods
+PascalCase | Classes
+
 
 [Python]
 notes.txt - 
@@ -83,6 +84,16 @@ b. Sort the list in ascending & descending (reverse) order.
 32.py: Return statement
 33.py: Emoji convertor using function.
 34.py: Exception handling.
+35.py: Classes
+36.py: Create a class 'Person':
+> Attribute: name
+> Method: talk()
+37.py: Inheritance & pass keyword.
+38.py: Contains:
+> find_max()
+> find_min()
+Both these methods take a list as input, and return the largest & smallest integer respectively.
+39.py: Import '38.py' and print the largest & smallest number in a list.
 
 [Programming & DSA using Python]:
 1.py: A program to implement Greatest Common Divisor (GCD).
@@ -371,6 +382,8 @@ Marks  Grade
 171.java - Arrays.setAll(array,generator): Setting the elements of an array from:
 a. User input
 b. Predefined values, for eg [1-10].
+172.java - Recursive Pre-order, In-order, Post-order tree traversal.
+173.java - Iterative Pre-order, In-order, Post-order tree traversal.
 
 
 [Kotlin]
@@ -403,6 +416,23 @@ $ kotlin file //file.class
 10.kt - String functions.
 11.kt - Array functions.
 12.kt - List functions.
+13.kt - Divide a by b, check if b is 0 before dividing.
+14.kt - Declare 2 integers, tell which one of them is a greater number.
+15.kt - 'When' expression, similar to 'switch' in Java.
+16.kt - Use 'when' expression to print if a number is negative, positive, or zero.
+17.kt - Use 'when' expression to print if a number is between 1-10,11-20, or outside the range.
+18.kt - For, while and do-while loop.
+19.kt - Operate using [+,-,*,/] on 2 numbers, using 'function' and 'when' expression.
+20.kt - Try catch Exception handling in Kotlin.
+21.kt - Using Elvis operator to print something else if the value we're trying to print, is null.
+22.kt - Using the 'filterNotNull()' function to print a list.
+23.kt - Creating Classes & Objects (without constructor).
+24.kt - Creating Classes & Objects (with constructor).
+25.kt - Creating Classes & Objects, removing all boiler-plate code.
+26.kt - Primary & Secondary constructors.
+27.kt - Data classes
+28.kt - Creating a mutable list of 'class' data type, and storing the values of the objects in it.
+
 
 [HTML] - 
 info.html
@@ -533,6 +563,7 @@ README.md -
 [./project_3] -> A random quote generator
 
 [./project_4] -> ToDo app
+App-v1 - Default approach, using input onChange() & button onClick()
 
 [Shell] - 
 1.sh - $var vs var, where to use which.
