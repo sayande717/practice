@@ -10,7 +10,6 @@ function App() {
   // setCounter = The function that modifies that value. This function takes both values and functions as input.
   // useState(0) = The initial value of 'counter' is 0.
   const [counter,setCounter] = useState(0)
-
   function increaseCounter() {
     // Set the value of 'counter' to counter+1.
     // 2nd render
