@@ -383,12 +383,12 @@ Marks  Grade
 a. User input
 b. Predefined values, for eg [1-10].
 172.java - Recursive Pre-order, In-order, Post-order tree traversal.
-173.java - Iterative Pre-order, In-order, Post-order tree traversal.
-
+173.java - Iterative Pre-order, In-order, Post-order, Level-order tree traversal.
+174.java - Selection Sort
 
 [Kotlin]
 [Run the code]:
-$ kotlinc file.java
+$ kotlinc file.kt
 $ kotlin file.class //file.class
 OR
 $ kotlin file //file.class
@@ -430,8 +430,12 @@ $ kotlin file //file.class
 24.kt - Creating Classes & Objects (with constructor).
 25.kt - Creating Classes & Objects, removing all boiler-plate code.
 26.kt - Primary & Secondary constructors.
-27.kt - Data classes
+27.kt - Data classes.
 28.kt - Creating a mutable list of 'class' data type, and storing the values of the objects in it.
+29.kt - Inheritance in Kotlin
+> Keywords: open,override
+30.kt - Interfaces in Kotlin
+Project 1 - Internshala Module 2 Assignment, more info in README.pdf
 
 
 [HTML] - 
@@ -475,6 +479,17 @@ style.css - CSS StyleSheet
 > Basic CSS Syntax.
 > Defining properties for tags and classes.
 > Using FlexBox.
+
+[Tailwind CSS]
+Run: npx tailwindcss -i ./src/input.css -o ./public/output.css
+Files:
+input.css [Optional] - Source input file for Tailwind. 
+index.html - Main HTML page
+[./playground] - Tailwind CSS build runs here.
+[./1] - 
+> Buttons, Alerts, Cards
+> Adding properties in input.css and using them.
+[./2][PENDING] - Create an 'About Me' card.
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.
@@ -527,43 +542,13 @@ style.css - CSS StyleSheet
 readme.js - Tells you what all that jargon means.
 
 [React.js]
-Port for Development: 3010
+Port for Development: 3000
 A complete list of commands is provided in the 'tutorials & fixes' file.
 In short,
 > $ cd app_name
 > $ npm start
 > Go to: http://0.0.0.0:3010
-
-README.md - 
-> To create a new React.js app
-> Commands for running React.js (npm)
-> Why index.jsx and not index.js?
-> Short-circuiting
-> Passing arguments to a function, for dynamically displaying them on a webpage
-> Event Listeners (click)
-> When should you use functions to update the value in stateful React.js?
-
-[./hello-world] - Won't run, just for reference
-> [./src/index.js] - 
-> Introduction to React.js (check src/index.js)
-> Importing functions (from calc.js)
-
-[./project_1] - Increment / decrement the value of a counter.
-> [./components/header.jsx] - Header
-> [./components/content.jsx] - Content
-> [./components/footer.jsx] - Footer
-> [./components/app.jsx] - Combines the header, content & footer, returns it to index.js
-> [./src/index.js] - Main file
-
-[./project_2]
-> Running a function when a button is clicked [ <button onCLick={}>something</button> ].
-> useState() in React.js
-> useEffect() in React.js
-
-[./project_3] -> A random quote generator
-
-[./project_4] -> ToDo app
-App-v1 - Default approach, using input onChange() & button onClick()
+[./playground] - React.js runs here.
 
 [Shell] - 
 1.sh - $var vs var, where to use which.
@@ -580,3 +565,19 @@ I. For loop:
 1..5 means 1 to 5
 1 until 5 means 1 to 4 
 II. Hiding the keyboard after pressing a button: check function -> hideSoftKeyboard()
+
+[Swift]
+Test: swift test
+Run: swift run
+
+[Exercism]
+[./java] 
+Prerequisites:
+$ curl -s "https://get.sdkman.io"
+$ sdk install gradle
+Test: $ gradle test
+
+[./javascript] 
+Prerequisites:
+$ pacman -S npm
+Test: $ npm test

@@ -1,7 +1,11 @@
-import java.util.*;
-
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Stack;
+import java.util.List;
+import java.util.Queue;
 class Node {
     int val;
+    Node node;
     Node left;
     Node right;
     Node(int val) {
@@ -13,53 +17,55 @@ class Node {
         this.right = right;
     }
 }
-class temp {
+class NodeTraversal{
     static List<Integer> result;
     public static void main(String[] args) {
-        Node left = new Node(2);
-        Node right = new Node(3);
-        Node root = new Node(1, left, right);
-        left.left = new Node(4);
-        left.right = new Node(5);
-        right.left = new Node(6);
-        right.right = new Node(7);
-        result = new ArrayList<Integer>();
-        System.out.println("Pre-order Traversal: "+preOrderTraversal(root));
-        result = new ArrayList<Integer>();
-        System.out.println("In-order Traversal: "+inOrderTraversal(root));
+        
     }
-    static List<Integer> preOrderTraversal(Node root) {
+
+    static List<Integer> postOrderTraversal(Node root) {
+        Stack<Node> stack = new Stack<>();
         Node current = root;
-        Stack<Node> stack = new Stack<Node>();
+        Node previous = null;
         while(true) {
-            while(current!= null) {
+            while(current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            if(stack.isEmpty()) {
+                break;
+            }
+            current = stack.peek();
+            if(current.right == null || current.right == previous) {
                 result.add(current.val);
-                stack.push(current);
-                current = current.left;
+                previous = current;
+                current = null;
             }
-            if(stack.isEmpty()) {
-                break;
+            else {
+                current = current.right;
             }
-            current = stack.pop();
-            current = current.right;
         }
         return result;
     }
-    static List<Integer> inOrderTraversal(Node root) {
-        Node current = root;
-        Stack<Node> stack = new Stack<Node>();
-        while(true) {
-            while(current!=null) {
-                stack.push(current);
-                current = current.left;
+
+    static List<Integer> levelOrderTraversal(Node root) {
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            while(size!=0) {
+                Node current = queue.remove();
+                result.add(current.val);
+                if(current.left!=null){
+                    queue.add(current.left);
+                }
+                if(current.right!=null){
+                    queue.add(current.right);
+                }
+                size--;
             }
-            if(stack.isEmpty()) {
-                break;
-            }
-            current = stack.pop();
-            result.add(current.val);
-            current = current.right;
         }
         return result;
+        
     }
 }

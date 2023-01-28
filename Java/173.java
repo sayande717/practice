@@ -1,6 +1,8 @@
 import java.util.Stack;
 import java.util.List;
+import java.util.Queue;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 class TreeNode {
     int val;
@@ -32,6 +34,8 @@ class TreeTraversal {
         System.out.println("In-Order Traversal: "+inOrderTraversal(root));
         result = new ArrayList<Integer>();
         System.out.println("Post-order Traversal: "+postOrderTraversal(root));
+        result = new ArrayList<Integer>();
+        System.out.println("Level order Traversal: "+levelOrderTraversal(root));
     }
 
     static List<Integer> preOrderTraversal(TreeNode root) {
@@ -76,32 +80,51 @@ class TreeTraversal {
     }
 
     static List<Integer> postOrderTraversal(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode current = root;
         TreeNode previous = null;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
         while(true) {
-            while(current!=null) {
+            while(current != null) {
                 stack.push(current);
                 current = current.left;
             }
             if(stack.isEmpty()) {
                 break;
             }
-            while((current == null) && !stack.isEmpty()) {
-                // peek() = Top-most node in the stack.
-                current = stack.peek();
-                if(current.right == null || current.right == previous) {
-                    result.add(current.val);
-                    stack.pop();
-                    previous = current;
-                    current = null;
-                }
-                else {
-                    current = current.right;
-                }
+            
+            current = stack.peek();
+            if(current.right == null || current.right == previous) {
+                result.add(current.val);
+                stack.pop();
+                previous = current;
+                current = null;
+            }
+            else {
+                current = current.right;
             }
         }
         return result;
     }
-    
+
+    static List<Integer> levelOrderTraversal(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            // Calculate the number of nodes in the current level.
+            int size = queue.size();
+            while(size-- != 0) {
+                TreeNode current = queue.remove();
+                result.add(current.val);
+                // Left and right child of the node is added here.
+                if(current.left != null) {
+                    queue.add(current.left);
+                }
+                if(current.right != null) {
+                    queue.add(current.right);
+                }
+                // size--;
+            }
+        }
+        return result;
+    }
 }
