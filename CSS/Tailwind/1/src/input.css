@@ -1,9 +1,6 @@
-/* Default packages to import */
-/* START */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* END */
 
 /* Create a custom property
  * This property can then be invoked using: class="btn"

@@ -7,23 +7,16 @@
     <link rel="stylesheet" href="output.css">
     <title>UI 1</title>
 </head>
-<body class="bg-green-400">
-    <div>
-        <!-- 1. Button -->
-        <!-- .btn defined in input.css -->
-        <button class="btn">Button 1</button>
-        <button class="btn">Button 2</button>
-        <!-- 2. Alert component -->
-        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative my-5" role="alert">
-            <strong class="font-bold">Alert!</strong>
-            <span class="block sm:inline">Please update your password!</span>
+<body>
+    <div class="text-center font-bold text-4xl pb-2">Tailwind CSS</div>
+    <!-- flex flex-col p-6 bg-white rounded-lg shadow-xl text-center -->
+    <div class="max-w-sm mx-auto bg-sky-600 hover:bg-sky-300 ease-in-out duration-200 rounded-lg shadow-lg border-dashed border-2 border-black flex flex-col p-4">
+        <div class="text-3xl hover:text-4xl ease-in-out duration-200 text-center">My Card!</div>
+        <div class="cardContent">
+            Name: Sayan De
+        <br>School: Modern School
+        <br>Class: IV
         </div>
-    </div>
-    <!-- Card -->
-    <div class="max-w-sm mx-auto flex flex-col p-6 bg-white rounded-lg shadow-xl text-center">
-        <h4 class="text-4xl">Title</h4>
-        <h3 class="text-xl">Text</h3>
-    </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TwoFerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-01-29T07:59:03" hostname="coding-amd64" time="0.019">
+  <properties/>
+  <testcase name="noNameGiven" classname="TwoFerTest" time="0.017"/>
+  <testcase name="emptyStringGiven" classname="TwoFerTest" time="0.0"/>
+  <testcase name="aNameGiven" classname="TwoFerTest" time="0.0"/>
+  <testcase name="anotherNameGiven" classname="TwoFerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -385,6 +385,11 @@ b. Predefined values, for eg [1-10].
 172.java - Recursive Pre-order, In-order, Post-order tree traversal.
 173.java - Iterative Pre-order, In-order, Post-order, Level-order tree traversal.
 174.java - Selection Sort
+175.java - Insertion Sort
+175.java - Single program to demonstrate different sorting techniques.
+> Bubble Sort
+> Selection Sort
+> Insertion Sort
 
 [Kotlin]
 [Run the code]:
@@ -489,7 +494,7 @@ index.html - Main HTML page
 [./1] - 
 > Buttons, Alerts, Cards
 > Adding properties in input.css and using them.
-[./2][PENDING] - Create an 'About Me' card.
+[./2] - Create an 'About Me' card.
 
 [JavaScript] - 
 1.js - In-line & Multi-line comments.
@@ -549,6 +554,8 @@ In short,
 > $ npm start
 > Go to: http://0.0.0.0:3010
 [./playground] - React.js runs here.
+[./1] - A static webpage listing fun facts about React.
+[./2] - A static webpage listing the reasons to learn React.
 
 [Shell] - 
 1.sh - $var vs var, where to use which.
@@ -566,9 +573,12 @@ I. For loop:
 1 until 5 means 1 to 4 
 II. Hiding the keyboard after pressing a button: check function -> hideSoftKeyboard()
 
-[Swift]
+[Swift] - 
 Test: swift test
-Run: swift run
+Run: swift file.swift
+1.swift - Swift Basics
+> Variables & Constants
+> Functions
 
 [Exercism]
 [./java] 
@@ -581,3 +591,9 @@ Test: $ gradle test
 Prerequisites:
 $ pacman -S npm
 Test: $ npm test
+
+[./kotlin]
+Prerequisites:
+$ curl -s "https://get.sdkman.io"
+$ sdk install gradle
+Test: $ gradle test

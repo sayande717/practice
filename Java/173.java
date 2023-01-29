@@ -88,6 +88,7 @@ class TreeTraversal {
                 stack.push(current);
                 current = current.left;
             }
+            
             if(stack.isEmpty()) {
                 break;
             }

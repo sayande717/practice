@@ -21,3 +21,9 @@ fun main()
     //Precede variables/constants with $.
     println("Sum: ${sum(a,b)}")
 }
+
+
+// Setting a default value for the input parameter. If no value is passed, the default value is used.
+// hello() -> "Hello, World!"
+// hello("abcd") -> "Hello, abcd!"
+fun hello(word:String = "World") = "Hello, ${word}!"
