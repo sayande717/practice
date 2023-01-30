@@ -386,10 +386,11 @@ b. Predefined values, for eg [1-10].
 173.java - Iterative Pre-order, In-order, Post-order, Level-order tree traversal.
 174.java - Selection Sort
 175.java - Insertion Sort
-175.java - Single program to demonstrate different sorting techniques.
+176.java - Single program to demonstrate different sorting techniques.
 > Bubble Sort
 > Selection Sort
 > Insertion Sort
+177.java - Lowest Common Ancestor of a Binary Tree.
 
 [Kotlin]
 [Run the code]:
