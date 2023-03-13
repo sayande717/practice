@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgTonyStark2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tony_stark"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/imageDesc"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/imgTonyStark2"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/imgTonyStark2"
+        android:layout_below="@id/txtName"
+        />
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:textSize="16sp"
+        android:layout_toEndOf="@id/imgTonyStark2"
+        android:layout_below="@id/txtEmail"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgTonyStark2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:text="@string/info"
+        android:backgroundTint="#1BCE30"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submitText"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#CE0003"
+        android:layout_margin="10dp"
+
+        />
+</RelativeLayout>

@@ -40,7 +40,8 @@ class Tree {
         if (root == null) {
             return null;
         }
-        // Condition 2 [For root]
+
+        // If a node is a descendant of itself.
         if (root.checkEqual(p) || root.checkEqual(q)) {
             return root;
         }

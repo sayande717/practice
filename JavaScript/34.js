@@ -1,14 +1,16 @@
-function fun1() {
-    return 1
-}
-console.log(fun1());
+const jobs = [
+    { id:1, isActive: true },
+    { id:2, isActive: true },
+    { id:3, isActive: false}
+]
 
-//Arrow function
-const fun2 = () => {
-    return 2
-}
-console.log(fun2());
+const inActiveJobs = jobs.filter(function (job) {
+    return !(job.isActive)
+})
 
-//function-name = (arguments) => return-value
-const fun3 = () => 200
-console.log(fun3());
+const activeJobs = jobs.filter(job => job.isActive)
+
+console.log(inActiveJobs)
+console.log(activeJobs);
+
+// Arrow functions don't define this.

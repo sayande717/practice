@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Log In</string>
+    <string name="subTitle">Hello, World!</string>
+    <string name="imageDesc">Tony Stark</string>
+    <string name="submitText">Submit!</string>
+    <string name="textHint">Enter your name here…</string>
+    <string name="phone">+91 12345 67890</string>
+    <string name="email">tony@starkindustries.com</string>
+    <string name="info">More Information</string>
+    <!--Facebook Login Page-->
+    <string name="hint_username">Username or Email</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">LOG IN</string>
+    <string name="text_SignUp">Sign Up For Facebook</string>
+    <string name="text_forgotPassword">Forgot Password?</string>
+    <!--Avengers Login-->
+    <string name="inputUsername">Enter Mobile Number</string>
+    <string name="inputPassword">Enter Password</string>
+    <string name="avengersLoginFooter">Register Yourself</string>
+    <!--Shared Preferences-->
+    <string name="SharedPreferencesAvengers">Avengers Preferences</string>
+
+</resources>

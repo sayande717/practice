@@ -10,7 +10,10 @@ class TreeNode {
     TreeNode right;
     TreeNode(int val) {
         this.val = val;
+        this.left = null;
+        this.right = null;
     }
+    
     TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
@@ -49,13 +52,12 @@ class TreeTraversal {
                 current = current.left;
             }
             if (stack.isEmpty()) {
-                break;
+                return result;
             }
             // R added
             current = stack.pop();
             current = current.right;
         }
-        return result;
     }
     
     static List<Integer> inOrderTraversal(TreeNode root) {
@@ -68,7 +70,7 @@ class TreeTraversal {
                 current = current.left;
             }
             if(stack.isEmpty()) {
-                break;
+                return result;
             }
             // current = top-most element in the stack
             current = stack.pop();
@@ -76,7 +78,6 @@ class TreeTraversal {
             result.add(current.val);
             current = current.right;
         }
-        return result;
     }
 
     static List<Integer> postOrderTraversal(TreeNode root) {

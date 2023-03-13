@@ -1,4 +1,3 @@
-
 /* Insertion Sort
  * Time Complexity (n = length of array):
  * Worst Case: O(n^2)
@@ -16,6 +15,7 @@
  * Outer loop runs from 0 to array.length-2
  * Inner loop runs from (i+1) to 1
  */
+
 import java.util.Arrays;
 class InsertionSort {
     public static void main(String[] args) {

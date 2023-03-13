@@ -98,6 +98,71 @@ Both these methods take a list as input, and return the largest & smallest integ
 [Programming & DSA using Python]:
 1.py: A program to implement Greatest Common Divisor (GCD).
 2.py: Optimising 1.py
+3.py: GCD v3
+4.py: GCD v4
+5.py: Find the position of an element in a list (using functions).
+6.py: Binary Search using Recursion.
+7.py: Selection Sort.
+8.py: Insertion Sort.
+9.py: NPTEL Week 2 Assignment:
+> A positive integer m can be partitioned as primes if it can be written as p + q where p > 0, q > 0 and both p and q are prime numbers. Write a Python function primepartition(m) that takes an integer m as input and returns True if m can be partitioned as primes and False otherwise. (If m is not positive, your function should return False).
+> Write a function matched(s) that takes as input a string s and checks if the brackets "(" and ")" in s are matched: that is, every "(" has a matching ")" after it and every ")" has a matching "(" before it. Your function should ignore all other symbols that appear in s. Your function should return True if s has matched brackets and False if it does not.
+> A list rotation consists of taking the first element and moving it to the end. For instance, if we rotate the list [1,2,3,4,5], we get [2,3,4,5,1]. If we rotate it again, we get [3,4,5,1,2]. Write a Python function rotatelist(l,k) that takes a list l and a positive integer k and returns the list l after k rotations. If k is not positive, your function should return l unchanged. Note that your function should not change l itself, and should return the rotated list.
+
+10.py: NPTEL Week 3 Assignment:
+> 1. Define a Python function remdup(l) that takes a nonempty list of integers l and removes all duplicates in l, keeping only the last occurrence of each number.
+>>> remdup([3,1,3,5])
+[1, 3, 5]
+
+> 2. Write a Python function splitsum(l) that takes a nonempty list of integers and returns a list [pos,neg], where pos is the sum of squares all the positive numbers in l and neg is the sum of cubes of all the negative numbers in l.
+>>> splitsum([1,3,-5])
+[10, -125]
+
+> 3. A two dimensional matrix can be represented in Python row-wise, as a list of lists: each inner list represents one row of the matrix.
+>>> For example, the matrix,
+1  2  3
+4  5  6 
+7  8  9
+... would be represented as [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+>>> A horizonatal flip reflects each row. For instance, if we flip the previous matrix horizontally, we get
+
+3  2  1
+6  5  4 
+9  8  7
+
+...which would be represented as [[3, 2, 1], [6, 5, 4], [9, 8, 7]].
+
+>>> A vertical flip reflects each column. For instance, if we flip the previous matrix that has already been flipped horizontally, we get
+9  8  7
+6  5  4 
+3  2  1
+
+...which would be represented as [[9, 8, 7], [6, 5, 4], [3, 2, 1]].
+
+Write a Python function matrixflip(m,d) that takes as input a two dimensional matrix m and a direction d, where d is either 'h' or 'v'. If d == 'h', the function should return the matrix flipped horizontally. If d == 'v', the function should retun the matrix flipped vertically. For any other value of d, the function should return m unchanged.
+
+11.py: Tuples in Python
+12.py: NPTEL Week 4 Assignment:
+> 1. We have a list of annual rainfall recordings of cities. Each element in the list is of the form (c,r) where c is the city and r is the annual rainfall for a particular year. The list may have multiple entries for the same city, corresponding to rainfall recordings in different years. Write a Python function rainaverage(l) that takes as input a list of rainfall recordings and computes the avarage rainfall for each city. The output should be a list of pairs (c,ar) where c is the city and ar is the average rainfall for this city among the recordings in the input list. Note that ar should be of type float. The output should be sorted in dictionary order with respect to the city name.
+> 2. A list in Python can contain nested lists. The degree of nesting need not be uniform. For instance [1,2,[3,4,[5,6]]] is a valid Python list. Write a Python function flatten(l) that takes a nonempty list of lists and returns a simple list of all the elements in the nested lists, flattened out. You can make use of the following function that returns True if its input is of type list.
+
+def listtype(l):
+  return(type(l) == type([]))
+
+Here are some examples to show how flatten(l) should work.
+>>> flatten([1,2,[3],[4,[5,6]]])
+[1, 2, 3, 4, 5, 6]
+
+>>> flatten([1,2,3,(4,5,6)])
+[1, 2, 3, (4, 5, 6)]
+
+13.py: Merge Sort
+14.py: List Difference using Merge Sort.
+15.py: List comprehension in Python.
+16.py: Exception handling in Python.
+17.py: Arguments for the print() statement.
+18.py: File Handling in Python.
 
 [C] -
 notes.txt - 
@@ -391,6 +456,12 @@ b. Predefined values, for eg [1-10].
 > Selection Sort
 > Insertion Sort
 177.java - Lowest Common Ancestor of a Binary Tree.
+[Recursion Theory] 178-180.java
+178.java - Recursion in Java.
+179.java - Find 'n'th Fibonacci number using Recursion.
+180.java - Binary Search using Recursion.
+181.java - Merge Sort using Recursion.
+182.java - Quick Sort using Recursion.
 
 [Kotlin]
 [Run the code]:
@@ -541,6 +612,10 @@ index.html - Main HTML page
 37.js - Multi-line strings in ES6.
 38.js - Using Array functions & Arrow functions to filter out the even and odd numbers in an array.
 39.js <-> data.json - Fetch API and Promise object
+[JavaScript ES6]
+40.js - Create an object, change the value of 1 of it's members.
+41.js - 'this' keyword in JavaScript.
+42.js - bind() method in JavaScript.
 
 [./bot]
 > Discord
@@ -548,31 +623,46 @@ index.html - Main HTML page
 readme.js - Tells you what all that jargon means.
 
 [React.js]
-Port for Development: 3000
+Port for Development: 3510
 A complete list of commands is provided in the 'tutorials & fixes' file.
 In short,
 > $ cd app_name
 > $ npm start
-> Go to: http://0.0.0.0:3010
+> Go to: http://0.0.0.0:3510
 [./playground] - React.js runs here.
-[./1] - A static webpage listing fun facts about React.
-[./2] - A static webpage listing the reasons to learn React.
+Current: Apna Cart (shopping cart)
 
 [Shell] - 
 1.sh - $var vs var, where to use which.
 2.sh - Switch Case in Shell.
 
 [Android] - 
-> ./testapp - First app - Greet the user.
-> ./BMICalculatorTest - BMI Calculator
-> ./checkNumber - Check if the entered number is:
-a. Odd / Even
-b. Prime
-New things learnt:
-I. For loop:
-1..5 means 1 to 5
-1 until 5 means 1 to 4 
-II. Hiding the keyboard after pressing a button: check function -> hideSoftKeyboard()
+1_ActivityLifecycle -
+activity_main.xml: Linear Layout
+activity_main_relative_layout.xml: Relative Layout
+scrollview_example.xml: Scroll View
+AvengersActivity1.kt <-> avengers_login.xml: Avengers Login Page
+> Check the username and password of the user, log the user in if they match
+> Display a toast if the password is incorrect.
+> Start another activity (& switch to it) if the credentials are correct (Intent).
+MainActivity.kt:
+> Send a string to another activity (ScrollViewActivity.kt) using intents.
+> Use Shared Preferences to save the user's credentials.
+ScrollViewActivity.kt <-> scrollview_example.xml: The Activity displayed after login.
+2_Module3Project:
+
+3_Bookhub:
+1. menu_drawer.xml: Menu icons for the drawer.
+2. Create icons for the menu bar items: [./drawable] New > Image Asset > Action Bar & Tab Icons.
+3. drawer_header.xml: Top part of the drawer.
+4. Create a DrawerLayout in activity_main.xml, to combine the 2 views together.
+5. Remove the default toolbar (NoActionBar)
+6. Add a new toolbar in activity_main.xml.
+7. Create the home icon in MainActivity.kt, using setSupportActionBar(toolbar) and supportActionBar?.setHomeButtonEnabled(true).
+8. Add functionality to the icon, ie add a click listener to the action bar.
+9. Add click listeners for the menu bar items.
+10. Add Fragments for all menu items.
+11. Setup the Fragment Transactions (open the fragments when the menu items are clicked).
 
 [Swift] - 
 Test: swift test

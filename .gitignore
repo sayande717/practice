@@ -1,5 +1,5 @@
 # Files/Directories to ignore
-.env
+.*
 node_modules
 temp.*
 package.json
@@ -7,3 +7,4 @@ package-lock.json
 *.class
 a.out
 __pycache__
+*gradle*
