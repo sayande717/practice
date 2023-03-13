@@ -1,4 +1,4 @@
-export function Content() {
+function Content() {
     return  (
         <div>
             <ol id="font-fix">
@@ -8,3 +8,5 @@ export function Content() {
         </div>
     )
 }
+
+export default Content
