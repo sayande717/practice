@@ -1,4 +1,4 @@
-import math
+import math, random
 
 # Master String Database
 def getString(channelID, channelProperty=''):
@@ -44,6 +44,16 @@ def getString(channelID, channelProperty=''):
                 'Perform unit conversion here!\
                 \nCurrently, these units are supported: [temperature]'
         },
+        # channel: #random-number
+        1096372904402358282: {
+            'scope': str.title(scopeDB['bot']['commands']),
+            'description':
+                'Generate random numbers! \
+                \n> Number of digits must be `atmost 2000`. \
+                \n Syntax: `$gen <number-of-digits>` \
+                \n Example: `$gen 5` will generate a random **5 digit** number.'
+        },
+        
     # Category: Bot Code Testing
         # channel: #test-zone
         994965043588370525: {
@@ -106,3 +116,13 @@ def getCalcResult(arg1, arg2):
                 'root': math.pow(number1, 1/number2)
             }
             return operatorDB2.get(arg1)
+
+def getRandomNumber(numberOfDigits=4) -> str:
+    outNum = ''
+    def getRandomDigit():
+        return str(math.floor(random.random()*10))
+    # Check if the number of Digits entered is a valid number.
+    
+    while len(outNum) < numberOfDigits and numberOfDigits<=2000:
+        outNum = outNum + getRandomDigit() 
+    return outNum

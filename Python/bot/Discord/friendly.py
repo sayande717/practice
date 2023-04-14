@@ -45,6 +45,14 @@ async def calc(ctx, expression1='', expression2=''):
             await ctx.channel.send(getString(0,'mistake'))
         else:
             await ctx.channel.send(f'{resultPrefix} **{result}**')
+            
+@bot.command()
+async def gen(ctx,noOfDigits=4):
+    if ctx.channel.id == 1096372904402358282:
+        strOut = getRandomNumber(noOfDigits)
+        if len(strOut) == 0:
+            strOut = getString(0,'mistake')
+        await ctx.channel.send(strOut)
 
 
 bot.run(TOKEN)
