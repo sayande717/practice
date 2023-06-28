@@ -1,61 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayoutContent"
     >
 
     <ImageView
-        android:id="@+id/imgIcon"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/ic_list_item"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/imgRecyclerRowIcon"
+        android:src="@drawable/ic_book_icon"
         />
 
     <TextView
-        android:id="@+id/txtItemTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/txtRecyclerRowTitle"
+        android:layout_toEndOf="@id/imgRecyclerRowIcon"
         android:padding="10dp"
-        android:text="@string/list_item_title"
-        android:textColor="@color/black"
         android:textSize="20sp"
+        android:text="@string/list_item"
+        android:textColor="#000000"
         android:textStyle="bold"
-        android:layout_toEndOf="@+id/imgIcon"
         />
 
     <TextView
-        android:id="@+id/txtItemRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRecyclerRowAuthor"
+        android:padding="10dp"
+        android:text="@string/author_name"
+        android:layout_toEndOf="@id/imgRecyclerRowIcon"
+        android:layout_below="@id/txtRecyclerRowTitle"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRecyclerRowPrice"
+        android:text="@string/list_price"
+        android:padding="10dp"
+        android:layout_toEndOf="@id/imgRecyclerRowIcon"
+        android:layout_below="@id/txtRecyclerRowAuthor"
+        />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_list_item"
-        android:layout_toEndOf="@id/txtItemTitle"
+        android:id="@+id/imgRecyclerRowRating"
+        android:src="@drawable/ic_list_rating"
+        android:layout_toStartOf="@+id/txtRecyclerRowRating"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRecyclerRowRating"
+        android:text="@string/list_rating"
         android:layout_alignParentEnd="true"
-        android:text="@string/itemRating"
-        android:textAlignment="viewEnd"
-        android:textColor="@color/item_rating"
-
+        android:layout_marginRight="5dp"
         />
 
-
-    <TextView
-        android:id="@+id/txtItemAuthorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/imgIcon"
-        android:layout_below="@+id/txtItemTitle"
-        android:text="@string/list_item_author_name"
-        android:textSize="15sp"
-
-        />
-
-    <TextView
-        android:id="@+id/txtItemPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/imgIcon"
-        android:layout_below="@id/txtItemAuthorName"
-        android:text="@string/txtItemPrice"
-        android:textSize="15sp"
-        />
 
 </RelativeLayout>

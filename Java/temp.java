@@ -1,8 +1,5 @@
-import java.util.LinkedList;
-class temp {
-    public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        list.add(3);
-        System.out.println(list);
+final class Even {
+    public final static void main(String[] args) {
+        System.out.println((Integer.parseInt(args[0])%2)==0);
     }
 }

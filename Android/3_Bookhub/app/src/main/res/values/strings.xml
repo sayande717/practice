@@ -17,5 +17,10 @@
     <string name="list_item_author_name">Author Name</string>
     <string name="txtItemPrice">Price: Rs</string>
     <string name="itemRating">Rating</string>
+    <string name="list_item">Book Name</string>
+    <string name="author_name">Author Name</string>
+    <string name="list_price">Rs. 0</string>
+    <string name="list_rating">0.0</string>
+    <string name="check_internet">Check Internet</string>
 
 </resources>

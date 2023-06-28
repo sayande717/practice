@@ -6,7 +6,7 @@ import os
 # Import Bot Token
 from dotenv import load_dotenv
 load_dotenv()
-TOKEN = os.getenv('Friendly')
+TOKEN = os.getenv('friendly')
 
 # Bot Intents
 intent = discord.Intents.default()
@@ -18,7 +18,7 @@ bot = commands.Bot(intents=intent, command_prefix='$')
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name='$info'))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening,name='$info'))
 
 # Scope: Information / Help
 @bot.command()

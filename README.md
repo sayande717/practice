@@ -163,6 +163,13 @@ Here are some examples to show how flatten(l) should work.
 16.py: Exception handling in Python.
 17.py: Arguments for the print() statement.
 18.py: File Handling in Python.
+19.py: pass & del
+20.py: 8-Queens
+21.py: Next Permutation
+22.py: Classes and objects
+23.py: Linked List
+24.py: Binary Search Tree (PENDING)
+25.py: Dynamic Programming (Fibonacci)
 
 [C] -
 notes.txt - 
@@ -462,6 +469,14 @@ b. Predefined values, for eg [1-10].
 180.java - Binary Search using Recursion.
 181.java - Merge Sort using Recursion.
 182.java - Quick Sort using Recursion.
+[Binary Search Approach+Questions]
+183.java - Ceiling of a number, in an array.
+184.java - Floor of a number, in an array.
+185.java - Floor of a number, in an unsorted array.
+186.java - Problem: Arpasland has surrounded by attackers. A truck enters the city. The driver claims the load is food and medicine from Iranians. Ali is one of the soldiers in Arpasland. He doubts about the truck, maybe it's from the siege. He knows that a tag is valid if the sum of every two consecutive digits of it is even and its letter is not a vowel. Determine if the tag of the truck is valid or not. 
+We consider the letters "A","E","I","O","U","Y" to be vowels for this problem.
+Input Format: The first line contains a string of length 9. The format is "DDXDDD-DD", where D stands for a digit (non zero) and X is an uppercase english letter.
+Output Format: Print "valid" (without quotes) if the tag is valid, print "invalid" otherwise (without quotes)
 
 [Kotlin]
 [Run the code]:
@@ -663,6 +678,8 @@ ScrollViewActivity.kt <-> scrollview_example.xml: The Activity displayed after l
 9. Add click listeners for the menu bar items.
 10. Add Fragments for all menu items.
 11. Setup the Fragment Transactions (open the fragments when the menu items are clicked).
+12. Check the app's connectivity to the Internet.
+13. Create an alert dialog -> DashboardFragment.kt
 
 [Swift] - 
 Test: swift test
@@ -671,12 +688,106 @@ Run: swift file.swift
 > Variables & Constants
 > Functions
 
-[Exercism]
+[Platforms]
+[Platforms/Exercism]
 [./java] 
 Prerequisites:
 $ curl -s "https://get.sdkman.io"
 $ sdk install gradle
 Test: $ gradle test
+
+[Platforms/LeetCode]
+1.cpp - Given two non-negative integers low and high, return the count of odd numbers between low and high (inclusive).
+Q: 1523. https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
+
+2.cpp - You are given an array of unique integers salary where salary[i] is the salary of the ith employee. Return the average salary of employees excluding the minimum and maximum salary.
+Q: 1491. https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
+
+3.cpp - Write a function that takes the binary representation of an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+Q: 191. https://leetcode.com/problems/number-of-1-bits/
+
+4.cpp - Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+Q: 1281. https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+
+5.cpp - Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.
+Q: 976. https://leetcode.com/problems/largest-perimeter-triangle/
+
+6.cpp - You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location. Return the index (0-indexed) of the valid point with the smallest Manhattan distance from your current location. If there are multiple, return the valid point with the smallest index. If there are no valid points, return -1.
+The Manhattan distance between two points (x1, y1) and (x2, y2) is abs(x1 - x2) + abs(y1 - y2).
+Q: 1779. https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/
+
+7.cpp - There is a function signFunc(x) that returns:
+    1 if x is positive.
+    -1 if x is negative.
+    0 if x is equal to 0.
+You are given an integer array nums. Let product be the product of all values in the array nums.
+Return signFunc(product).
+Q: 1822. https://leetcode.com/problems/sign-of-the-product-of-an-array/
+
+8.py -  A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same. Given an array of numbers arr, return true if the array can be rearranged to form an arithmetic progression. Otherwise, return false.
+Q: 1502. https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
+
+9.java - Given an array nums of integers, return how many of them contain an even number of digits.
+Q: 1295. https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+
+10.java - You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has. A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+Q: 1672. https://leetcode.com/problems/richest-customer-wealth/
+
+11.java - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+Q: 1. https://leetcode.com/problems/two-sum/
+
+12.java - Given an integer x, return true if x is a palindrome, and false otherwise.
+Q: 9. https://leetcode.com/problems/palindrome-number/
+
+13.java - Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums. Return k.
+Q: 26. https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+14.java - You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots. Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.
+Q: 605. https://leetcode.com/problems/can-place-flowers/
+
+15.java - Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+  Open brackets must be closed by the same type of brackets.
+  Open brackets must be closed in the correct order.
+  Every close bracket has a corresponding open bracket of the same type.
+Q: 20. https://leetcode.com/problems/valid-parentheses/
+
+16.java - You are given the heads of two sorted linked lists list1 and list2. Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list.
+Q: 21. https://leetcode.com/problems/merge-two-sorted-lists/
+
+17.java - You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters. Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.
+Q: 744. https://leetcode.com/problems/find-smallest-letter-greater-than-target/
+
+18.java - Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. If target is not found in the array, return [-1, -1].
+You must write an algorithm with O(log n) runtime complexity.
+Q: 34. https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
+19.java - You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+Q: 88. https://leetcode.com/problems/merge-sorted-array/
+
+20.java - Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums. Return k.
+Q: 27. https://leetcode.com/problems/remove-element/
+
+21.java - Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Q: 26. https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+
+22.java - Given a string s consisting of words and spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.
+Q: 58. https://leetcode.com/problems/length-of-last-word/
+
+23.java - Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
+Q: 14. https://leetcode.com/problems/longest-common-prefix/
+
+24.java - You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+Increment the large integer by one and return the resulting array of digits.
+Q: 66. https://leetcode.com/problems/plus-one/
+
+25.java - Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+Q: 169. https://leetcode.com/problems/majority-element/
 
 [./javascript] 
 Prerequisites:
