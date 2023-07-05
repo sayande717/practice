@@ -16,6 +16,7 @@ def getString(channelID, channelProperty=''):
             }
         }
     }
+    
     stringDB = {
     # Scope: All channels, Channel ID = 0
         0: {
@@ -37,6 +38,7 @@ def getString(channelID, channelProperty=''):
                 \n> Example: log 2 , pow 2,4 \
                 '
         },
+
         # channel: #unit-conversion
         985990030570975262: {
             'scope': str.title(scopeDB['bot']['commands']),
