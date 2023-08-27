@@ -1,37 +1,45 @@
 # Index
 - [Case types](#case-types)
 - [Python](#python)
-  - [Discord Bot](#discord-bot)
-  - [Programming \& DSA using Python](#programming--dsa-using-python)
+    - [Discord Bot](#discord-bot)
+        - [Functions needed](#functions-needed)
+        - [os](#os)
+    - [Programming \& DSA using Python](#programming--dsa-using-python)
 - [C](#c)
-  - [notes.txt -](#notestxt--)
-  - [Programs](#programs)
+    - [notes.txt -](#notestxt--)
+    - [Programs](#programs)
 - [C++](#c-1)
 - [Java](#java)
-  - [DSA BootCamp: **Assignment-02**](#dsa-bootcamp-assignment-02)
-  - [DSA BootCamp: **Assignment-03**](#dsa-bootcamp-assignment-03)
-  - [DSA BootCamp: **Assignment-04**](#dsa-bootcamp-assignment-04)
-  - [DSA BootCamp: **Assignment-05**](#dsa-bootcamp-assignment-05)
-  - [DSA BootCamp: **Assignment-06**](#dsa-bootcamp-assignment-06)
+    - [DSA BootCamp: **Assignment-02**](#dsa-bootcamp-assignment-02)
+    - [DSA BootCamp: **Assignment-03**](#dsa-bootcamp-assignment-03)
+        - [Easy](#easy)
+        - [Intermediate](#intermediate)
+    - [DSA BootCamp: **Assignment-04**](#dsa-bootcamp-assignment-04)
+    - [DSA BootCamp: **Assignment-05**](#dsa-bootcamp-assignment-05)
+    - [DSA BootCamp: **Assignment-06**](#dsa-bootcamp-assignment-06)
+        - [Easy](#easy-1)
+        - [Medium](#medium)
 - [Kotlin](#kotlin)
 - [HTML](#html)
-  - [./**Coffee-Junkie**: Company webpage](#coffee-junkie-company-webpage)
+    - [./**Coffee-Junkie**: Company webpage](#coffee-junkie-company-webpage)
 - [CSS](#css)
 - [JavaScript](#javascript)
-  - [./React.js](#reactjs)
+    - [./React.js](#reactjs)
 - [Shell](#shell)
 - [Android](#android)
-  - [1\_ActivityLifecycle](#1_activitylifecycle)
-  - [2\_Module3Project](#2_module3project)
-  - [3\_Bookhub](#3_bookhub)
+    - [1\_ActivityLifecycle](#1_activitylifecycle)
+    - [2\_Module3Project](#2_module3project)
+    - [3\_Bookhub](#3_bookhub)
 - [Swift](#swift)
 - [Platforms](#platforms)
-  - [Exercism](#exercism)
-  - [LeetCode](#leetcode)
-- [Machine Learning](#machine-learning)
-  - [./dataset](#dataset)
-  - [./src](#src)
-
+    - [Exercism](#exercism)
+        - [Java](#java-1)
+        - [Kotlin](#kotlin-1)
+        - [JavaScript](#javascript-1)
+    - [GeeksForGeeks](#geeksforgeeks)
+    - [LeetCode](#leetcode)
+- [Blogs](#blogs)
+    - [Hashnode](#hashnode)
 
 ## Case types
 camelCase | variables, methods
@@ -731,6 +739,18 @@ pacman -S npm # Install
 npm test # Test
 ```
 
+### GeeksForGeeks
+1. Given a string S, check if it is palindrome or not. Return 1 if it is, otherwise return 0.
+    [Question](https://practice.geeksforgeeks.org/problems/palindrome-string0817/1)
+    
+2. Longest K unique characters substring
+    [Question](https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1)
+
+3. Reverse a String
+    [Question](https://practice.geeksforgeeks.org/problems/reverse-a-string/1)
+4. Multiply two strings
+    [Question](https://practice.geeksforgeeks.org/problems/multiply-two-strings/1)    
+
 ### LeetCode
 1. Given two non-negative integers low and high, return the count of odd numbers between low and high (inclusive).
     [Q.1523](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
@@ -794,10 +814,10 @@ npm test # Test
 16. You are given the heads of two sorted linked lists list1 and list2. Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list.
     [Q: 21](https://leetcode.com/problems/merge-two-sorted-lists/)
 
-17.You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters. Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.
+17. You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters. Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.
     [Q: 744](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
 
-  18. Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. If target is not found in the array, return `[-1, -1]`. You must write an algorithm with `O(log n)` runtime complexity.
+18. Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. If target is not found in the array, return `[-1, -1]`. You must write an algorithm with `O(log n)` runtime complexity.
     [Q: 34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 19. You are given two integer arrays `nums1` and `nums2`, sorted in non-decreasing order, and two integers `m` and `n`, representing the number of elements in `nums1` and `nums2` respectively. Merge `nums1` and `nums2` into a single array sorted in non-decreasing order. <br>
@@ -824,8 +844,19 @@ npm test # Test
 25. Given an array nums of size `n`, return the majority element. The majority element is the element that appears more than `⌊n / 2⌋ times`. You may assume that the majority element always exists in the array.
     [Q: 169](https://leetcode.com/problems/majority-element/)
 
-## Machine Learning
-### ./dataset
-### ./src
-1. Hello, World!
-2. 
+26. Write a function that reverses a string. The input string is given as an array of characters `s`. You must do this by modifying the input array in-place with O(1) extra memory.
+    [Q. 344](https://leetcode.com/problems/reverse-string/)
+
+27. Given the root of a binary tree, return the inorder traversal of its nodes' values.
+    [Q. 94](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+
+28. Given the head of a singly linked list, reverse the list, and return the reversed list.
+    [Q. 206](https://leetcode.com/problems/reverse-linked-list/)
+
+
+## Blogs
+### Hashnode
+1. 'Listen' to books on your Kindle!
+2. Linux Basics: The Command Line!
+3. GNU/Linux: The Good, The Bad & The Ugly!
+4. Systemd guide: Create your own service!
