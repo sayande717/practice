@@ -40,6 +40,7 @@
     - [LeetCode](#leetcode)
 - [Blogs](#blogs)
     - [Hashnode](#hashnode)
+    - [Medium](#medium-1)
 
 ## Case types
 camelCase | variables, methods
@@ -748,8 +749,15 @@ npm test # Test
 
 3. Reverse a String
     [Question](https://practice.geeksforgeeks.org/problems/reverse-a-string/1)
+
 4. Multiply two strings
-    [Question](https://practice.geeksforgeeks.org/problems/multiply-two-strings/1)    
+    [Question](https://practice.geeksforgeeks.org/problems/multiply-two-strings/1)  
+
+5. Remove duplicate element from sorted Linked List
+    [Question](https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1)
+
+6. Delete nodes having greater value on right
+    [Question](https://practice.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1)
 
 ### LeetCode
 1. Given two non-negative integers low and high, return the count of odd numbers between low and high (inclusive).
@@ -853,6 +861,17 @@ npm test # Test
 28. Given the head of a singly linked list, reverse the list, and return the reversed list.
     [Q. 206](https://leetcode.com/problems/reverse-linked-list/)
 
+29. Write an algorithm to determine if a number n is happy.
+    A happy number is a number defined by the following process:
+    - Starting with any positive integer, replace the number by the sum of the squares of its digits.
+    - Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+    - Those numbers for which this process ends in 1 are happy.
+    Return true if n is a happy number, and false if not.
+    [Q. 202](https://leetcode.com/problems/happy-number/)
+
+30. Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+    [Q. 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
 
 ## Blogs
 ### Hashnode
@@ -860,3 +879,10 @@ npm test # Test
 2. Linux Basics: The Command Line!
 3. GNU/Linux: The Good, The Bad & The Ugly!
 4. Systemd guide: Create your own service!
+5. Git Basics: Everything you need to know!
+6. Git Basics: Make your first open source contribution!
+
+### Medium
+1. The headless Raspberry Pi setup, for beginners
+2. Get started with the Linux command line!
+3. Is an SBI Credit Card (India) worth it?

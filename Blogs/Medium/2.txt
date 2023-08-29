@@ -1,0 +1,108 @@
+It’s not as scary as you think it is.
+
+In this article I’ll be covering some basic things you can do on the Linux terminal. I’ll be taking the Debian Linux terminal as an example, but most of these commands should work on other Linux distributions as well! So, without further ado, let’s get started.
+
+    In Linux, everything is a file. Your directories, the devices you connect to your PC, everything.
+
+Now let’s go over some basic directories in Linux:
+
+. :- Current directory
+.. :- The last directory
+/ :- The Root directory.
+/boot :- Files needed to boot the system are stored here.
+/home/username :- The user’s home directory. For example, if your username is ‘user1’, your home directory will be ‘/home/user1’
+/bin or /usr/bin :- Executable commands are stored here.
+/etc :- Configuration files are stored here.
+/mnt :- Devices you connect to your PC are mounted here by default.
+/proc :- All active processes are stored here, identifiable by their Process ID’s.
+
+Keep in mind that this isn’t an exhaustive list, but should be enough to get you started.
+File operations on Linux
+
+Moving a file to a new location:
+mv file1 /path/to/destination
+Moving file ‘file1’ from /tmp/dir to /tmp/dir/dir2
+
+Moving a file to a new location & renaming it at the same time:
+mv oldname /path/to/destination/newname
+‘file1' was moved and renamed to ‘file01’
+
+Renaming a file:
+mv oldname newname
+Renaming ‘file2’ to ‘file02'
+
+Copying a file to a new location:
+cp file /path/to/destination
+Copying ‘file1’ to ‘/tmp/dir/dir2’
+
+Listing files & directories:
+$ ls
+Listing directories
+
+$ ls -l -h
+
+    -l : Shows a detailed info of the files & directories in the current
+    -h (optional) : Shows the file sizes in a more human readable format (i.e. in KB, MB, GB, etc instead of just in bytes)
+
+Using Text editors (Vi, nano, etc):
+
+To use ‘vi’ to edit a file ‘file.txt’:
+$ vi file.txt
+
+To do the same thing using ‘nano’:
+$ nano file.txt
+Running commands as root:
+
+Let’s take an example here. Suppose you edit a configuration file in the directory ‘/etc/settings.conf’. Since /etc is a root directory, you need to get root access in order to edit this file. So, should you log out, login as ‘root’ and then edit the file?! Of course not! Instead, you just use the ‘sudo’ command to run a single command as the root user. So, in this case, the command is:
+
+$ sudo vi /etc/settings.conf
+OR
+$ sudo nano /etc/settings.conf
+Zipping & unzipping files
+
+Let’s first zip 2 files (file1,file2) into a zip ‘stuff.zip’, list the contents of the zip file, and extract it.
+
+First, the zipping part:
+
+$ zip file1 file2 stuff.zip
+zipping the files
+
+Next, listing the contents of the zip archive:
+$ unzip -l stuff.zip
+
+    -l : Lists the zip contents
+
+Listing the contents of the zip file
+
+Lastly, extracting the zip archive in the current directory:
+$ unzip stuff.zip
+Extracting the zip contents
+
+zip & unzip are very versatile tools that have a lot of options that you can use to do various stuff. Just run ‘zip --help’ or ‘unzip --help’ to learn about all their functions.
+System Info & system stats stuff:
+
+Uptime: To show the system uptime.
+$ uptime
+
+$ uptime -p
+
+    -p : display the uptime in a ‘pretty’ format.
+
+$ uptime -s
+
+    -s : Displays the time when system was started.
+
+The Task Manager:
+
+htop is an amazing Task Manager that shows running processes, Memory used, Disk Usage, Network usage & more. It’s navigable using the mouse & arrow keys. To run it, simply use:
+$ htop
+
+In case it’s not installed, use:
+$ apt install htop
+htop
+
+Neofetch: To display system info.
+$ neofetch
+neofetch
+
+So that’s it for the basic Linux command line stuff!
