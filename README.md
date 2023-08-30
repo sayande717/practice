@@ -759,6 +759,9 @@ npm test # Test
 6. Delete nodes having greater value on right
     [Question](https://practice.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1)
 
+7. Delete a Node in Single Linked List
+    [Question](https://practice.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1)
+
 ### LeetCode
 1. Given two non-negative integers low and high, return the count of odd numbers between low and high (inclusive).
     [Q.1523](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
@@ -872,6 +875,8 @@ npm test # Test
 30. Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
     [Q. 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
+31. Given an integer numRows, return the first numRows of Pascal's triangle. In Pascal's triangle, each number is the sum of the two numbers directly above it.
+    [Q. 118](https://leetcode.com/problems/pascals-triangle/)
 
 ## Blogs
 ### Hashnode
