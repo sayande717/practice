@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('Management')
 
-
 # Bot Intents
 intent = discord.Intents.default()
 intent.message_content = True
@@ -18,6 +17,8 @@ intent.message_content = True
 # Bot Command prefix
 bot = commands.Bot(intents=intent, command_prefix='.')
 
+# Query Channel ID
+commandChannelID = os.getenv('channelServer')
 
 @bot.event
 async def on_ready():
@@ -27,7 +28,7 @@ async def on_ready():
 @bot.command()
 async def info(ctx):
     # Channel = Self > #commands
-    if ctx.channel.id == 940487185973530655:
+    if ctx.channel.id == commandChannelID:
         await ctx.channel.send('\
             \n---Command info---\
             \n \
@@ -55,7 +56,7 @@ async def info(ctx):
 @bot.command()
 async def run(ctx, arg0, arg1=''):
     # Channel = Self > #commands
-    if ctx.channel.id == 940487185973530655:
+    if ctx.channel.id == commandChannelID:
         # Command DB for which to return the system output.
         commandDBSystemOutput = {
             # 1 Argument
@@ -80,7 +81,7 @@ async def run(ctx, arg0, arg1=''):
 @bot.command()
 async def ping(ctx, arg):
     # Channel = Self > #commands
-    if ctx.channel.id == 940487185973530655:
+    if ctx.channel.id == commandChannelID:
         # List of common ping aliases
         pingAlias = {
             # Internet IPv4 Address
@@ -106,6 +107,5 @@ async def vol(ctx, arg):
             await ctx.channel.send(f'Volume set to **{arg}%**')
         except ValueError:
             await ctx.channel.send(getString(0, 'mistake'))
-            
 
 bot.run(TOKEN)

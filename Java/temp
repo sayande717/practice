@@ -1,7 +1,0 @@
-1 1 1
-1 1 0 -> r,c = 1,2
-1 1 1
-1 1 1
-3x2 [mxn] matrix
-row -> 1,0 1,1 1,2 -> this runs till n
-col -> 0,2 1,2 2,2 3,2 -> this runs till m
