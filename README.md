@@ -800,16 +800,4 @@ npm test # Test
 13. Given an integer numRows, return the first numRows of Pascal's triangle. In Pascal's triangle, each number is the sum of the two numbers directly above it.
     [Q. 118](https://leetcode.com/problems/pascals-triangle/)
 
-## Blogs
-### Hashnode
-1. 'Listen' to books on your Kindle!
-2. Linux Basics: The Command Line!
-3. GNU/Linux: The Good, The Bad & The Ugly!
-4. Systemd guide: Create your own service!
-5. Git Basics: Everything you need to know!
-6. Git Basics: Make your first open source contribution!
 
-### Medium
-1. The headless Raspberry Pi setup, for beginners
-2. Get started with the Linux command line!
-3. Is an SBI Credit Card (India) worth it?
